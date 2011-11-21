@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<window id="2">
+	<defaultcontrol always="false">555</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>555,572</views>
+	<controls>
+		<include>themeBackground2</include>
+		<control type="group">
+			<include>view_ThumbWide</include>
+			<include>view_List_GrainyEdition</include>
+			<!--<include>AllViewCommonPageControls</include>-->
+			<control type="label">
+				<label>[LOWERCASE]$LOCALIZE[1][/LOWERCASE] $INFO[Container.FirstTitle]  $INFO[Container.SecondTitle]</label>
+				<include>PageLabel</include>
+				<visible>!Container.Scrolling</visible>
+			</control>
+			<!-- FAKE INFO BUTTON -->
+			<control type="button" id="8000">
+				<label>SHOULD NOT SEE ME</label>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<onleft>53</onleft>
+				<onright>53</onright>
+				<width>200</width>
+				<visible allowhiddenfocus="true">false</visible>
+			</control>
+			<!--- LIST VIEW -->
+			<control type="group">
+				<include>infoDialogHide</include>
+				<include>transition2</include>
+				<include>contextMenuHide</include>
+				<visible>!Window.IsActive(2) + Control.IsVisible(50) + !IsEmpty(Container.FolderPath)</visible>
+				<control type="group">
+					<posx>640</posx>
+					<posy>100</posy>
+					<include>transition2</include>
+					<control type="image">
+						<width>590</width>
+						<height>357</height>
+						<texture border="48">frames/wideFrame.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<include>fanartFadeTime</include>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>27</posy>
+						<width>540</width>
+						<height>304</height>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<texture fallback="thumbs/picture.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+						<include>fanartFadeTime</include>
+					</control>
+				</control>
+			</control>
+		</control>
+		<!-- THUMBNAILS VIEW -->
+		<control type="group">
+			<visible>Control.IsVisible(572)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<posx>85</posx>
+			<posy>640</posy>
+			<control type="label">
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<font>special3</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>900</width>
+			</control>
+			<control type="label">
+				<posy>25</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color4</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>25</posy>
+				<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
+				<font>normalCaps</font>
+				<textcolor>Color4</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posx>1075</posx>
+				<posy>25</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color4</textcolor>
+				<align>right</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posx>1075</posx>
+				<posy>25</posy>
+				<label>$INFO[ListItem.PictureDateTime]</label>
+				<font>normalCaps</font>
+				<textcolor>Color4</textcolor>
+				<align>right</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+		</control>
+		<!-- INFOS BOTTOM -->
+		<control type="group">
+			<posx>265</posx>
+			<posy>585</posy>
+			<visible>Control.IsVisible(53)</visible>
+			<include>transition3</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<control type="label">
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.Size)</visible>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.Size)</visible>
+			</control>
+		</control>
+		<control type="image">
+			<include>screentype</include>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(56) + ControlGroup(300).HasFocus()</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>0</posx>
+			<posy>665</posy>
+			<include>screenwidth</include>
+			<height>55</height>
+			<texture flipy="false">OSD/fullscreenInfo.png</texture>
+			<include>videoFullScreenInfo</include>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="image">
+			<posx>10</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollLeftIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="image">
+			<posx>42r</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollRightIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>684</posy>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<font>normalCaps</font>
+			<textcolor>Color4</textcolor>
+			<align>center</align>
+			<width>1200</width>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<include>allscreens</include>
+		<include>LibraryVideoMenu</include>
+	</controls>
+</window>

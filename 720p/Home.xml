@@ -1,0 +1,86 @@
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- BACKGROUND MEDIA -->
+		<include>slideshows</include>
+		<!-- grainy bg for home screen only -->
+		<include>grainyeditionthemeoverlay</include>
+		
+		<!-- fanart slides and other overlays -->
+		<control type="multiimage" id="1">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>fadeinout</include>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<fadetime>850</fadetime>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
+			<include>fadeinout</include>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<fadetime>1400</fadetime>
+			<include>fadeinout</include>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+		</control>
+		
+		<!-- reFocus logo positioned underneath the home overlay for a little softness -->
+		<control type="group">
+			<include>newtypelogo</include>
+			<visible>!Skin.HasSetting(hideplexhomelogo)</visible>
+		</control>
+		
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112)</visible>
+		</control>
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107)</visible>
+		</control>
+		<!-- now playing for legcy home screen -->
+		<control type="group">
+			<visible>Player.HasAudio</visible>
+			<posx>905</posx>
+			<posy>-15</posy>
+			<include>grainyeditionnowplayinghome</include>
+		</control>
+		<!-- time and date -->
+		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		<!-- left screen edge shadow -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>20</posy>
+				<height>720</height>
+				<width>29</width>
+				<texture flipx="true">settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>grainypagefade</include>
+			</control>
+		<!-- MOD CALL MENU GRAINY EDITION -->
+		<include>HomeMenu_Original</include>		
+	</controls>
+</window>
