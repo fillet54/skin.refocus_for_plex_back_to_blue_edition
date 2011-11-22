@@ -19,20 +19,22 @@
 		</font>
 
 
+		<!---TOAST------>
 		<font>
 			<name>notification</name>
-			<filename>SemilightCaps.ttf</filename>
-			<size>20</size>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
 		</font>
 		<font>
 			<name>notificationSmall</name>
-			<filename>SemilightCaps.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>progress</name>
-			<filename>LightCaps.ttf</filename>
-			<size>42</size> 
+			<filename>Arial.ttf</filename>
+			<size>40</size>
+			<aspect>0.8`15</aspect>
 		</font>
 
 <!-- CUSTOM GRAINY EDITION FONTS -->
@@ -176,11 +178,47 @@
 
 
 <!-- general ------------------------------------------------------>
+
+
+<!---GENERAL------>
+		<font>
+			<name>normal</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>normalAlt</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>normalCaps</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>small</name>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
+		</font>		
+		<font>
+			<name>smallCaps</name>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>smallerCaps</name>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
+		</font>
+
+<!--
 		<font>
 			<name>small</name>
 			<filename>RegularOrg.ttf</filename>
 			<size>16</size>
 		</font>
+		-->
 		<font>
 			<name>extrasmall</name>
 			<filename>RegularOrg.ttf</filename>
@@ -191,21 +229,25 @@
 			<filename>RegularLow.ttf</filename>
 			<size>16</size>
 		</font>
+		<!--
 		<font>
 			<name>normal</name>
 			<filename>RegularOrg.ttf</filename>
 			<size>22</size>
 		</font>
+		-->
 		<font>
 			<name>normalLow</name>
 			<filename>RegularLow.ttf</filename>
 			<size>22</size>
 		</font>
+		<!--
 		<font>
 			<name>normalCaps</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>22</size>
 		</font>
+		-->
 		<font>
 			<name>medium</name>
 			<filename>RegularOrg.ttf</filename>
@@ -270,34 +312,27 @@
 			<size>18</size>
 		</font>
 
-
-<!-- dialogs ------------------------------------------------------>	
+<!---DIALOGS------>		
 		<font>
 			<name>dialog1</name>
-			<filename>RegularLow.ttf</filename>
-			<size>32</size>
-			<aspect>0.90</aspect>
+			<filename>Arial.ttf</filename>
+			<size>28</size>
 		</font>
 		<font>
 			<name>dialog2</name>
-			<filename>RegularLow.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
-		</font>
-        
-<!-- Added Capitalisation option: Courtesy of Se.bastian -->
-        <font>
-			<name>dialog11</name>
-			<filename>Regular.ttf</filename>
-			<size>28</size>
-			<aspect>0.90</aspect>
 		</font>
 		<font>
-			<name>dialog12</name>
-			<filename>Regular.ttf</filename>
+			<name>dialogConfirmButton</name>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
-<!-- End Capitalization addition -->
-
+		<font>
+			<name>keyboard</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
 
 <!-- osd ------------------------------------------------------>	
 		<font>

@@ -279,6 +279,61 @@
 		<!--<include condition="!Skin.HasSetting(plex)">bluethemeback</include>
 		<include condition="Skin.HasSetting(plex)">blackthemeback</include>-->
 	</include>
+	
+	
+	<!---NOTIFICATIONS------>
+	<!--notificationTop-->
+	<include name="toast_Top">
+		<posy>7</posy>
+		<width>340</width>
+		<align>right</align>
+		<height>40</height>
+		<font>notification</font>
+		<aligny>center</aligny>
+		<textcolor>Color1</textcolor>
+		<scrollout>false</scrollout>
+		<pauseatend>2000</pauseatend>
+		<include>transition_Toast</include>
+	</include>
+	<!--notificationBottom-->
+	<include name="toast_Bottom">
+		<posy>26</posy>
+		<width>340</width>
+		<align>right</align>
+		<font>notificationSmall</font>
+		<height>40</height>
+		<aligny>center</aligny>
+		<textcolor>Color2</textcolor>
+		<scroll>false</scroll>
+		<pauseatend>2000</pauseatend>
+		<include>transition_Toast</include>
+	</include>
+	<!--notificationSide-->
+	<include name="toast_Side">
+		<posy>22</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>progress</font>
+		<textcolor>Color1</textcolor>
+		<include>transition_Toast</include>
+		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
+			<effect type="slide" time="0" start="0" end="-60" />
+		</animation>
+		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(videoscan) | Window.IsActive(musicscan)]">
+			<effect type="slide" time="0" start="0" end="-60" />
+		</animation>
+	</include>
+	<!--notificationIcon-->
+	<include name="toast_Icon">
+		<posx>60r</posx>
+		<posy>16</posy>
+		<width>42</width>
+		<height>42</height>
+		<aspectratio>keep</aspectratio>
+		<include>transition_Toast</include>
+	</include>
+	
+	
 	<!-- PAGE ELEMENTS -->
 	<include name="startupBackground">
 		<aspectratio>scale</aspectratio>
@@ -315,6 +370,14 @@
 		<font>special5</font>
 		<textcolor>Color1</textcolor>
 		<include>transition1</include>
+	</include>
+	<include name="screen_Dimensions">
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	<include name="screen_Width">
+		<width>1280</width>
 	</include>
 	<include name="screentype">
 		<width>1280</width>
@@ -573,7 +636,7 @@
 	<include name="libClock">
 		<include>transition2</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(homeTime)</visible>
+			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113)</visible>
 			<control type="label" id="200">
 				<posx>25r</posx>
 				<label>[B]$INFO[System.Time][/B]</label>

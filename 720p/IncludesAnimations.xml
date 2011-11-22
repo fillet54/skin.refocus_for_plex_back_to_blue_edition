@@ -248,6 +248,33 @@
 			<effect type="fade" time="250" center="640,360" start="100" end="0"/>
 		</animation>
 	</include>
+	
+	<!---TRANSITIONS------>
+	<include name="transition_Toast">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) | Window.IsActive(614)]">
+			<effect type="slide" time="0" start="0" end="-60" />
+		</animation>
+		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(videoscan) | Window.IsActive(musicscan)]">
+			<effect type="slide" time="0" start="0" end="-60" />
+		</animation>
+		<animation type="Conditional" condition="Player.Muted">
+			<effect type="slide" time="0" start="0" end="-50" />
+		</animation>
+	</include>
+	
+	
 	<!-- TOGGLES / SELECTS -->
 	<include name="pagemenus">
 		<animation type="Visible">
@@ -260,34 +287,38 @@
 			<effect type="fade" time="250" center="640,360" start="100" end="0"/>
 		</animation>
 	</include>
+
+<!---DIALOGS------>
 	<include name="dialogOpen">
 		<animation type="WindowOpen">
-			<effect type="zoom" start="80" end="100" center="640,360" tween="back" time="350"/>
-			<effect type="fade" start="0" end="100" time="400"/>
+			<effect type="zoom" start="90" end="100" center="screen_Center" tween="Cubic" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
 		</animation>
 		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="640,360" time="150"/>
-			<effect type="fade" start="100" end="0" time="200"/>
+			<effect type="zoom" start="100" end="90" center="screen_Center" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
 		</animation>
-		<!--animation type="Visible">
-			<effect type="zoom" start="90" end="100" center="640,360" tween="back" time="250" />
-			<effect type="fade" start="0" end="100" time="400" />
+		<animation type="Visible">
+			<effect type="zoom" start="90" end="100" center="screen_Center" tween="Cubic" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
 		</animation>
 		<animation type="Hidden">
-			<effect type="zoom" start="100" end="90" center="640,360" time="150" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation-->
+			<effect type="zoom" start="100" end="90" center="screen_Center" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
+		</animation>
 	</include>
-	<include name="infoDialogHide">
+	<include name="infoDialogHide">		
 		<animation type="Conditional" condition="[Window.IsActive(2003) | Window.IsActive(2001)]">
-			<effect type="fade" start="100" end="0" time="250"/>
-			<effect type="zoom" start="100" end="80" tween="Cubic" easing="Out" center="640,360" time="250"/>
+			<effect type="fade" start="100" end="0" time="250" />
+			<effect type="zoom" start="100" end="85" tween="Cubic" easing="Out" center="screen_Center" time="250"/>
 		</animation>
 		<animation type="Conditional" condition="![Window.IsActive(2003) | Window.IsActive(2001)]">
-			<effect type="fade" start="0" end="100" time="150"/>
-			<effect type="zoom" start="40" end="100" tween="Quadratic" easing="Out" center="640,360" time="250"/>
+			<effect type="fade" start="0" end="100" time="250" />
+			<effect type="zoom" start="85" end="100" tween="Quadratic" easing="Out" center="screen_Center" time="250"/>
 		</animation>
 	</include>
+
+
 	<include name="contextMenuHide">
 		<animation type="Conditional" condition="[ControlGroup(300).HasFocus | Window.IsActive(111) | ControlGroup(200).HasFocus()]">
 			<effect type="zoom" time="250" center="640,360" start="100" end="55"/>

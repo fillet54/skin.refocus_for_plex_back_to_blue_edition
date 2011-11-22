@@ -1,183 +1,188 @@
-<?xml version="1.0"?>
-<window id="2901">
-	<defaultcontrol>706</defaultcontrol>
+<window type="dialog" id="2901">
+	<defaultcontrol always="true">702</defaultcontrol>
 	<controls>
 		<control type="group">
-			<posx>0</posx>
-			<posy>-100</posy>
-			<include>state_OSD</include>
-		<control type="group">
-			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
-			<control type="image" id="1">
-				<posx>325</posx>
-				<posy>630</posy>
-				<width>650</width>				
-				<height>100</height>
-				<texture border="35,0,35,0">osd/background.png</texture>
+			<control type="group">
+			<control type="group" id="600">
+				<posx>478</posx>
+				<posy>303</posy>
+				<visible allowhiddenfocus="true">ControlGroup(600).HasFocus</visible>
+				<include>toggle_PlayerMenu</include>
+				<control type="image">
+					<width>325</width>
+					<height>274</height>
+					<texture>new_osd/settingsMenu.png</texture>
+				</control>
+				<control type="grouplist" id="601">
+					<posx>13</posx>
+					<posy>8</posy>
+					<width>307</width>
+					<height>240</height>
+					<align>top</align>
+					<onleft>701</onleft>
+					<onright>701</onright>
+					<onup>599</onup>
+					<ondown>599</ondown>
+					<onback>SetFocus(599)</onback>
+					<itemgap>0</itemgap>
+					<!--video settings-->
+					<control type="button" id="603">
+						<width>299</width>
+						<label>$LOCALIZE[13395]</label>
+						<onback>SetFocus(599)</onback>
+						<include>dialog_Button-list</include>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>XBMC.ActivateWindow(123)</onclick>
+					</control>
+					<!--audio settings-->
+					<control type="button" id="604">
+						<width>299</width>
+						<label>$LOCALIZE[13396]</label>
+						<onback>SetFocus(599)</onback>
+						<include>dialog_Button-list</include>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>XBMC.ActivateWindow(124)</onclick>
+					</control>
+					<!--bookmarks-->
+					<control type="button" id="605">
+						<width>299</width>
+						<label>$LOCALIZE[298]</label>
+						<onback>SetFocus(599)</onback>
+						<include>dialog_Button-list</include>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>XBMC.ActivateWindow(125)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					<!--get subtitles
+					<control type="togglebutton" id="606">
+						<width>307</width>
+						<label>$LOCALIZE[31980]</label>
+						<onback>SetFocus(599)</onback>
+						<onclick>-</onclick>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(Subscript)])</onclick>
+						<include>dialog_Button-list</include>
+						<visible>Videoplayer.Content(movies) | Videoplayer.Content(episodes) | Videoplayer.Content(files)</visible>
+						<enable>Skin.HasSetting(addonSubtitles)</enable>
+					</control>-->
+					
+					
+					
+					<!--dvd menu-->
+					<control type="button" id="610">
+						<width>307</width>
+						<label>$LOCALIZE[33061]</label>
+						<onback>SetFocus(599)</onback>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<texturenofocus border="3">-</texturenofocus>
+						<include>dialog_Button-list</include>
+						<visible>VideoPlayer.HasMenu</visible>
+					</control>
+				</control>
 			</control>
-			<control type="label" id="1">
-				<posx>360</posx>
-				<posy>690</posy>
-				<width>200</width>
-				<align>left</align>
-				<font>small</font>
-				<label>$INFO[Player.Time]</label>
-				<textcolor>Color1</textcolor>
+			<control type="image">
+				<posx>618</posx>
+				<posy>540</posy>
+				<width>45</width>
+				<height>45</height>
+				<texture>new_osd/openSettings.png</texture>
+				<visible>!ControlGroup(600).HasFocus</visible>
+				<include>fadeinout</include>
 			</control>
-			<control type="progress" id="1">
-				<description>Progressbar</description>
-				<posx>440</posx>
-				<posy>701</posy>
-				<width>410</width>
-				<height>6</height>
-				<info>Player.Progress</info>
-			</control>
-			<control type="label" id="1">
-				<posx>940</posx>
-				<posy>690</posy>
-				<width>200</width>
-				<align>right</align>
-				<font>small</font>
-				<label>$INFO[Player.Duration]</label>
-				<textcolor>Color1</textcolor>
-			</control>
-		</control>
-		<control type="group" id="200">
-			<posx>341</posx>
-			<posy>646</posy>
-			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
-			<include>state_OSD</include>
-			<control type="button" id="701">
-				<posx>0</posx>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-bookmarks-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-bookmarks.png</texturenofocus>
-				<onleft>711</onleft>
-				<onright>702</onright>
-				<onclick>ActivateWindow(125)</onclick>
-			</control>
-			<control type="button" id="702">
-				<posx>55</posx>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-audiosettings-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-audiosettings.png</texturenofocus>
-				<onleft>701</onleft>
-				<onright>703</onright>
-				<onclick>ActivateWindow(124)</onclick>
-			</control>
-			<control type="button" id="703">
-				<posx>110</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-videosettings-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-videosettings.png</texturenofocus>
-				<onleft>702</onleft>
-				<onright>704</onright>
-				<onclick>ActivateWindow(123)</onclick>
-			</control>
-			<control type="button" id="704">
-				<posx>165</posx>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>osd/osd-button-prev-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-prev.png</texturenofocus>
-				<onleft>703</onleft>
-				<onright>705</onright>
-				<onclick>PlayerControl(Previous)</onclick>
-			</control>
-			<control type="button" id="705">
-				<posx>220</posx>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>osd/osd-button-rwd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-rwd.png</texturenofocus>
-				<onleft>704</onleft>
-				<onright>706</onright>
-				<onclick>PlayerControl(Rewind)</onclick>
-			</control>
-			<control type="togglebutton" id="706">
-				<posx>275</posx>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>osd/osd-button-pause-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-pause.png</texturenofocus>
-				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>osd/osd-button-play-focus.png</alttexturefocus>
-				<alttexturenofocus>osd/osd-button-play.png</alttexturenofocus>
-				<onleft>705</onleft>
-				<onright>707</onright>
-				<onclick>PlayerControl(Play)</onclick>
-			</control>
-			<control type="button" id="707">
-				<posx>330</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-fwd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-fwd.png</texturenofocus>
-				<onleft>706</onleft>
-				<onright>708</onright>
-				<onclick>PlayerControl(Forward)</onclick>
-			</control>
-			<control type="button" id="708">
-				<posx>385</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-next-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-next.png</texturenofocus>
-				<onleft>707</onleft>
-				<onright>709</onright>
-				<onclick>PlayerControl(Next)</onclick>
-			</control>
-			<control type="button" id="709">
-				<posx>440</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-stop.png</texturenofocus>
-				<onleft>708</onleft>
-				<onright>710</onright>
-				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-			<control type="button" id="710">
-				<posx>495</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-subs-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-subs.png</texturenofocus>
-				<onleft>709</onleft>
-				<onright>711</onright>
-				<enable>Skin.HasSetting(addonSubtitles)</enable>
-				<onclick>Close</onclick>
-				<onclick>XBMC.RunScript($INFO[Skin.String(Subscript)])</onclick>
-				<animation effect="fade" start="100" end="50" time="100" condition="!Skin.HasSetting(addonSubtitles)">Conditional</animation>
-			</control>
-			<control type="button" id="711">
-				<posx>550</posx>
-				<posy>0</posy>
-				<width>48</width>
-				<height>48</height>
-				<font>-</font>
-				<texturefocus>osd/osd-button-dvd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-dvd.png</texturenofocus>
-				<onleft>710</onleft>
-				<onright>701</onright>
-				<onclick>PlayerControl(ShowVideoMenu)</onclick>
-				<enable>VideoPlayer.HasMenu</enable>
-				<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
+			<control type="group" id="599">
+				<posx>465</posx>
+				<posy>575</posy>
+				<control type="image" id="1">
+					<width>350</width>
+					<height>72</height>
+					<texture border="48,33,48,33">new_osd/playerControlsPanel.png</texture>
+				</control>
+				<include>toggle_PlayerControls</include>
+				<control type="group">
+					<posy>13</posy>
+					<control type="button" id="700">
+						<posx>13</posx>
+						<width>48</width>
+						<height>48</height>
+						<texturefocus>new_osd/osd-button-prev-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-prev.png</texturenofocus>
+						<onup>600</onup>
+						<onleft>705</onleft>
+						<onright>701</onright>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="701">
+						<posx>68</posx>
+						<width>48</width>
+						<height>48</height>
+						<texturefocus>new_osd/osd-button-rwd-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-rwd.png</texturenofocus>
+						<onup>600</onup>
+						<onleft>700</onleft>
+						<onright>702</onright>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Rewind)</onclick>
+					</control>
+					<control type="togglebutton" id="702">
+						<posx>123</posx>
+						<width>48</width>
+						<height>48</height>
+						<texturefocus>new_osd/osd-button-pause-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-pause.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>new_osd/osd-button-play-focus.png</alttexturefocus>
+						<alttexturenofocus>new_osd/osd-button-play.png</alttexturenofocus>
+						<onup>600</onup>
+						<onleft>701</onleft>
+						<onright>703</onright>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Play)</onclick>
+					</control>
+					<control type="button" id="703">
+						<posx>178</posx>
+						<posy>0</posy>
+						<width>48</width>
+						<height>48</height>
+						<font>-</font>
+						<texturefocus>new_osd/osd-button-stop-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-stop.png</texturenofocus>
+						<onleft>702</onleft>
+						<onright>704</onright>
+						<onup>600</onup>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="704">
+						<posx>233</posx>
+						<posy>0</posy>
+						<width>48</width>
+						<height>48</height>
+						<font>-</font>
+						<texturefocus>new_osd/osd-button-fwd-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-fwd.png</texturenofocus>
+						<onleft>703</onleft>
+						<onright>705</onright>
+						<onup>600</onup>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Forward)</onclick>
+					</control>
+					<control type="button" id="705">
+						<posx>288</posx>
+						<posy>0</posy>
+						<width>48</width>
+						<height>48</height>
+						<font>-</font>
+						<texturefocus>new_osd/osd-button-next-focus.png</texturefocus>
+						<texturenofocus>new_osd/osd-button-next.png</texturenofocus>
+						<onleft>704</onleft>
+						<onright>700</onright>
+						<onup>600</onup>
+						<ondown>-</ondown>
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+				</control>
 			</control>
 		</control>
 		</control>
