@@ -11,7 +11,7 @@
 			<posy>20</posy>
 			<width>950</width>
 			<aligny>center</aligny>
-			<font>PageLabelGrainy</font>
+			<font>pagelabel</font>
 			<textcolor>Color1</textcolor>
 			<include>transition3</include>
 			<visible>!Window.IsActive(2001)</visible>

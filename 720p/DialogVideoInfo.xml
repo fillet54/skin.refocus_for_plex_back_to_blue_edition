@@ -91,7 +91,7 @@
 				<width>740</width>
 				<height>270</height>
 				<label>$INFO[ListItem.PlotOutline]</label>
-				<font>normal</font>
+				<font>descriptionSmall</font>
 			</control>
 		</control>
 		<!-- TVSHOWS -->
@@ -151,7 +151,7 @@
 				<width>740</width>
 				<height>270</height>
 				<label>$INFO[ListItem.Plot]</label>
-				<font>normal</font>
+				<font>descriptionSmall</font>
 			</control>
 		</control>
 		<!-- EPISODES -->
@@ -219,7 +219,7 @@
 					<width>690</width>
 					<height>300</height>
 					<label>$INFO[ListItem.Plot]</label>
-					<font>normal</font>
+					<font>descriptionSmall</font>
 				</control>
 				<!-- END MOD -->
 			</control>
@@ -303,7 +303,7 @@
 					<height>240</height>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<include>textBox</include>
-					<font>normal</font>
+					<font>descriptionSmall</font>
 					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<!-- END MOD -->

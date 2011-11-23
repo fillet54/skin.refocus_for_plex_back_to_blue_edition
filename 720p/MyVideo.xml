@@ -9,8 +9,7 @@
 		<include>AllViewCommonPageControls</include>
 		<include>videoFanartPageLabels</include>
 		<include>view_Banner</include>
-		<include condition="!Skin.HasSetting(dontusegrainynewbiglist)">view_BigList_GrainyEdition</include>
-		<include condition="Skin.HasSetting(dontusegrainynewbiglist)">view_BigList</include>
+		<include>view_BigList</include>
 		<include>view_GalleryFull</include>
 		<include>view_Poster</include>
 		<include>view_PosterInfo</include>
@@ -460,7 +459,7 @@
 		<include>view_Gallery</include>
 		<!-- fullscreen / expanded -->
 		<control type="image">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<aspectratio align="left">stretch</aspectratio>
 			<texture>home/menuBackground.png</texture>
 			<include>fadeinout</include>
@@ -512,7 +511,7 @@
 				<font>osd1</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
-				<include>screenwidth</include>
+				<include>screen_Width</include>
 				<include>Heading</include>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -522,7 +521,7 @@
 				<font>osd1</font>
 				<align>left</align>
 				<textcolor>Color6</textcolor>
-				<include>screenwidth</include>
+				<include>screen_Width</include>
 				<include>Heading</include>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
@@ -548,7 +547,7 @@
 				<height>120</height>
 				<align>left</align>
 				<label>$INFO[ListItem.Plot]</label>
-				<font>normalLow</font>
+				<font>list</font>
 				<textcolor>Color6</textcolor>
 				<visible>Skin.HasSetting(usesmallcase)</visible>
 			</control>

@@ -227,7 +227,7 @@
 						<height>35</height>
 						<width>720</width>
 						<label>$INFO[ListItem.Label]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color1</textcolor>
 					</control>
 					<control type="label">
@@ -236,7 +236,7 @@
 						<width>720</width>
 						<align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color1</textcolor>
 					</control>
 				</itemlayout>
@@ -251,7 +251,7 @@
 						<posx>20</posx>
 						<width>720</width>
 						<height>35</height>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Focused</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -261,7 +261,7 @@
 						<width>720</width>
 						<align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Focused</textcolor>
 					</control>
 				</focusedlayout>

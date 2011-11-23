@@ -168,7 +168,7 @@
 			</control>
 		</control>
 		<control type="image">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<aspectratio align="left">stretch</aspectratio>
 			<texture>home/menuBackground.png</texture>
 			<include>fadeinout</include>
@@ -177,7 +177,7 @@
 		<control type="image" id="1">
 			<posx>0</posx>
 			<posy>665</posy>
-			<include>screenwidth</include>
+			<include>screen_Width</include>
 			<height>55</height>
 			<texture flipy="false">OSD/fullscreenInfo.png</texture>
 			<include>videoFullScreenInfo</include>

@@ -91,7 +91,7 @@
                 <posx>40</posx>
 			<!--<height>45</height>-->
                 <height>40</height>
-			<!--<font>normalLow</font>-->
+			<!--<font>list</font>-->
                 <font>normal</font>
                 <label>-</label>
                 <textcolor>Color5</textcolor>
@@ -103,7 +103,7 @@
             <control type="sliderex" id="8">
                 <description>Default Slider</description>
                 <height>40</height>
-			<!--<font>normalLow</font>-->
+			<!--<font>list</font>-->
                 <font>normal</font>
                 <textcolor>Color4</textcolor>
                 <focusedcolor>Color1</focusedcolor>

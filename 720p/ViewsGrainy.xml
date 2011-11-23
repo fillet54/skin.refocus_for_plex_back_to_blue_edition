@@ -44,7 +44,7 @@
 					<width>740</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>special7</font>
+					<font>listBig</font>
 					<selectedcolor>Color5</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -58,7 +58,7 @@
 					<width>730</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>special8</font>
+					<font>listBig</font>
 					<textcolor>Color1</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>true</scroll>
@@ -83,7 +83,7 @@
 					<width>730</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>special8</font>
+					<font>listBig</font>
 					<textcolor>Color1</textcolor>
 					<selectedcolor>Color6</selectedcolor>
 					<label>$INFO[ListItem.Title]</label>
@@ -110,7 +110,7 @@
 					<width>740</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>special7</font>
+					<font>listBig</font>
 					<label>$INFO[ListItem.Label]</label>
 					<selectedcolor>Color5</selectedcolor>
 				</control>
@@ -123,7 +123,7 @@
 					<width>730</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>special8</font>
+					<font>listBig</font>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>Color1</textcolor>
 					<selectedcolor>Color5</selectedcolor>
@@ -349,266 +349,6 @@
 			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 		</control>
 	</include>
-	<!-- BIG LIST NEW [updated] -->
-	<include name="view_BigList_GrainyEdition">
-		<!-- fixed focused bg -->
-		<control type="group">
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="80" time="1000" delay="200"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="80" end="0" time="200"/>
-			</animation>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="80" time="1000"/>
-			</animation>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<include>grainypagefade</include>
-			<visible>[[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)] + Control.IsVisible(51) + !ControlGroup(300).HasFocus()</visible>
-			<control type="image">
-				<posx>29</posx>
-				<posy>237</posy>
-				<width>1205</width>
-				<height>146</height>
-				<texture border="10">views/list-focus-bigAlt.png</texture>
-				<visible>!ControlGroup(300).HasFocus()</visible>
-			</control>
-		</control>
-		<!-- list -->
-		<control type="fixedlist" id="51">
-			<viewtype label="537">biglist</viewtype>
-			<posx>30</posx>
-			<posy>88</posy>
-			<width>1400</width>
-			<height>598</height>
-			<onleft>300</onleft>
-			<onright>76</onright>
-			<onup>51</onup>
-			<ondown>51</ondown>
-			<scrolltime tween="Cubic" easing="Out">200</scrolltime>
-			<focusposition>1</focusposition>
-			<pagecontrol>76</pagecontrol>
-			<orientation>vertical</orientation>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<include>grainypagefade</include>
-			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)</visible>
-			<itemlayout width="625" height="150">
-				<control type="image">
-					<width>246</width>
-					<height>138</height>
-					<posy>3</posy>
-					<texture background="true">frames/new/frame_Square-small.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<width>247</width>
-					<height>144</height>
-					<texture fallback="backgrounds/library/TVShowsNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordersize>6</bordersize>
-					<aspectratio>scale</aspectratio>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<posx>209</posx>
-					<posy>106</posy>
-					<width>32</width>
-					<height>32</height>
-					<include>watchedOverlay</include>
-					<visible>Skin.HasSetting(overlayEpisodes)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Title]</label>
-					<include>list_Label</include>
-					<visible>IsEmpty(Container.Property(mixedParents))</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
-					<include>list_Label</include>
-					<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label]</label>
-					<include>list_Label</include>
-					<visible>IsEmpty(ListItem.Title)</visible>
-				</control>
-
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, • ]</label>
-					<include>list_Label-sub</include>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Year]</label>
-					<include>list_Label-sub</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<include>list_Label-sub</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
-				</control>
-				
-				
-				<control type="textbox" id="4">
-					<posx>260</posx>
-					<posy>65</posy>
-					<width>930</width>
-					<height>60</height>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>mediumNormal</font>
-				</control>
-				
-				<control type="image">
-					<posx>1060</posx>
-					<posy>35</posy>
-					<width>128</width>
-					<height>32</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!IsEmpty(ListItem.Title) + ![Skin.HasSetting(hideratings) | Skin.HasSetting(episodehiderating)]</visible>
-				</control>
-			</itemlayout>
-			<!-- FOCUSED BIG LIST ITEM [updated] -->
-			<focusedlayout width="625" height="150">
-				<control type="image">
-					<width>247</width>
-					<height>144</height>
-					<texture fallback="backgrounds/library/TVShowsNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordersize>6</bordersize>
-					<aspectratio>scale</aspectratio>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<posx>209</posx>
-					<posy>106</posy>
-					<width>32</width>
-					<height>32</height>
-					<include>watchedOverlay</include>
-					<visible>Skin.HasSetting(overlayEpisodes)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Title]</label>
-					<include>list_Label-focus</include>
-					<visible>IsEmpty(Container.Property(mixedParents))</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
-					<include>list_Label-focus</include>
-					<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>2</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label]</label>
-					<include>list_Label-focus</include>
-					<visible>IsEmpty(ListItem.Title)</visible>
-				</control>
-
-
-				<!-- MOD : end -->
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, • ] • $INFO[ListItem.Duration,, ]</label>
-					<include>list_Label-sub-focus</include>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Year]</label>
-					<include>list_Label-sub-focus</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<include>list_Label-sub-focus</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
-				</control>
-				
-				<control type="textbox" id="4">
-					<posx>260</posx>
-					<posy>65</posy>
-					<width>930</width>
-					<height>60</height>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
-					<font>mediumNormal</font>
-					<textcolor>Focused</textcolor>
-					<include>autoscroll-plot</include>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" delay="100" time="1200"/>
-					</animation>
-				</control>
-				
-				<control type="image">
-					<posx>1060</posx>
-					<posy>35</posy>
-					<width>128</width>
-					<height>32</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!IsEmpty(ListItem.Title) + ![Skin.HasSetting(hideratings) | Skin.HasSetting(episodehiderating)]</visible>
-				</control>
-			</focusedlayout>
-		</control>
-		<!-- plot textbox 
-		<control type="group" id="4000">
-			<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)]</visible>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<control type="textbox" id="4">
-				<posx>290</posx>
-				<posy>301</posy>
-				<width>930</width>
-				<height>60</height>
-				<label>$INFO[ListItem(0).Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
-				<font>mediumNormal</font>
-				<textcolor>Focused</textcolor>
-				<include>autoscroll-plot</include>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="100" delay="100" time="1200"/>
-				</animation>
-				<visible>Control.IsVisible(51)</visible>
-			</control>
-		</control>-->
-	</include>
 	<!-- MUSIC VIEWS -->
 	<!-- PLAYLIST NOW -->
 	<include name="view_PlayListMusic_GrainyEdition">
@@ -634,17 +374,6 @@
 			<include>contextMenuHide</include>
 			<visible>!Window.IsActive(progressdialog)</visible>
 			<itemlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
-				<!-- small case -->
-				<control type="label">
-					<posx>40</posx>
-					<width>500</width>
-					<label>$INFO[ListItem.Title,, ][COLOR=Color2]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
-					<include>grainywhitetext</include>
-					<font>smallsmallcase</font>
-					<selectedcolor>Color5</selectedcolor>
-					<visible>Skin.HasSetting(usesmallcase)</visible>
-				</control>
-				<!-- mixed case -->
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
@@ -684,15 +413,6 @@
 					</animation>
 					<visible>!ControlGroup(300).HasFocus</visible>
 				</control>
-				<!-- small case -->
-				<control type="label">
-					<posx>40</posx>
-					<width>500</width>
-					<label>[COLOR=Color5]$INFO[ListItem.Title,, ][/COLOR][COLOR=Color2]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
-					<font>smallsmallcase</font>
-					<visible>Skin.HasSetting(usesmallcase)</visible>
-				</control>
-				<!-- mixed case -->
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>

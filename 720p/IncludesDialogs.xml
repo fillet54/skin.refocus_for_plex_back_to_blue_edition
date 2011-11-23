@@ -117,7 +117,7 @@
 	
 	
 	<include name="contextMenuButton">
-		<font>normalLow</font>
+		<font>list</font>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color6</focusedcolor>
 		<texturenofocus border="1">dialogs/list-nofocus2.png</texturenofocus>
@@ -136,7 +136,7 @@
 		<height>40</height>
 		<align>left</align>
 		<aligny>-</aligny>
-		<font>mediumLow</font>
+		<font>small</font>
 		<textcolor>Color1</textcolor>
 	</include>
 	
@@ -163,7 +163,7 @@
 	<include name="dialogButton">	
 		<width>120</width>
 		<height>42</height>
-		<font>medium</font>
+		<font>small</font>
 		<align>center</align>
 		<aligny>-</aligny>
 		<textoffsety>6</textoffsety>
@@ -177,7 +177,7 @@
 	<include name="dialogConfirmButton">	
 		<width>120</width>
 		<height>42</height>
-		<font>medium</font>
+		<font>small</font>
 		<align>center</align>
 		<aligny>-</aligny>
 		<textoffsety>6</textoffsety>
@@ -192,7 +192,7 @@
 		<textcolor>Color1</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>Color6</focusedcolor>
-		<font>mediumLow</font>
+		<font>small</font>
 		<aligny>center</aligny>
 		<height>40</height>
 		<pulseonselect>false</pulseonselect>
@@ -202,7 +202,7 @@
 
 	<include name="dialogTextField">	
 		<height>40</height>
-		<font>medium</font>
+		<font>small</font>
 		<align>center</align>
 		<textoffsety>5</textoffsety>
 		<texturenofocus border="10,0,10,0">dialogs/textField.png</texturenofocus>
@@ -216,7 +216,7 @@
 	<include name="dialogRadio">
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color6</focusedcolor>
-		<font>mediumLow</font>
+		<font>small</font>
 		<texturefocus border="3">dialogs/list-focus2.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<textureradiofocus>dialogs/radioOn.png</textureradiofocus>
@@ -228,7 +228,7 @@
 		<textcolor>Color1</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>Color6</focusedcolor>
-		<font>mediumLow</font>
+		<font>small</font>
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>-3</textoffsety>
 		<aligny>center</aligny>
@@ -250,7 +250,7 @@
 		<texturesliderbar>dialogs/sliderBackground.png</texturesliderbar>
 		<textureslidernib border="2">dialogs/sliderNib.png</textureslidernib>
 		<textureslidernibfocus border="2">dialogs/sliderNib.png</textureslidernibfocus>
-		<font>mediumLow</font>
+		<font>small</font>
 		<height>40</height>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color6</focusedcolor>
@@ -275,7 +275,7 @@
 	</include>
 
 	<include name="keyboardButton">
-		<font>medium</font>
+		<font>small</font>
 		<texturenofocus border="8,3,8,3">dialogs/buttonKB.png</texturenofocus>
 		<texturefocus border="8,3,8,3">dialogs/buttonKB-focus.png</texturefocus>
 		<textcolor>Color4</textcolor>

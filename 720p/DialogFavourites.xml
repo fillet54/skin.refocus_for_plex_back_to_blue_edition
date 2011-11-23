@@ -53,7 +53,7 @@
 					<posx>15</posx>
 					<width>543</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>Color1</textcolor>
@@ -78,7 +78,7 @@
 					<posx>15</posx>
 					<width>543</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>Color6</textcolor>
@@ -95,7 +95,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>medium</font>
+			<font>small</font>
 			<label>$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
 			<visible>!Control.IsVisible(451)</visible>
 			<textcolor>Color1</textcolor>

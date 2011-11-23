@@ -28,7 +28,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
@@ -69,7 +69,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">
@@ -498,19 +498,19 @@
 			<include>infoDialogHide</include>
 			<itemlayout height="720" width="1280">
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.Thumb]</texture>
 					<visible>Window.IsActive(2)</visible>
@@ -518,19 +518,19 @@
 			</itemlayout>
 			<focusedlayout height="720" width="1280">
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio aligny="left">scale</aspectratio>
 					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
-					<include>screentype</include>
+					<include>screen_Dimensions</include>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.Thumb]</texture>
 					<visible>Window.IsActive(2)</visible>

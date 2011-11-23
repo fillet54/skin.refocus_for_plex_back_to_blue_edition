@@ -34,7 +34,7 @@
 			<width>410</width>
 			<align>left</align>
 			<label>12016</label>
-			<font>normalLow</font>
+			<font>list</font>
 		</control>
 		
 		<control type="spincontrol" id="60">

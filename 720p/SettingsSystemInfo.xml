@@ -81,7 +81,7 @@
 					<description>category label</description>
 					<width>1100</width>
 					<align>left</align>
-					<font>special2Low</font>
+					<font>titleSpecial</font>
 					<textcolor>Color1</textcolor>
 				</control>
 			
@@ -141,14 +141,14 @@
 						<posy>25</posy>
 						<width>800</width>
 						<label>[UPPERCASE]$LOCALIZE[144] $INFO[System.BuildVersion][/UPPERCASE]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color2</textcolor>
 					</control>
 					<control type="label" id="1">
 						<posy>50</posy>
 						<width>800</width>
 						<label>[UPPERCASE]$LOCALIZE[552]: $INFO[System.BuildDate][/UPPERCASE]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color2</textcolor>
 					</control>
 					<control type="label" id="1">
@@ -156,7 +156,7 @@
 						<width>800</width>
 						<label>[UPPERCASE]Mplayer $LOCALIZE[552]: $INFO[system.mplayerversion][/UPPERCASE]</label>
 						<visible>System.Platform.Xbox</visible>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color2</textcolor>
 					</control>
 				</control>

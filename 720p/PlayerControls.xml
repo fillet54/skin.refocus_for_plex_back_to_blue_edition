@@ -92,7 +92,8 @@
 					<focusedcolor>Color1</focusedcolor>
 					<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				</control>
-				<control type="group">
+			
+				<!--control type="group">
 					<posy>-18</posy>
 					<posx>490</posx>
 					<control type="label">
@@ -119,7 +120,7 @@
 						<textcolor>Color1</textcolor>
 						<visible>Playlist.IsRepeat</visible>
 					</control>
-				</control>
+				</control -->
 				<!-- shuffle -->
 				<control type="button" id="8">
 					<posy>-10</posy>
@@ -133,7 +134,7 @@
 					<focusedcolor>Color1</focusedcolor>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 				</control>
-				<control type="group">
+				<!-- control type="group">
 					<posy>-18</posy>
 					<posx>580</posx>
 					<control type="label">
@@ -152,7 +153,7 @@
 						<textcolor>Color1</textcolor>
 						<visible>Playlist.IsRandom</visible>
 					</control>
-				</control>
+				</control -->
 			</control>
 		</control>
 	</controls>

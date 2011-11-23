@@ -45,7 +45,7 @@
 				<label>$INFO[MusicPlayer.Album]</label>
 				<align>left</align>
 				<textcolor>Color4</textcolor>
-				<font>osd3</font>
+				<font>info</font>
 			</control>
 	
 			<control type="group">
@@ -92,28 +92,28 @@
 					<width>548</width>
 					<label>[B]$LOCALIZE[515][/B] $INFO[ListItem.Genre]</label>
 					<textcolor>Color4</textcolor>
-					<font>mediumCaps</font>
+					<font>smallCaps</font>
 					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="4">
 					<width>548</width>
 					<label>[B]$LOCALIZE[562][/B] $INFO[ListItem.Year]</label>
 					<textcolor>Color4</textcolor>
-					<font>mediumCaps</font>
+					<font>smallCaps</font>
 					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="5">
 					<width>548</width>
 					<label>[B]$LOCALIZE[554][/B] $INFO[ListItem.TrackNumber]</label>
 					<textcolor>Color4</textcolor>
-					<font>mediumCaps</font>
+					<font>smallCaps</font>
 					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="6">
 					<width>548</width>
 					<label>[B]$LOCALIZE[563][/B]</label>
 					<textcolor>Color4</textcolor>
-					<font>mediumCaps</font>
+					<font>smallCaps</font>
 					<include>infoDialogMeta</include>
 				</control>
 			</control>

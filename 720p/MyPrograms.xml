@@ -50,7 +50,7 @@
 				<aligny>top</aligny>
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>text</textcolor>
-				<font>normalLow</font>
+				<font>list</font>
 			</control>
 		</control>
 		<!-- infos for new list -->

@@ -4,15 +4,15 @@
 			<visible>![Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
 			<control type="label" id="401">
 				<posx>130r</posx>
-				<include>notificationTop</include>
+				<include>toast_Top</include>
 			</control>
 			<control type="label" id="402">
 				<posx>130r</posx>
-				<include>notificationBottom</include>
+				<include>toast_Bottom</include>
 			</control>
 			<control type="label" id="1">
 				<label>$INFO[Control.GetLabel(403),,%]</label>
-				<include>notificationSide</include>
+				<include>toast_Side</include>
 			</control>
 			<control type="progress" id="403">
 				<posx>15</posx>

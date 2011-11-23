@@ -5,7 +5,7 @@
 		<posy>20</posy>
 		<width>950</width>
 		<aligny>center</aligny>
-		<font>PageLabelGrainy</font>
+		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
 		<include>transition3</include>
 	</include>
@@ -16,7 +16,7 @@
 		<posy>25</posy>
 		<width>1000</width>
 		<aligny>center</aligny>
-		<font>PageLabelGrainy</font>
+		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
 		<include>transition3</include>		
 	</include>
@@ -26,7 +26,7 @@
 		<posy>25</posy>
 		<width>1000</width>
 		<aligny>center</aligny>
-		<font>PageLabelGrainy</font>
+		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
 		<include>transition3</include>
 	</include>
@@ -36,7 +36,7 @@
 		<posy>25</posy>
 		<width>950</width>
 		<aligny>center</aligny>
-		<font>PageLabelGrainy</font>
+		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
 		<include>transition3</include>
 		<visible>!Container.Scrolling</visible>

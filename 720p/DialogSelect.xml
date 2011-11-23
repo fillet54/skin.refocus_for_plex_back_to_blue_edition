@@ -54,7 +54,7 @@
 						<width>573</width>
 						<height>35</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>normalLow</font>
+						<font>list</font>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
 					</control>
@@ -69,7 +69,7 @@
 						<posx>20</posx>
 						<width>573</width>
 						<height>35</height>
-						<font>normalLow</font>
+						<font>list</font>
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -119,7 +119,7 @@
 						<width>473</width>
 						<height>32</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<font>bigLow</font>
+						<font>listBig</font>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
 					</control>
@@ -131,7 +131,7 @@
 						<height>100</height>
 						<label>$INFO[ListItem.Label2]</label>
 						<aligny>top</aligny>
-						<font>mediumLow</font>
+						<font>small</font>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
 					</control>
@@ -143,7 +143,7 @@
 						<height>100</height>
 						<label>$LOCALIZE[24051] $INFO[ListItem.Property(Addon.Version)]</label>
 						<aligny>top</aligny>
-						<font>mediumLow</font>
+						<font>small</font>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
 					</control>
@@ -175,7 +175,7 @@
 						<width>473</width>
 						<height>32</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<font>bigLow</font>
+						<font>listBig</font>
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
 					</control>
@@ -187,7 +187,7 @@
 						<height>100</height>
 						<label>$INFO[ListItem.Label2]</label>
 						<aligny>top</aligny>
-						<font>mediumLow</font>
+						<font>small</font>
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
 					</control>
@@ -199,7 +199,7 @@
 						<height>100</height>
 						<label>$LOCALIZE[24051] $INFO[ListItem.Property(Addon.Version)]</label>
 						<aligny>top</aligny>
-						<font>mediumLow</font>
+						<font>small</font>
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
 					</control>

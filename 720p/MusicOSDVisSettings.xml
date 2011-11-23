@@ -33,7 +33,7 @@
 				<align>center</align>
 				<label>13390</label>
 				<textcolor>Color4</textcolor>
-				<font>normalLow</font>
+				<font>list</font>
 			</control>
 			
 			<control type="image">

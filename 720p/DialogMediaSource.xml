@@ -84,7 +84,7 @@
 					<posx>15</posx>
 					<width>530</width>
 					<height>35</height>
-					<font>normalLow</font>
+					<font>list</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -104,7 +104,7 @@
 					<posx>15</posx>
 					<width>530</width>
 					<height>35</height>
-					<font>normalLow</font>
+					<font>list</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -134,7 +134,7 @@
 			<height>28</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>normalLow</font>
+			<font>list</font>
 			<label>1022</label>
 			<textcolor>Color5</textcolor>
 		</control>

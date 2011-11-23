@@ -17,7 +17,7 @@
 	</default>
 
 	<default type="label">
-		<font>normalLow</font>
+		<font>list</font>
 		<height>22</height>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
@@ -176,7 +176,7 @@
 	</default>
 	
 	<default type="fadelabel">
-		<font>normalLow</font>
+		<font>list</font>
 		<height>22</height>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
@@ -196,7 +196,7 @@
 		<texturedown>-</texturedown>
 		<textureupfocus>-</textureupfocus>
 		<texturedownfocus>-</texturedownfocus>
-		<font>normalLow</font>
+		<font>list</font>
 		<textcolor>Color1</textcolor>
 		<include>autoscroll</include>
 		<aligny>top</aligny>

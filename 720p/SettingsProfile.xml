@@ -72,7 +72,7 @@
 						<width>850</width>
 						<height>35</height>
 						<info>ListItem.Label</info>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color1</textcolor>
 					</control>
 					<control type="label">
@@ -82,7 +82,7 @@
 						<height>45</height>
 						<textcolor>Color2</textcolor>
 						<info>ListItem.Label2</info>
-						<font>normalLow</font>
+						<font>list</font>
 						<align>right</align>
 						<textcolor>Color1</textcolor>
 					</control>
@@ -99,7 +99,7 @@
 						<width>850</width>
 						<height>35</height>
 						<info>ListItem.Label</info>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color5</textcolor>
 					</control>
 					<control type="label">
@@ -109,7 +109,7 @@
 						<height>35</height>
 						<align>right</align>
 						<info>ListItem.Label2</info>
-						<font>normalLow</font>
+						<font>list</font>
 						<textcolor>Color5</textcolor>
 					</control>
 				</focusedlayout>

@@ -148,7 +148,7 @@
 				<align>left</align>
 				<label>$INFO[VideoPlayer.Album,, ] ($INFO[VideoPlayer.Year])</label>
 				<textcolor>Color4</textcolor>
-				<font>osd3</font>
+				<font>info</font>
 				<visible>VideoPlayer.Content(musicvideos)</visible>
 			</control>
 			<!-- plot separator 
@@ -169,7 +169,6 @@
 				<texture>views/separatorFaded.png</texture>
 				<colordiffuse>Color4</colordiffuse>
 			</control>-->
-			<!-- original small case -->
 			<control type="textbox" id="8">
 				<posy>65</posy>
 				<posx>150</posx>
@@ -180,8 +179,7 @@
 				<label>$INFO[VideoPlayer.PlotOutline]</label>
 				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>Color1</textcolor>
-				<font>normalLow</font>
-				<visible>Skin.HasSetting(usesmallcase)</visible>
+				<font>description</font>
 			</control>
 			<control type="textbox" id="8">
 				<posy>65</posy>
@@ -193,35 +191,7 @@
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>Color1</textcolor>
-				<font>normalLow</font>
-				<visible>Skin.HasSetting(usesmallcase)</visible>
-			</control>
-			<!-- use mixed case -->
-			<control type="textbox" id="8">
-				<posy>65</posy>
-				<posx>150</posx>
-				<width>1070</width>
-				<height>95</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[VideoPlayer.PlotOutline]</label>
-				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<textcolor>Color1</textcolor>
-				<font>normal</font>
-				<visible>!Skin.HasSetting(usesmallcase)</visible>
-			</control>
-			<control type="textbox" id="8">
-				<posy>65</posy>
-				<posx>150</posx>
-				<width>1070</width>
-				<height>95</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[VideoPlayer.Plot]</label>
-				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<textcolor>Color1</textcolor>
-				<font>normal</font>
-				<visible>!Skin.HasSetting(usesmallcase)</visible>
+				<font>description</font>
 			</control>
 			<!-- <control type="progress" id="1">
 				<description>Progressbar</description>
@@ -264,7 +234,7 @@
 				<align>right</align>
 				<label>$INFO[Player.Duration] / $INFO[Player.TimeRemaining]</label>
 				<textcolor>Color4</textcolor>
-				<font>osd3</font>
+				<font>info</font>
 			</control>
 			<control type="label" id="1">
 				<posy>54</posy>
@@ -272,7 +242,7 @@
 				<align>left</align>
 				<label>$INFO[VideoPlayer.Album,, ] ($INFO[VideoPlayer.Year])</label>
 				<textcolor>Color4</textcolor>
-				<font>osd3</font>
+				<font>info</font>
 			</control>
 			<control type="progress" id="1">
 				<description>Progressbar</description>

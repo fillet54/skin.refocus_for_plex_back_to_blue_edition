@@ -75,7 +75,7 @@
 				<textoffsetx>200</textoffsetx>
 				<aligny>bottom</aligny>
 				<height>38</height>
-				<font>medium</font>
+				<font>small</font>
 				<textcolor>Color4</textcolor>
 				<focusedcolor>Color4</focusedcolor>
 			</control>
@@ -139,7 +139,7 @@
 						<posx>10</posx>
 						<width>512</width>
 						<height>35</height>
-						<font>normalLow</font>
+						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -158,7 +158,7 @@
 						<posx>15</posx>
 						<width>512</width>
 						<height>35</height>
-						<font>normalLow</font>
+						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -169,7 +169,7 @@
 						<posx>15</posx>
 						<width>512</width>
 						<height>35</height>
-						<font>normalLow</font>
+						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>

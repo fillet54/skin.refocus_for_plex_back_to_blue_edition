@@ -81,36 +81,6 @@
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
 			</focusedlayout>
-			<!--<itemlayout condition="IsEmpty(Container.FolderPath) | Container.Content(artists)" width="625" height="40">
-				<control type="image">
-					<posy>-28</posy>
-					<width>635</width>
-					<height>100</height>
-					<texture border="0,30,0,30">1black.png</texture>
-				</control>
-				<control type="label">
-					<posx>40</posx>
-					<width>570</width>
-					<label>$INFO[ListItem.Label]</label>
-                    <font>bigLow</font>
-					<include>listMenu</include>
-				</control>
-			</itemlayout>
-			<focusedlayout condition="IsEmpty(Container.FolderPath) | Container.Content(artists)" width="625" height="40">
-				<control type="image">
-					<posy>-28</posy>
-					<width>570</width>
-					<height>100</height>
-					<texture border="0,30,0,30">views/list-focus.png</texture>
-				</control>
-				<control type="label">
-					<posx>40</posx>
-					<width>570</width>
-					<label>$INFO[ListItem.Label]</label>
-                    <font>bigLow</font>
-					<include>listMenuFocus</include>
-				</control>
-			</focusedlayout>-->
 			<itemlayout condition="Container.Content(albums) | Container.Content(songs)" width="770" height="69">
 				<control type="image">
 					<posy>-28</posy>
@@ -122,7 +92,7 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Album]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
@@ -130,7 +100,7 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 					<visible>Container.Content(songs)</visible>
 				</control>
@@ -138,7 +108,7 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 					<visible>IsEmpty(ListItem.Album) + IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -175,7 +145,7 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Album]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
@@ -183,7 +153,7 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 					<visible>IsEmpty(ListItem.Album) + IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -191,7 +161,7 @@
 					<posx>40</posx>
 					<width>560</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 					<visible>Container.Content(songs)</visible>
 				</control>

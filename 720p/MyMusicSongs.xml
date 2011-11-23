@@ -114,7 +114,7 @@
 				<aligny>top</aligny>
 				<label fallback="416">$INFO[ListItem.Property(Artist_Description)]</label>
 				<textcolor>Color7</textcolor>
-				<font>normalLow</font>
+				<font>list</font>
 				<include>textBox</include>
 				<visible>Container.Content(artists)</visible>
 			</control>
@@ -126,7 +126,7 @@
 				<aligny>top</aligny>
 				<label fallback="416">$INFO[ListItem.Property(Album_Description)]</label>
 				<textcolor>Color7</textcolor>
-				<font>normalLow</font>
+				<font>list</font>
 				<include>textBox</include>
 				<visible>Container.Content(albums)</visible>
 			</control>
@@ -151,14 +151,14 @@
 			<control type="label">
 				<align>left</align>
 				<label>$INFO[ListItem.Title]</label>
-				<include>screenwidth</include>
+				<include>screen_Width</include>
 				<include>Heading</include>
 				<visible>!Container.Content(albums)</visible>
 			</control>
 			<control type="label">
 				<align>left</align>
 				<label>$INFO[ListItem.Album]</label>
-				<include>screenwidth</include>
+				<include>screen_Width</include>
 				<include>Heading</include>
 				<visible>Container.Content(albums)</visible>
 			</control>
@@ -166,7 +166,7 @@
 				<posy>30</posy>
 				<align>left</align>
 				<label>$INFO[ListItem.Artist] &#xEF; $INFO[ListItem.Year]</label>
-				<include>screenwidth</include>
+				<include>screen_Width</include>
 				<include>Heading3</include>
 				<visible>Container.Content(albums)</visible>
 			</control>

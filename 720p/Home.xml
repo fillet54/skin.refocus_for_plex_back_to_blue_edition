@@ -9,7 +9,7 @@
 		
 		<!-- fanart slides and other overlays -->
 		<control type="multiimage" id="1">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
 			<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
 			<timeperimage>7000</timeperimage>
@@ -20,7 +20,7 @@
 			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
 		</control>
 		<control type="largeimage">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 			<fadetime>850</fadetime>
@@ -28,7 +28,7 @@
 			<include>fadeinout</include>
 		</control>
 		<control type="largeimage">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<fadetime>1400</fadetime>
@@ -48,13 +48,13 @@
 		</control>
 		
 		<control type="image" id="1">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<texture>home/homeOverlay.png</texture>
 			<include>fadeinout</include>
 			<visible>Window.IsActive(133) | Window.IsActive(112)</visible>
 		</control>
 		<control type="image" id="1">
-			<include>screentype</include>
+			<include>screen_Dimensions</include>
 			<texture>home/homeOverlay.png</texture>
 			<include>fadeinout</include>
 			<visible>Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107)</visible>
@@ -68,6 +68,7 @@
 		</control>
 		<!-- time and date -->
 		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		
 		<!-- left screen edge shadow -->
 			<control type="image">
 				<posx>0</posx>

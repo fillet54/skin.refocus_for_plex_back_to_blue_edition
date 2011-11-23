@@ -178,7 +178,7 @@
 				<include>fadeinout</include>
 				<posy>680</posy>
 				<control type="label">
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<label>[UPPERCASE]$INFO[System.Freespace(C)] - $INFO[System.Freespace(E)] - $INFO[System.Freespace(F)] - $INFO[System.Freespace(G)][/UPPERCASE]</label>
 					<textcolor>Color2</textcolor>
 					<align>center</align>

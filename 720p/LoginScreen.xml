@@ -88,7 +88,7 @@
 					<control type="label">
 						<posx>216</posx>
 						<width>432</width>
-						<font>bigLow</font>
+						<font>titleAlt</font>
 						<textcolor>Color4</textcolor>
 						<align>center</align>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -97,7 +97,7 @@
 						<posx>216</posx>
 						<posy>28</posy>
 						<width>432</width>
-						<font>mediumLow</font>
+						<font>small</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
@@ -132,7 +132,7 @@
 			<width>445</width>
 			<height>36</height>
 			<textcolor>Color1</textcolor>
-			<font>mediumCaps</font>
+			<font>smallCaps</font>
 			<include>fadeinout</include>
 		</control>-->
 		

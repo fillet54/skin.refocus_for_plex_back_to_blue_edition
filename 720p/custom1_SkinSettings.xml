@@ -318,7 +318,7 @@
 						<height>100</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
-						<font>extrasmall</font>
+						<font>smallAlt</font>
 						<include>textBox</include>
 					</control>
 				</control>
@@ -332,7 +332,7 @@
 						<height>170</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
-						<font>extrasmall</font>
+						<font>smallAlt</font>
 						<include>textBox</include>
 					</control>
 					<control type="textbox">
@@ -342,7 +342,7 @@
 						<height>150</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
-						<font>extrasmall</font>
+						<font>smallAlt</font>
 						<include>textBox</include>
 					</control>
 				</control>

@@ -63,7 +63,7 @@
 			<control type="label">
 				<posx>500</posx>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<textcolor>Color0</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>right</align>
@@ -72,7 +72,7 @@
 				<posx>500</posx>
 				<posy>35</posy>
 				<width>500</width>
-				<font>medium</font>
+				<font>small</font>
 				<textcolor>Color3</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
 				<align>right</align>
@@ -81,7 +81,7 @@
 				<posx>500</posx>
 				<posy>108</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<include>grainybeigetext</include>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>right</align>
@@ -95,7 +95,7 @@
 				<posx>500</posx>
 				<posy>76</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<textcolor>Color0</textcolor>
 				<label>Next Track</label>
 				<align>right</align>
@@ -104,7 +104,7 @@
 				<posx>500</posx>
 				<posy>30</posy>
 				<width>500</width>
-				<font>medium</font>
+				<font>small</font>
 				<textcolor>Color3</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 				<align>right</align>
@@ -113,7 +113,7 @@
 				<posx>500</posx>
 				<posy>53</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<include>grainybeigetext</include>
 				<label>$INFO[MusicPlayer.Offset(1).Title]</label>
 				<align>right</align>
@@ -126,7 +126,7 @@
 			<control type="label">
 				<posx>0</posx>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<textcolor>Color0</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>left</align>
@@ -135,7 +135,7 @@
 				<posx>0</posx>
 				<posy>35</posy>
 				<width>500</width>
-				<font>medium</font>
+				<font>small</font>
 				<textcolor>Color3</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
 				<align>left</align>
@@ -144,7 +144,7 @@
 				<posx>0</posx>
 				<posy>108</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<include>grainybeigetext</include>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>left</align>
@@ -158,7 +158,7 @@
 				<posx>0</posx>
 				<posy>76</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<textcolor>Color0</textcolor>
 				<label>Next Track</label>
 				<align>left</align>
@@ -167,7 +167,7 @@
 				<posx>0</posx>
 				<posy>30</posy>
 				<width>500</width>
-				<font>medium</font>
+				<font>small</font>
 				<textcolor>Color3</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 				<align>left</align>
@@ -176,7 +176,7 @@
 				<posx>0</posx>
 				<posy>53</posy>
 				<width>500</width>
-				<font>mediumBold</font>
+				<font>smallBold</font>
 				<include>grainybeigetext</include>
 				<label>$INFO[MusicPlayer.Offset(1).Title]</label>
 				<align>left</align>

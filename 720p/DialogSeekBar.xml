@@ -55,7 +55,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[773] $INFO[Player.SeekOffset]</label>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 					<visible>Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]</visible>
 				</control>
@@ -63,7 +63,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[15107]</label>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 					<visible>Player.Caching</visible>
 				</control>
@@ -73,15 +73,15 @@
 					<label>$LOCALIZE[31040]</label>
 					<visible>Player.Paused + !Control.IsVisible(24)</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
-					<include>Heading4</include>
+					<include>screen_Width</include>
+					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
 					<align>left</align>
 					<label>$LOCALIZE[31041]</label>
 					<visible>Player.Forwarding2x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -89,7 +89,7 @@
 					<label>$LOCALIZE[31042]</label>
 					<visible>Player.Forwarding4x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -97,7 +97,7 @@
 					<label>$LOCALIZE[31043]</label>
 					<visible>Player.Forwarding8x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -105,7 +105,7 @@
 					<label>$LOCALIZE[31044]</label>
 					<visible>Player.Forwarding16x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -113,7 +113,7 @@
 					<label>$LOCALIZE[31045]</label>
 					<visible>Player.Forwarding32x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -121,7 +121,7 @@
 					<label>$LOCALIZE[31046]</label>
 					<visible>Player.Rewinding2x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -129,7 +129,7 @@
 					<label>$LOCALIZE[31047]</label>
 					<visible>Player.Rewinding4x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -137,7 +137,7 @@
 					<label>$LOCALIZE[31048]</label>
 					<visible>Player.Rewinding8x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -145,7 +145,7 @@
 					<label>$LOCALIZE[31049]</label>
 					<visible>Player.Rewinding16x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 				<control type="label" id="0">
@@ -153,7 +153,7 @@
 					<label>$LOCALIZE[31050]</label>
 					<visible>Player.Rewinding32x</visible>
 					<textcolor>Color1</textcolor>
-					<include>screenwidth</include>
+					<include>screen_Width</include>
 					<include>Heading3</include>
 				</control>
 			</control>

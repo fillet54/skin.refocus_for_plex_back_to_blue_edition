@@ -54,7 +54,7 @@
 					<posy>82</posy>
 					<width>556</width>
 					<align>left</align>
-					<font>normalLow</font>
+					<font>list</font>
 					<haspath>true</haspath>
 					<textcolor>Color4</textcolor>
 				</control>
@@ -86,7 +86,7 @@
 							<posx>60</posx>
 							<width>525</width>
 							<height>35</height>
-							<font>normalLow</font>
+							<font>list</font>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 							<textcolor>Color1</textcolor>
@@ -109,7 +109,7 @@
 							<posx>60</posx>
 							<width>525</width>
 							<height>35</height>
-							<font>normalLow</font>
+							<font>list</font>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 							<textcolor>Color5</textcolor>

@@ -38,7 +38,7 @@
 			<align>center</align>
 			<label>13389</label>
 			<textcolor>Color4</textcolor>
-			<font>normalLow</font>
+			<font>list</font>
 		</control>
 		
 		<control type="list" id="2">
@@ -62,7 +62,7 @@
 					<posx>15</posx>
 					<width>563</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -80,7 +80,7 @@
 					<posx>15</posx>
 					<width>563</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -97,7 +97,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>medium</font>
+			<font>small</font>
 			<label>$INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages]</label>
 			<visible>!Control.IsVisible(451) + !Control.IsVisible(4)</visible>
 			<textcolor>Color4</textcolor>

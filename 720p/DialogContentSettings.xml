@@ -92,7 +92,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="3">dialogs/list-focus.png</texturefocus>
 			<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
-			<font>mediumLow</font>
+			<font>small</font>
 			<label>20344</label>
 			<reverse>yes</reverse>
 			<textoffsetx>15</textoffsetx>
@@ -112,7 +112,7 @@
 			<height>40</height>
 			<align>left</align>
 			<textcolor>Color4</textcolor>
-			<font>normalLow</font>
+			<font>list</font>
 			<label>[B]$LOCALIZE[31060][/B]</label>
 		</control>
 		<control type="label">
@@ -122,7 +122,7 @@
 			<height>40</height>
 			<align>left</align>
 			<textcolor>Color4</textcolor>
-			<font>normalLow</font>
+			<font>list</font>
 			<label>[B]$LOCALIZE[33063][/B]</label>
 		</control>
 		
@@ -143,7 +143,7 @@
 					<posx>15</posx>
 					<width>556</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<info>ListItem.Label</info>
@@ -161,7 +161,7 @@
 					<posx>15</posx>
 					<width>556</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<info>ListItem.Label</info>
@@ -172,7 +172,7 @@
 					<posx>15</posx>
 					<width>556</width>
 					<height>35</height>
-					<font>mediumLow</font>
+					<font>small</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<info>ListItem.Label</info>
