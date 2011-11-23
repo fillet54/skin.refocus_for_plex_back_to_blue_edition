@@ -7,7 +7,7 @@
 		<include>allscreens</include>
 		<!-- reFocus logo -->
 		<control type="group">
-			<posx>90</posx>
+			<posx>10</posx>
 			<posy>555</posy>
 			<include>newtypelogo</include>
 		</control>
