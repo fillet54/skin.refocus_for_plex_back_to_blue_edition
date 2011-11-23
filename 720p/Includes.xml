@@ -636,7 +636,7 @@
 	<include name="libClock">
 		<include>transition2</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113)</visible>
+			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113) + !Window.IsActive(107)</visible>
 			<control type="label" id="200">
 				<posx>25r</posx>
 				<label>[B]$INFO[System.Time][/B]</label>
