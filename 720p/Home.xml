@@ -35,9 +35,8 @@
 			<include>fadeinout</include>
 		</control>
 		<control type="image">
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio align="left">stretch</aspectratio>
+			<include>screen_Dimensions</include>
+			<include>transition_Toast</include>
 			<texture>home/menuBackground.png</texture>
 		</control>
 		<control type="image" id="1">
