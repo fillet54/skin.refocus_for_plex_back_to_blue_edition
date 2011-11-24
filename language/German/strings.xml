@@ -15,6 +15,17 @@ Ein besonderer Dank geht an Christopher Meredith für die Nutzung seiner Photogr
 [B][COLOR=Color2]ABSCHLIESSEND[/COLOR][/B]
 Unterstützt das XBMC Team im dem ihr etwas Geld spendet.
 [B]xbmc.org/contribute/donate[/B]
+
+[COLOR=Color2][B][UPPERCASE]reFocus für Plex[/UPPERCASE][/B][/COLOR]
+ist eine reFocus Portierung von [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], einm XBMC Skin, angepasst [B]Plex[/B] von [B]El Massman[/B].
+
+[B][COLOR=Color2]Danke[/COLOR][/B]
+an das gesamte Plex Team und jedem im Plex Forum, vor allem dem Plex/Nine alpha Team für ihr gründliches Testen und ihre hilfreichen Vorschläge. Besucht uns doch unter forums.plexapp.com
+
+[B][COLOR=Color2]PLEX ÜBERSETZUNG[/COLOR][/B]
+[B]Nerpissad[/B] (spanisch)
+[B]BushD[/B] (deutsch)
+[B]dawiinci[/B] (deutsch)
 </string>
 
 <string id="31001">Poster</string>
@@ -224,16 +235,6 @@ Unterstützt das XBMC Team im dem ihr etwas Geld spendet.
 <!--plex-->
 <string id="31976">Plex Online</string>
 <string id="31977">Deaktiviere RSS-Feed</string>
-<string id="31978">[COLOR=Color2][B][UPPERCASE]reFocus für Plex[/UPPERCASE][/B][/COLOR]
-ist eine reFocus Portierung von [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], einm XBMC Skin, angepasst [B]Plex[/B] von [B]El Massman[/B].
-
-[B][COLOR=Color2]Danke[/COLOR][/B]
-an das gesamte Plex Team und jedem im Plex Forum, vor allem dem Plex/Nine alpha Team für ihr gründliches Testen und ihre hilfreichen Vorschläge. Besucht uns doch unter forums.plexapp.com
-
-[B][COLOR=Color2]PLEX ÜBERSETZUNG[/COLOR][/B]
-[B]Nerpissad[/B] (spanisch)
-[B]BushD[/B] (deutsch)
-[B]dawiinci[/B] (deutsch)</string>
 
 <string id="31979">Beenden</string>
 <string id="31980">Aktualisiere Plex</string>

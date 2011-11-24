@@ -15,6 +15,15 @@ Un remerciement spécial à Christopher Meredith pour l'utilisation de ses photo
 [B][COLOR=Color2]NOTE FINALE[/COLOR][/B]
 Si vous voulez supporter le développement de PLEX en faisant une donation.
 [B]plexapp.com/[/B]
+
+[COLOR=Color2][B][UPPERCASE]reFocus pour Plex[/UPPERCASE][/B][/COLOR]
+transposition de reFocus par [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], un skin XBMC adapté pour l'utilisation avec [B]Plex[/B] par [B]El Massman[/B].
+
+[B][COLOR=Color2]MERCI[/COLOR][/B]
+à l'équipe Plex et les persones du forum, et spécifiquement les testeurs de Plex 9 pour leurs tests rigoureux et leurs suggestions. 
+
+[B][COLOR=Color2]PLEX TRANSLATION[/COLOR][/B]
+[B]crislaet[/B] (french)
 </string>
 
 <string id="31001">Posters</string>
@@ -224,15 +233,6 @@ Si vous voulez supporter le développement de PLEX en faisant une donation.
 <!--plex-->
 <string id="31976">Plex Online</string>
 <string id="31977">Désactiver flux RSS</string>
-<string id="31978">[COLOR=Color2][B][UPPERCASE]reFocus pour Plex[/UPPERCASE][/B][/COLOR]
-transposition de reFocus par [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], un skin XBMC adapté pour l'utilisation avec [B]Plex[/B] par [B]El Massman[/B].
-
-[B][COLOR=Color2]MERCI[/COLOR][/B]
-à l'équipe Plex et les persones du forum, et spécifiquement les testeurs de Plex 9 pour leurs tests rigoureux et leurs suggestions. 
-
-[B][COLOR=Color2]PLEX TRANSLATION[/COLOR][/B]
-[B]crislaet[/B] (french)</string>
-
 <string id="31979">exif</string>
 <string id="31980">MAJ Plex</string>
 <string id="31981">Plex MAJ automatique</string>

@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-<string id="31000">
-[COLOR=Color2][B][UPPERCASE]Skin Designer and Developer[/UPPERCASE][/B][/COLOR]
-Jeroen
 
-[B][COLOR=Color2]THANKS[/COLOR][/B]
-Team-XBMC for creating the most advanced and versatile mediacenter available. Thanks to the wonderful XBMC community for their help, skins, plugins, scripts and applications that make the xbmc experience even better. And thank YOU for using reFocus! 
-
-Special thanks to Christopher Meredith for the use of his photographs [B]monopedilos.com/photoblog[/B]
-
-[B][COLOR=Color2]TRANSLATION[/COLOR][/B]
-[B]MaDDoGo[/B] (spanish)
-
-[B][COLOR=Color2]FINAL NOTE[/COLOR][/B]
-Please consider supporting the development of XBMC by making a donation.
-[B]xbmc.org/contribute/donate[/B]
-</string>
 
 <string id="31001">Posters</string>
 <string id="31002">Gallery</string>
@@ -224,14 +209,6 @@ Please consider supporting the development of XBMC by making a donation.
 <!--plex-->
 <string id="31976">Plex Online</string>
 <string id="31977">Disable RSS Feed</string>
-<string id="31978">[COLOR=Color2][B][UPPERCASE]reFocus for Plex[/UPPERCASE][/B][/COLOR]
-is a port of reFocus by [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], a skin for XBMC adapted for use with [B]Plex[/B] by [B]El Massman[/B].
-
-[B][COLOR=Color2]THANKS[/COLOR][/B]
-to the entire Plex team and everyone over at the Plex Forums, specifically the Plex/Nine alpha team for their rigorous testing and helpful suggestions. Please consider paying us a visit over at forums.plexapp.com
-
-[B][COLOR=Color2]PLEX TRANSLATION[/COLOR][/B]
-[B]Nerpissad[/B] (spanish)</string>
 
 <string id="31979">exif</string>
 <string id="31980">Update Plex</string>

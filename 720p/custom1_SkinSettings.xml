@@ -284,20 +284,7 @@
 				<!-- separator between credits -->
 				<control type="image">
 					<posx>256</posx>
-					<posy>105</posy>
-					<height>10</height>
-					<width>370</width>
-					<texture>dialogs/sliderBackground_.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-					<include>transition2</include>
-					<animation type="Conditional" condition="true">
-						<effect type="fade" start="0" end="80"/>
-					</animation>
-					<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>
-				</control>
-				<control type="image">
-					<posx>256</posx>
-					<posy>295</posy>
+					<posy>100</posy>
 					<height>10</height>
 					<width>370</width>
 					<texture>dialogs/sliderBackground_.png</texture>
@@ -311,38 +298,28 @@
 				<!-- back to blue edition credits -->
 				<control type="group">
 					<posx>30</posx>
-					<posy>10</posy>
+					<posy>5</posy>
 					<control type="textbox">
 						<label>[B]reFocus for Plex [COLOR=Color2]"Black to Blue"[/COLOR] Edition[/B] port by [B]sandman4sure[/B][CR]Based on the excellent [B]reFocus for Plex - Grainy Edition[/B] by [B]Sebastian (se.bastian)[/B].[CR][CR]For more information and updates:[CR]http://forums.plexapp.com/index.php/topic/30646-refocus-for-plex-back-to-blue-edition/[CR]</label>
 						<width>840</width>
 						<height>100</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
-						<font>smallAlt</font>
+						<font>font101</font>
 						<include>textBox</include>
 					</control>
 				</control>
 				<!-- original credits -->
 				<control type="group">
 					<posx>30</posx>
-					<posy>115</posy>
+					<posy>120</posy>
 					<control type="textbox">
 						<label>31000</label>
 						<width>840</width>
-						<height>170</height>
+						<height>325</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
-						<font>smallAlt</font>
-						<include>textBox</include>
-					</control>
-					<control type="textbox">
-						<label>31978</label>
-						<posy>190</posy>
-						<width>840</width>
-						<height>150</height>
-						<align>left</align>
-						<textcolor>Color1</textcolor>
-						<font>smallAlt</font>
+						<font>font101</font>
 						<include>textBox</include>
 					</control>
 				</control>
