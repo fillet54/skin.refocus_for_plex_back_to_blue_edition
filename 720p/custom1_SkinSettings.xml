@@ -413,7 +413,7 @@
 					<selected>Skin.HasSetting(iTunesHome)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				
+				-->
 				<!-- programs -->
 				<control type="radiobutton" id="293">
 					<label>31956</label>
