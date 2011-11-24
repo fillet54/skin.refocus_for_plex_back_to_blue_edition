@@ -8,49 +8,37 @@
 		<origin x="455" y="100" />
 	</coordinates>
 	<controls>
-		
 		<control type="image" id="997">
 			<description>background top image</description>
-			<posx>1</posx>
 			<posy>-30</posy>
-			<width>347</width>
+			<width>370</width>
 			<height>30</height>
-			<texture border="10">dialogs/dialogtop.png</texture>
-			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
+			<texture border="29,29,29,0">new_dialogs/contextmenu-top.png</texture>
 		</control>
-
 		<control type="image" id="999">
 			<description>background image</description>
-			<posx>1</posx>
-			<posy>0</posy>
-			<width>347</width>
-			<texture border="10">dialogs/dialogmiddle.png</texture>
-			<animation effect="fade" start="0" end="95" time="250">WindowOpen</animation>
+			<posx>-1</posx>
+			<width>371</width>
+			<texture border="29">new_dialogs/contextmenu-center.png</texture>
 		</control>
 		<control type="image" id="998">
 			<description>background bottom image</description>
-			<posx>1</posx>
-			<posy>145</posy>
-			<width>347</width>
-			<height>35</height>
-			<texture border="10">dialogs/dialogbottom.png</texture>
-			<animation effect="fade" start="0" end="95" time="250">WindowOpen</animation>
+			<posx>-1</posx>
+			<posy>45</posy>
+			<width>371</width>
+			<height>30</height>
+			<texture border="45,0,45,0">new_dialogs/contextmenu-bottom.png</texture>
 		</control>
-		
-		<control type="image" id="1">
+		<control type="image">
 			<posx>18</posx>
-			<posy>0</posy>
 			<width>335</width>
-			<height>1</height>
-			<texture>dialogs/separator.png</texture>
+			<include>dialog_Separator</include>
 		</control>
-		
 		<control type="button" id="1000">
 			<description>button template</description>
-			<posx>7</posx>
-			<posy>0</posy>
+			<posx>18</posx>
 			<width>335</width>
-			<include>contextMenuButton</include>
+			<include>dialog_Button-list</include>
 		</control>
 	</controls>
 </window>

@@ -503,7 +503,7 @@
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>grainypagefade</include>
-				<texture>dialogs/dialogWindow1.png</texture>
+				<texture>new_dialogs/dialogWindow.png</texture>
 				<visible>Window.IsActive(musicplaylist)</visible>
 			</control>
 			<!-- item image -->
