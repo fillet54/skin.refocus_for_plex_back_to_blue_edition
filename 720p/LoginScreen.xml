@@ -105,36 +105,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-		
-			
-		
-			
 		</control>
-		
-		
-		
-		<!--<control type="image">
-			<posx>415</posx>
-			<posy>650</posy>
-			<width>445</width>
-			<height>36</height>
-			<aspectratio>stretch</aspectratio>
-			<texture border="14">home/rssBackground.png</texture>
-			<include>fadeinout</include>
-		</control>
-		
-		<control type="label">
-			<description>time label</description>
-			<posx>415</posx>
-			<posy>648</posy>
-			<label>[UPPERCASE]$INFO[System.Time,,   ]$INFO[System.Date][/UPPERCASE]</label>
-			<align>center</align>
-			<width>445</width>
-			<height>36</height>
-			<textcolor>Color1</textcolor>
-			<font>smallCaps</font>
-			<include>fadeinout</include>
-		</control>-->
-		
 	</controls>
 </window>

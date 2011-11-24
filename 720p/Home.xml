@@ -39,31 +39,20 @@
 			<include>transition_Toast</include>
 			<texture>home/menuBackground.png</texture>
 		</control>
-		<control type="image" id="1">
-			<include>screen_Dimensions</include>
-			<texture border="16">overlays/vignette.png</texture>
-			<include>transition_Toast</include>
-			<visible>Window.IsActive(infodialog)</visible>
-		</control>
 		
 		<!-- reFocus logo positioned underneath the home overlay for a little softness -->
 		<control type="group">
 			<include>newtypelogo</include>
 			<visible>!Skin.HasSetting(hideplexhomelogo)</visible>
 		</control>
+
+		<control type="image" id="1">
+			<include>screen_Dimensions</include>
+			<texture border="16">overlays/vignette.png</texture>
+			<include>transition_Toast</include>
+			<visible>Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)</visible>
+		</control>
 		
-		<control type="image" id="1">
-			<include>screen_Dimensions</include>
-			<texture>home/homeOverlay.png</texture>
-			<include>fadeinout</include>
-			<visible>Window.IsActive(133) | Window.IsActive(112)</visible>
-		</control>
-		<control type="image" id="1">
-			<include>screen_Dimensions</include>
-			<texture>home/homeOverlay.png</texture>
-			<include>fadeinout</include>
-			<visible>Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107)</visible>
-		</control>
 		<!-- now playing for legcy home screen -->
 		<control type="group">
 			<visible>Player.HasAudio</visible>

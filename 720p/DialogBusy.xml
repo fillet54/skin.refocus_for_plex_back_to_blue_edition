@@ -2,8 +2,8 @@
 	<defaultcontrol always="true">99</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>30</posx>
-		<posy>8</posy>
+		<posx>1210</posx>
+		<posy>15</posy>
 	</coordinates>
 	<controls>
 		<control type="group">

@@ -45,7 +45,6 @@
 		</control>
 	</include>
 
-	<!-- old type logo -->
 	<include name="newtypelogo">
 		<control type="group">
 			<control type="image">
@@ -100,18 +99,6 @@
 			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out"/>
 			<effect type="fade" time="400" center="640,360" start="0" end="100"/>
 		</animation>
-	</include>
-	<!-- custom grainy edition logo addition for theme settings -->
-	<include name="grainyeditionlogo">
-		<control type="image">
-			<posx>48</posx>
-			<posy>558</posy>
-			<width>200</width>
-			<height>47</height>
-			<texture>logos/grainyeditionlogo.png</texture>
-			<aspectratio align="right">keep</aspectratio>
-			<include>transition2</include>
-		</control>
 	</include>
 	<!-- ALL SCREEN INCLUDES -->
 	<include name="allscreens">
@@ -544,7 +531,7 @@
 	<include name="libClock">
 		<include>transition2</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113) + !Window.IsActive(107)</visible>
+			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113) + !Window.IsActive(107) + !Window.isActive(busydialog)</visible>
 			<control type="label" id="200">
 				<posx>25r</posx>
 				<label>[B]$INFO[System.Time][/B]</label>

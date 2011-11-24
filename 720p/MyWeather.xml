@@ -26,25 +26,6 @@
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		<!-- weather fanart -->
-		<!-- <control type="group">
-			<visible>Skin.HasSetting(weatherFanart)</visible>
-			<control type="multiimage" id="1">
-				<include>screen_Dimensions</include>
-				<aspectratio>scale</aspectratio>
-				<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
-				<timeperimage>7000</timeperimage>
-				<fadetime>850</fadetime>
-				<randomize>true</randomize>
-				<loop>yes</loop>
-				<include>transition2</include>
-			</control>
-			<control type="image" id="1">
-				<include>screen_Dimensions</include>
-				<texture flipy="false">overlays/weatherOverlay.png</texture>
-				<include>transition2</include>
-			</control>
-		</control> -->
 		<!-- location -->
 		<control type="label">
 			<posx>34</posx>
