@@ -104,6 +104,7 @@
 	<include name="allscreens">
 		<include>libClock</include>
 		<include>scrollOffset</include>
+		<include>global_Itemcount</include>
 		<include>debugInfos</include>
 	</include>
 	
@@ -298,12 +299,24 @@
 			<visible>Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
 			<control type="label">
 				<posx>34</posx>
-				<posy>24</posy>
+				<posy>20</posy>
 				<width>40</width>
 				<aligny>center</aligny>
 				<font>pagelabel</font>
 				<label>$INFO[ListItem.SortLetter]</label>
 			</control>
+		</control>
+	</include>
+	<include name="global_Itemcount">
+		<control type="label">
+			<posx>38</posx>
+			<posy>58</posy>
+			<width>500</width>
+			<label>[UPPERCASE][B]$INFO[Container.NumItems][/B] Items[/UPPERCASE]</label>
+			<font>smallerCaps</font>
+			<textcolor>Color3</textcolor>
+			<include>transition_PageLabel</include>
+			<visible>[Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videofiles) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
 		</control>
 	</include>
 	<!-- TYPE INCLUDES -->

@@ -13,7 +13,7 @@
 	<include name="videoPageLabel">
 		<!-- scrolloffset visible -->
 		<posx>84</posx>
-		<posy>25</posy>
+		<posy>20</posy>
 		<width>1000</width>
 		<aligny>center</aligny>
 		<font>pagelabel</font>
@@ -23,7 +23,7 @@
 	<include name="videoPageLabel2">
 		<!-- scrolloffset hidden -->
 		<posx>34</posx>
-		<posy>25</posy>
+		<posy>20</posy>
 		<width>1000</width>
 		<aligny>center</aligny>
 		<font>pagelabel</font>
@@ -33,7 +33,7 @@
 	<!-- Copied From "videoPageLabel" -->
 	<include name="videoFanartPageLabels">
 		<posx>34</posx>
-		<posy>25</posy>
+		<posy>20</posy>
 		<width>950</width>
 		<aligny>center</aligny>
 		<font>pagelabel</font>
@@ -44,13 +44,13 @@
 	<include name="videoLibPageLabels">
 		<!-- page titles with or without scrolloffset visible -->
 		<control type="label">
-			<label>[COLOR=Color2]$INFO[Container.FirstTitle][/COLOR] $INFO[Container.SecondTitle]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
 			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
 		</control>
 		<control type="label">
-			<label>[COLOR=Color2]$INFO[Container.FirstTitle][/COLOR] $INFO[Container.SecondTitle]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel2</include>
 			<include>infoDialogHide</include>
 			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(hidescrolloffset)]]</visible>
