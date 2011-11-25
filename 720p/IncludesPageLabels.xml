@@ -7,72 +7,38 @@
 		<aligny>center</aligny>
 		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
-		<include>transition3</include>
+		<include>transition_PageLabel</include>
+		<animation effect="slide" end="0,-3" condition="true">Conditional</animation> <!-- Skin.HasSetting(numitems.enable) aanzetten als je numitems aan en uit kan zetten -->
+		<animation effect="slide" end="45" condition="Container.Scrolling + Skin.HasSetting(hidescrolloffset)">Conditional</animation> <!-- als indicator aanwezig, scroll over indicator zetten -->
+		<visible>!Control.IsVisible(9900) + !Control.IsVisible(531)</visible>
 	</include>
-	<!-- VIDEO PAGELABELS -->
-	<include name="videoPageLabel">
-		<!-- scrolloffset visible -->
-		<posx>84</posx>
-		<posy>20</posy>
-		<width>1000</width>
-		<aligny>center</aligny>
-		<font>pagelabel</font>
-		<textcolor>Color1</textcolor>
-		<include>transition3</include>		
-	</include>
-	<include name="videoPageLabel2">
-		<!-- scrolloffset hidden -->
-		<posx>34</posx>
-		<posy>20</posy>
-		<width>1000</width>
-		<aligny>center</aligny>
-		<font>pagelabel</font>
-		<textcolor>Color1</textcolor>
-		<include>transition3</include>
-	</include>
-	<!-- Copied From "videoPageLabel" -->
-	<include name="videoFanartPageLabels">
-		<posx>34</posx>
-		<posy>20</posy>
-		<width>950</width>
-		<aligny>center</aligny>
-		<font>pagelabel</font>
-		<textcolor>Color1</textcolor>
-		<include>transition3</include>
-		<visible>!Container.Scrolling</visible>
-	</include>
+	
 	<include name="videoLibPageLabels">
 		<!-- page titles with or without scrolloffset visible -->
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
+			<include>PageLabel</include>
+			<visible>!Window.IsActive(502) + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
 		</control>
-		<control type="label">
-			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
-			<include>videoPageLabel2</include>
-			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(hidescrolloffset)]]</visible>
-		</control>
+
 		<!-- full info screen movies -->
 		<control type="label">
 			<label>$INFO[ListItem.Title]</label>
-			<include>videoPageLabel2</include>
+			<include>PageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(movies)</visible>
 		</control>
 		<!-- full info screen tv shows -->
 		<control type="label">
 			<description>tv shows</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
-			<include>videoPageLabel2</include>
+			<include>PageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(tvshows)</visible>
 		</control>
 		<!-- full info screen episodes -->
 		<control type="label">
 			<description>episodes</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
-			<include>videoPageLabel2</include>
+			<include>PageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(episodes)</visible>
 		</control>
 		<!-- music -->
@@ -85,7 +51,7 @@
 		<control type="label">
 			<description>programs</description>
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
-			<include>videoFanartPageLabels</include>
+			<include>PageLabel</include>
 			<visible>Control.IsVisible(50) + Window.IsActive(10002)</visible>
 		</control>
 	</include>
@@ -93,14 +59,14 @@
 		<!-- video -->
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
-			<include>videoPageLabel</include>
+			<include>PageLabel</include>
 			<visible>!Window.IsActive(2003)</visible>
 		</control>
 		<!-- pictures -->
 		<control type="label">
 			<description>programs</description>
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
-			<include>videoFanartPageLabels</include>
+			<include>PageLabel</include>
 			<visible>Control.IsVisible(50) + Window.IsActive(10002)</visible>
 		</control>
 	</include>

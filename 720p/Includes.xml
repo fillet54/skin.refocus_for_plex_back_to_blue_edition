@@ -297,13 +297,15 @@
 	<include name="scrollOffset">
 		<control type="group">
 			<visible>Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
+			<animation effect="slide" end="0,-3" condition="true">Conditional</animation> <!-- Skin.HasSetting(numitems.enable) aanzetten als je numitems aan en uit kan zetten -->
 			<control type="label">
 				<posx>34</posx>
 				<posy>20</posy>
-				<width>40</width>
+				<width>950</width>
 				<aligny>center</aligny>
 				<font>pagelabel</font>
-				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>Color1</textcolor>
+				<label>[B]$INFO[ListItem.SortLetter][/B]</label>
 			</control>
 		</control>
 	</include>
