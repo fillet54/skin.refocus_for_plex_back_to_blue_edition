@@ -8,7 +8,6 @@
 		<font>pagelabel</font>
 		<textcolor>Color1</textcolor>
 		<include>transition_PageLabel</include>
-		<animation effect="slide" end="0,-3" condition="true">Conditional</animation> <!-- Skin.HasSetting(numitems.enable) aanzetten als je numitems aan en uit kan zetten -->
 		<animation effect="slide" end="45" condition="Container.Scrolling + Skin.HasSetting(hidescrolloffset)">Conditional</animation> <!-- als indicator aanwezig, scroll over indicator zetten -->
 		<visible>!Control.IsVisible(9900) + !Control.IsVisible(531)</visible>
 	</include>
