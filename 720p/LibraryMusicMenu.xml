@@ -217,7 +217,7 @@
 					</control>
 					<!-- slide (episodes) -->
 					<control type="image">
-						<texture border="10" diffuse="frames/episodeframemask.png">views/slideepisodes.jpg</texture>
+						<texture border="10" diffuse="frames/episodeframemask.png">views/slide.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9006)</visible>
