@@ -42,6 +42,8 @@
 		
 		<!-- reFocus logo positioned underneath the home overlay for a little softness -->
 		<control type="group">
+			<posx>5</posx>
+			<posy>555</posy>
 			<include>newtypelogo</include>
 			<visible>!Skin.HasSetting(hideplexhomelogo)</visible>
 		</control>
@@ -75,6 +77,27 @@
 				<include>infoDialogHide</include>
 				<include>grainypagefade</include>
 			</control>
+			
+		<control type="group" id="6100">
+			<posx>20</posx>
+			<posy>20</posy>
+			<include>transition_Indicator</include>
+			<control type="image">
+				<width>48</width>
+				<height>48</height>
+				<texture>navigation/left.png</texture>
+				<colordiffuse>Color1</colordiffuse>
+				<animation type="Visible">
+					<effect type="fade" tween="Quadratic" easing="Out" start="0" end="100" time="250" />
+					<effect type="slide" tween="Quadratic" easing="Out" start="25" end="0" time="250" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" tween="Quadratic" easing="Out" start="100" end="0" time="250" />
+					<effect type="slide" tween="Quadratic" easing="Out" start="0" end="-25" time="250" />
+				</animation>
+				<animation effect="rotate" center="auto" start="0" end="-180" time="250" tween="Quadratic" condition="Control.HasFocus(301)">Conditional</animation>
+			</control>
+		</control>	
 		<!-- MOD CALL MENU GRAINY EDITION -->
 		<include>HomeMenu_Original</include>		
 	</controls>

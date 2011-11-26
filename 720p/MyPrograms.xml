@@ -11,6 +11,7 @@
 		<include>transition2</include>
 		<include>contextMenuHide</include>
 		<include>view_Addons</include>
+		<include>nav_Indicator</include>
 		<!--include>view_EmuInfo</include-->
 		<include>allscreens</include>
 		<control type="label">

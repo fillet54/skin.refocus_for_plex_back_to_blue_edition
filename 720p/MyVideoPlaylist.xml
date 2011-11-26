@@ -5,6 +5,7 @@
 	<controls>
 		<include>themeBackground2</include>
 		<include>allscreens</include>
+		<include>nav_Indicator</include>
 		
 		<control type="label">
 			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[559][/COLOR]</label>

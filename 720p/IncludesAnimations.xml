@@ -265,6 +265,18 @@
 		</animation>
 	</include>
 	
+	<include name="transition_Indicator">
+		<animation type="WindowOpen">
+			<effect type="slide" time="400" center="auto" start="-64" end="0" easing="Out" tween="Quadratic"/>
+			<effect type="fade" time="400" start="0" end="95" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" time="250" center="auto" start="0" end="-64" easing="In" tween="Quadratic"/>
+			<effect type="fade" time="250" start="95" end="0" />
+		</animation>
+		<animation effect="fade" start="0" end="90" time="250">Visible</animation>
+		<animation effect="fade" start="90" end="0" time="250">Hidden</animation>
+	</include>
 	
 	<include name="transition_Toast">
 		<animation type="WindowOpen">

@@ -103,7 +103,7 @@
 	<!-- ALL SCREEN INCLUDES -->
 	<include name="allscreens">
 		<include>libClock</include>
-		<include>scrollOffset</include>
+		<include>global_Sortletter</include>
 		<include>global_Itemcount</include>
 		<include>global_Devmode</include>
 	</include>
@@ -294,18 +294,16 @@
 		<align>left</align>
 		<font>list</font>
 	</include>
-	<include name="scrollOffset">
-		<control type="group">
-			<visible>Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
-			<control type="label">
-				<posx>34</posx>
-				<posy>20</posy>
-				<width>950</width>
-				<aligny>center</aligny>
-				<font>pagelabel</font>
-				<textcolor>Color1</textcolor>
-				<label>[B]$INFO[ListItem.SortLetter][/B]</label>
-			</control>
+	<include name="global_Sortletter">
+		<control type="label" id="9900">
+			<posx>34</posx>
+			<posy>20</posy>
+			<width>950</width>
+			<aligny>center</aligny>
+			<font>pagelabel</font>
+			<textcolor>Color1</textcolor>
+			<label>[B]$INFO[ListItem.SortLetter][/B]</label>
+			<visible>Skin.HasSetting(hidescrolloffset) + Container.Scrolling</visible>
 		</control>
 	</include>
 	<include name="global_Itemcount">
@@ -455,11 +453,11 @@
 	
 	<!-- HOMESCREEN INCLUDES -->
 	<include name="homeMenusLayout">
-		<posy>220</posy>
-		<itemlayout width="375" height="50">
+		<itemlayout width="640" height="52">
 			<control type="label">
 				<posx>20</posx>
-				<width>375</width>
+				<posy>70</posy>
+				<width>640</width>
 				<height>50</height>
 				<font>homeMenu</font>
 				<align>left</align>
@@ -467,62 +465,47 @@
 				<textcolor>Color0</textcolor>
 			</control>
 		</itemlayout>
-		<focusedlayout width="375" height="50">
+		<focusedlayout width="640" height="52">
 			<!-- normal focus background -->
 			<control type="image">
-				<posx>-150</posx>
-				<posy>-52</posy>
-				<width>600</width>
-				<height>163</height>
+				<posy>0</posy>
+				<width>375</width>
+				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelect.png</texture>
-				<include>homeListScroll</include>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="70"/>
-				</animation>
-				<visible allowhiddenfocus="true">![Container(300).HasFocus(7) | Container(300).HasFocus(12) | Container(300).HasFocus(13)]</visible>
+				<include>home_ListScroll</include>
+				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5)">Conditional</animation>
 			</control>
-			<!-- weather stretched focus background -->
 			<control type="image">
-				<posx>-150</posx>
-				<posy>-52</posy>
-				<width>1100</width>
-				<height>163</height>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture border="80,0,0,0">home/menuSelect.png</texture>
-				<include>homeListScroll</include>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="70"/>
-				</animation>
-				<visible allowhiddenfocus="true">[Container(300).HasFocus(7) | Container(300).HasFocus(12)  | Container(300).HasFocus(13)]</visible>
-			</control>
-			<!--<control type="image">
 				<posy>0</posy>
-				<width>1200</width>
-				<height>195</height>
+				<width>950</width>
+				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="80,0,0,0">home/menuSelect.png</texture>
-				<include>homeListScroll</include>
-				<visible allowhiddenfocus="true">[Container(2110).HasFocus(0)]</visible>
-			</control>-->
+				<include>home_ListScroll</include>
+				<visible allowhiddenfocus="true">[Container(300).HasFocus(7) | Container(300).HasFocus(12)  | Container(300).HasFocus(13)]</visible>	
+			</control>
+
 			<control type="label">
+				<posy>70</posy>
 				<posx>20</posx>
-				<width>375</width>
+				<width>640</width>
 				<height>50</height>
 				<font>homeMenu</font>
 				<align>left</align>
-				<textcolor>ff000000</textcolor>
+				<textcolor>Color5</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13)]</visible>
 				<visible>IsEmpty(Listitem.Label2)</visible>
 			</control>
 			<control type="label">
+				<posy>72</posy>
 				<posx>20</posx>
-				<width>1200</width>
+				<width>640</width>
 				<height>50</height>
 				<font>homeMenuInfo</font>
 				<align>left</align>
-				<textcolor>ff000000</textcolor>
+				<textcolor>Color5</textcolor>
 				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13)]</visible>
 				<visible>!IsEmpty(Listitem.Label2)</visible>
@@ -563,6 +546,49 @@
 			</control>
 		</control>
 	</include>
+	
+	<!--- NAVIGATION ------>
+	<include name="nav_Indicator">
+		<control type="group" id="6100">
+			<posx>20</posx>
+			<posy>24</posy>
+			<visible>!Window.IsActive(busydialog) + [Window.IsActive(programs) | Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(videofiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(pictures) | Window.IsActive(600)] + !Control.IsVisible(9900)</visible>
+			<animation effect="slide" end="0,-3" condition="true">Conditional</animation>
+			<include>transition_Indicator</include>
+			<control type="image">
+				<width>32</width>
+				<height>32</height>
+				<texture>navigation/indicator_Left.png</texture>
+				<visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(541) | Control.IsVisible(57) | Control.IsVisible(571) | Control.IsVisible(573) | Control.IsVisible(574) | Control.IsVisible(572) | Control.IsVisible(575) | Window.IsActive(600) | Control.IsVisible(555)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+				<visible>!Control.IsVisible(52) + !Control.IsVisible(53)</visible>
+				<animation effect="rotate" center="auto" start="0" end="-180" time="250" tween="Quadratic" condition="ControlGroup(6000).HasFocus">Conditional</animation>
+			</control>
+			<control type="image">
+				<width>32</width>
+				<height>32</height>
+				<texture>navigation/indicator_Up.png</texture>
+				<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(53)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+				<animation effect="rotate" center="auto" start="0" end="90" time="250" tween="Quadratic" condition="Control.IsVisible(300)">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="nav_Indicator-info">
+		<control type="group" id="6100">
+			<posx>20</posx>
+			<posy>24</posy>
+			<visible>!Window.IsActive(busydialog) + [Window.IsActive(movieinformation) | Window.IsActive(musicinformation)] + !Control.IsVisible(9900)</visible>
+			<animation effect="slide" end="0,-3" condition="true">Conditional</animation>
+			<include>transition_Indicator</include>
+			<control type="image">
+				<width>32</width>
+				<height>32</height>
+				<texture>navigation/indicator_Left.png</texture>
+				<animation effect="rotate" center="auto" start="0" end="-180" time="250" tween="Quadratic" condition="Control.IsVisible(300)">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	
+	
 	<!-- SLIDESHOWS -->
 	<include name="slideshows">
 		<control type="multiimage" id="1">

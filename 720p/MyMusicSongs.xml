@@ -8,20 +8,10 @@
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>view_List_GrainyEdition</include>
-		<include>view_SlideMusic</include>
-		<include>view_Thumbs</include>
-		<include>view_SlideWideMusic</include>
+		<include>nav_Indicator</include>
 		<!--<include>ListViewCommon</include>-->
 		<!-- FAKE INFO BUTTON -->
-		<control type="button" id="8000">
-			<label>SHOULD NOT SEE ME</label>
-			<onup>54</onup>
-			<ondown>54</ondown>
-			<onleft>54</onleft>
-			<onright>54</onright>
-			<width>200</width>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
+		
 		<!-- LIST VIEW (ALBUMS & SONGS) -->
 		<!--<include>view_ListMusic</include>-->
 		<!--<include>info_MusicList</include>-->

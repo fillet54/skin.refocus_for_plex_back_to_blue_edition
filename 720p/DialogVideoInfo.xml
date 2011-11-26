@@ -31,6 +31,36 @@
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
+
+		<control type="label">
+			<label>[COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Title]</label>
+			<font>pagelabelAlt</font>
+			<include>PageLabelInfo</include>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="label">
+			<description>tv shows</description>
+			<label>[COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.TVShowTitle]</label>
+			<font>pagelabelAlt</font>
+			<include>PageLabelInfo</include>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+		<control type="label">
+			<description>episodes</description>
+			<label>$INFO[ListItem.TVShowTitle]</label>
+			<font>pagelabelAlt</font>
+			<include>PageLabelInfo</include>
+			<visible>Container.Content(episodes)</visible>
+		</control>
+		<control type="label">
+			<description>episodes</description>
+			<label>$INFO[ListItem.Label]</label>
+			<font>pagelabelAlt</font>
+			<include>PageLabelInfo</include>
+			<visible>Container.Content(musicvideos)</visible>
+		</control>
+
+
 		<!-- MOVIES -->
 		<control type="grouplist" id="1000">
 			<visible>Container.Content(movies) + !Window.IsActive(101)</visible>
@@ -396,11 +426,11 @@
 
 			<control type="image">
 				<description>Actor image</description>
-				<posx>33</posx>
-				<posy>32</posy>
-				<width>395</width>
-				<height>569</height>
-				<texture diffuse="frames/posterFrameMask.png" fallback="thumbs/actor.png" scalediffuse="false">$INFO[Container(50).Listitem.Icon]</texture>
+				<posx>23</posx>
+				<posy>23</posy>
+				<width>406</width>
+				<height>600</height>
+				<texture fallback="thumbs/actor.png" background="true">$INFO[Container(50).Listitem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
@@ -432,5 +462,6 @@
 			<include>transition1</include>
 			<include>InfoDialogMenu</include>
 		</control>
+		<include>nav_Indicator-info</include>
 	</controls>
 </window>

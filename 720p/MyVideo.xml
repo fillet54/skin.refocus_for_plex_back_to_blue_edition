@@ -14,6 +14,7 @@
 		<include>view_Poster</include>
 		<include>view_PosterInfo</include>
 		<include>view_ThumbWide</include>
+		<include>nav_Indicator</include>
 		<!-- FAKE INFO TRIGGER BUTTON -->
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
