@@ -19,15 +19,15 @@
 				<visible allowhiddenfocus="true">Container(300).HasFocus(10) | Container(301).HasFocus(10)</visible>
 				<content>
 					<item id="1">
-						<label>Video Plug-ins</label>
+						<label>Video Channels</label>
 						<onclick>ActivateWindow(6)</onclick>
 					</item>
 					<item id="2">
-						<label>Music Plug-ins</label>
+						<label>Music Channels</label>
 						<onclick>ActivateWindow(MyMusic)</onclick>
 					</item>
 					<item id="3">
-						<label>Picture Plug-ins</label>
+						<label>Picture Channels</label>
 						<onclick>ActivateWindow(2)</onclick>
 					</item>
 				</content>
