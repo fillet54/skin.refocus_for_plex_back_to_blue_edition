@@ -6,7 +6,7 @@
 			<posy>20</posy>
 			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)</visible>
 			<onright>50</onright>
-			<include>pagemenus</include>
+			<include>MenuOpen</include>
 			<include>transition2</include>
 			
 			<control type="button" id="20">

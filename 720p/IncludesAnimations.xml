@@ -10,9 +10,9 @@
 	<include name="autoscroll-plot">
 		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>
 	</include>
-	<!--<include name="autoscroll-line">
+	<include name="autoscroll-line">
 		<scrollspeed>20</scrollspeed>
-	</include>-->
+	</include>
 	<include name="fadeinout">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="350"/>
@@ -265,6 +265,17 @@
 		</animation>
 	</include>
 	
+	<include name="transition_Container">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="transition_Open" center="screen_Center" start="160" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="transition_Open" center="screen_Center" start="0" easing="out" end="100" reversible="false" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="transition_Close" center="screen_Center" start="100" end="160" tween="cubic" easing="in" />
+			<effect type="fade" time="transition_Close" center="screen_Center" start="100" easing="in" end="0" reversible="false"/>
+		</animation>
+	</include>
+	
 	<include name="transition_Indicator">
 		<animation type="WindowOpen">
 			<effect type="slide" time="400" center="auto" start="-64" end="0" easing="Out" tween="Quadratic"/>
@@ -304,15 +315,25 @@
 	
 	
 	<!-- TOGGLES / SELECTS -->
-	<include name="pagemenus">
+	<include name="MenuOpen">
 		<animation type="Visible">
-			<effect type="slide" start="0" end="275" time="150" reversible="false"/>
-			<effect type="zoom" time="400" center="640,360" start="140" end="100" tween="cubic" easing="out"/>
-			<effect type="fade" time="400" center="640,360" start="0" end="100"/>
-		</animation>
+			<effect type="slide" start="0" end="275" time="150" />
+			<effect type="zoom" time="400" center="screen_Center" start="140" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="screen_Center" start="0" end="100" />
+		</animation>			
 		<animation type="Hidden">
-			<effect type="zoom" time="250" center="640,360" start="100" end="140" tween="cubic" easing="in"/>
-			<effect type="fade" time="250" center="640,360" start="100" end="0"/>
+			<effect type="zoom" time="250" center="screen_Center" start="100" end="140" tween="cubic" easing="in" />
+			<effect type="fade" time="250" center="screen_Center" start="100" end="0" />
+		</animation>
+	</include>
+	<include name="toggle_Menu">
+		<animation type="Conditional" condition="[ControlGroup(6000).HasFocus] + !Skin.HasSetting(global.kiosk)">
+			<effect type="zoom" time="250" center="screen_Center" start="100" end="55" />
+			<effect type="fade" time="250" center="screen_Center" start="100" end="20" />
+		</animation>			
+		<animation type="Conditional" condition="![ControlGroup(6000).HasFocus] + !Skin.HasSetting(global.kiosk)">
+			<effect type="zoom" time="250" center="screen_Center" start="140" end="100" />
+			<effect type="fade" time="250" center="screen_Center" start="20" end="100" />
 		</animation>
 	</include>
 

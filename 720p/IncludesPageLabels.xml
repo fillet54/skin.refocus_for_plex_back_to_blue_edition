@@ -29,7 +29,7 @@
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>PageLabel</include>
-			<visible>!Window.IsActive(502) + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+			<visible>!Window.IsActive(500) + !Window.IsActive(502) + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
 		</control>
 		<!-- pictures -->
 		<control type="label">
@@ -37,6 +37,12 @@
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 			<include>PageLabel</include>
 			<visible>Control.IsVisible(50) + Window.IsActive(10002)</visible>
+		</control>
+		<!-- music playlist -->
+		<control type="label">
+			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[559][/COLOR]</label>
+			<include>PageLabel</include>
+			<visible>Window.isActive(500)</visible>
 		</control>
 	</include>
 	<include name="videoLibPageLabels2">

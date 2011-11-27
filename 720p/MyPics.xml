@@ -178,7 +178,7 @@
 		<control type="image" id="1">
 			<posx>0</posx>
 			<posy>665</posy>
-			<include>screen_Width</include>
+			<width>screen_Width</width>
 			<height>55</height>
 			<texture flipy="false">OSD/fullscreenInfo.png</texture>
 			<include>videoFullScreenInfo</include>

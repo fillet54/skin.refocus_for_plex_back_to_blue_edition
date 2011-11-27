@@ -36,15 +36,6 @@
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
 	
-	<!-- go home button -->
-	<include name="goHome">
-		<control type="button" id="72">
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-		</control>
-	</include>
-
 	<include name="newtypelogo">
 		<control type="group">
 			<control type="image">
@@ -76,30 +67,25 @@
 
 		</control>
 	</include>
-	<!-- new big list focused title fade-in -->
-	<include name="grainybiglisttextfade">
-		<animation type="Focus" condition="Container.OnNext">
-			<effect type="fade" start="0" end="100" delay="100" time="100"/>
-		</animation>
-		<animation type="Focus" condition="Container.OnPrevious">
-			<effect type="fade" start="0" end="100" time="0"/>
-		</animation>
-	</include>
-	<!-- page fade-in -->
+
 	<!-- view_ListVideo, view_BigList, view_Poster, view_PosterInfo -->
 	<include name="grainypagefade">
 		<animation type="Focus">
 			<effect type="fade" start="0" end="100" delay="50" time="700"/>
 		</animation>
 	</include>
-	<!-- page zoom-in -->
-	<!-- no pages -->
-	<include name="grainypagezoom">
-		<animation type="Conditional" condition="Control.HasFocus(57)">
-			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out"/>
-			<effect type="fade" time="400" center="640,360" start="0" end="100"/>
-		</animation>
-	</include>
+
+<!---CONSTANTS------>
+	<constant name="screen_Width">1280</constant>
+	<constant name="screen_Height">720</constant>
+	<constant name="screen_Center">640,360</constant>
+	<constant name="fadetime_Thumb">300</constant>
+	<constant name="fadetime_Fanart">300</constant>
+	<constant name="fadetime_Slideshow">1200</constant>
+	<constant name="transition_Open">350</constant>
+	<constant name="transition_Close">250</constant>
+	<constant name="slideshow_Timer">10000</constant>
+
 	<!-- ALL SCREEN INCLUDES -->
 	<include name="allscreens">
 		<include>libClock</include>
@@ -285,9 +271,6 @@
 		<height>720</height>
 		<aspectratio>scale</aspectratio>
 	</include>
-	<include name="screen_Width">
-		<width>1280</width>
-	</include>
 	<include name="sysInfoLabel">
 		<width>800</width>
 		<textcolor>Color7</textcolor>
@@ -388,29 +371,6 @@
 		<font>special6</font>
 		<include>grainybeigetext</include>
 	</include>
-	
-	<!-- new fonts from original skin -->
-	<!--Heading1-->
-	<include name="info_Title">
-		<height>28</height>
-		<aligny>center</aligny>
-		<font>title</font>
-		<textcolor>Color1</textcolor>
-	</include>
-	<include name="info_TitleSmall">
-		<height>26</height>
-		<aligny>center</aligny>
-		<font>normalCaps</font>
-		<textcolor>Color1</textcolor>
-	</include>
-	<!--Heading3-->
-	<include name="info_Sub">
-		<height>25</height>
-		<aligny>center</aligny>
-		<font>smallCaps</font>
-		<textcolor>Color2</textcolor>
-	</include>
-	
 	
 	<include name="description_Small">
 		<textcolor>Color7</textcolor>
@@ -583,10 +543,257 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>navigation/indicator_Left.png</texture>
-				<animation effect="rotate" center="auto" start="0" end="-180" time="250" tween="Quadratic" condition="Control.IsVisible(300)">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-180" time="250" tween="Quadratic" condition="Control.IsVisible(300) | Control.IsVisible(6000)">Conditional</animation>
 			</control>
 		</control>
 	</include>
+	
+	<!---LABELS------>
+	<include name="label_Systeminfo">
+		<width>800</width>
+		<textcolor>Color7</textcolor>
+		<align>left</align>
+		<font>normal</font>
+	</include>
+	<include name="label_Small-caps">
+		<height>20</height>
+		<aligny>center</aligny>
+		<font>smallCaps</font>
+		<textcolor>Color2</textcolor>
+	</include>
+	<include name="label_Login">
+		<width>300</width>
+		<font>titleAlt</font>
+		<align>center</align>
+		<textcolor>Color1</textcolor>
+	</include>
+
+<!---LIST LABELS------>
+	<include name="list_Label-single">
+		<height>40</height>
+		<font>list</font>
+		<aligny>center</aligny>
+		<textcolor>Color1</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+		<scroll>false</scroll>
+	</include>
+	<!--listMenu-->
+	<include name="list_Label">
+		<height>40</height>
+		<font>listBig</font>
+		<aligny>center</aligny>
+		<textcolor>Color1</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+		<scroll>false</scroll>
+	</include>
+	<!--listMenuFocus-->
+	<include name="list_Label-focus">
+		<height>40</height>
+		<font>listBig</font>
+		<aligny>center</aligny>
+		<textcolor>Focused</textcolor>
+		<selectedcolor>Color5</selectedcolor>
+		<scroll>false</scroll>
+	</include>
+	<include name="list_Label-sub">
+		<height>40</height>
+		<font>listInfo</font>
+		<aligny>center</aligny>
+		<textcolor>Color2</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+		<scroll>false</scroll>
+	</include>
+	<include name="list_Label-sub-focus">
+		<height>40</height>
+		<font>listInfo</font>
+		<aligny>center</aligny>
+		<textcolor>Focused</textcolor>
+		<selectedcolor>Focused</selectedcolor>
+	</include>
+	
+	<!--Heading1-->
+	<include name="info_Title">
+		<height>28</height>
+		<aligny>center</aligny>
+		<font>title</font>
+		<textcolor>Color1</textcolor>
+	</include>
+	<include name="info_TitleSmall">
+		<height>26</height>
+		<aligny>center</aligny>
+		<font>normalCaps</font>
+		<textcolor>Color1</textcolor>
+	</include>
+	<!--Heading3-->
+	<include name="info_Sub">
+		<height>25</height>
+		<aligny>center</aligny>
+		<font>smallCaps</font>
+		<textcolor>Color2</textcolor>
+	</include>
+
+<!---TEXTBOXES------>
+	<include name="description_OSD">
+		<width>1040</width>
+		<font>description</font>
+		<aligny>top</aligny>
+		<textcolor>Color7</textcolor>
+		<include>autoscroll-plot</include>
+	</include>
+	<include name="description_Small">
+		<textcolor>Color7</textcolor>
+		<font>descriptionSmall</font>
+		<aligny>top</aligny>
+		<include>autoscroll-plot</include>
+	</include>
+
+<!---BUTTONS------>
+	<!--contextButton-->
+	<include name="button_Menu">
+		<width>400</width>
+		<height>170</height>
+		<font>pagemenu</font>
+		<textcolor>Color1</textcolor>
+		<focusedcolor>Color5</focusedcolor>
+		<textoffsety>60</textoffsety>
+		<textoffsetx>35</textoffsetx>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>home/menuSelect.png</texturefocus>
+		<alttexturefocus>home/menuSelect.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<onback>50</onback>
+	</include>
+	<!--categoryButton-->
+	<include name="button_Category">
+		<width>325</width>
+		<height>50</height>
+		<font>category</font>
+		<align>right</align>
+		<textoffsety>3</textoffsety>
+		<textoffsetx>25</textoffsetx>
+		<textcolor>Color1</textcolor>
+		<texturefocus border="13,6,13,6">settings/list-focusRev.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</include>
+	<!--settingsButton-->
+	<include name="button_Settings">
+		<width>850</width>
+		<height>46</height>
+		<font>normal</font>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>7</textoffsety>
+		<textcolor>Color1</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<texturefocus border="13,6,13,6">settings/list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<radioheight>24</radioheight>
+		<radiowidth>77</radiowidth>
+	</include>
+	<include name="button_Inline">
+		<width>125</width>
+		<font>normal</font>
+		<align>center</align>
+		<textoffsety>2</textoffsety>
+		<textcolor>Color1</textcolor>
+		<focusedcolor>Color1</focusedcolor>
+		<texturenofocus>views/column_focus2.png</texturenofocus>
+		<texturefocus border="8">views/column_focus.png</texturefocus>
+		<colordiffuse>column3</colordiffuse>
+	</include>
+	
+<!---THUMBS------>
+	<include name="frame_Poster-List">
+		<width>452</width>
+		<height>646</height>
+		<texture background="true" border="31">frames/frame_Square.png</texture>
+		<aspectratio align="center">stretch</aspectratio>
+		<fadetime>fadetime_Thumb</fadetime>
+	</include>
+	<include name="frame_Landscape-List">
+		<width>587</width>
+		<height>349</height>
+		<texture background="true" border="31">frames/frame_Square.png</texture>
+		<aspectratio align="center">stretch</aspectratio>
+		<fadetime>fadetime_Thumb</fadetime>
+	</include>
+	<include name="thumb_Portrait-List">
+		<posx>23</posx>
+		<posy>23</posy>
+		<width>406</width>
+		<height>600</height>
+		<aspectratio align="center">stretch</aspectratio>
+		<fadetime>fadetime_Thumb</fadetime>
+	</include>
+	<include name="thumb_Landscape-List">
+		<posx>22</posx>
+		<posy>22</posy>
+		<width>542</width>
+		<height>305</height>
+		<aspectratio align="center">scale</aspectratio>
+		<fadetime>fadetime_Thumb</fadetime>
+	</include>
+	<!--watchedOverlay-->
+	<include name="overlay_UnWatched">
+		<width>32</width>
+		<height>32</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
+	</include>
+
+
+<!---COLUMNS------>
+	<include name="column_Header">
+		<height>20</height>
+		<font>titleLow</font>
+		<textcolor>Color2</textcolor>
+		<aligny>center</aligny>
+	</include>
+	<include name="column">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column.png</texture>
+	</include>
+	<include name="column_Single">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column_Single.png</texture>
+		<colordiffuse>column3</colordiffuse>
+	</include>
+	<include name="column_Single-focus">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column_Single.png</texture>
+		<colordiffuse>Color1</colordiffuse>
+	</include>
+	<include name="column_Left">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column_Left.png</texture>
+	</include>
+	<include name="column_Right">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column_Right.png</texture>
+	</include>
+	<include name="column_Top">
+		<width>98</width>
+		<height>42</height>
+		<texture border="8">views/column_Top.png</texture>
+	</include>
+	<include name="column_Label">
+		<height>38</height>
+		<font>listAlt</font>
+		<textcolor>Color1</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+	</include>
+	<include name="column_Label-focus">
+		<height>38</height>
+		<font>listAlt</font>
+		<textcolor>Focused</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+	</include>
+	
 	
 	
 	<!-- SLIDESHOWS -->

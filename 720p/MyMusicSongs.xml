@@ -141,14 +141,14 @@
 			<control type="label">
 				<align>left</align>
 				<label>$INFO[ListItem.Title]</label>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<include>Heading</include>
 				<visible>!Container.Content(albums)</visible>
 			</control>
 			<control type="label">
 				<align>left</align>
 				<label>$INFO[ListItem.Album]</label>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<include>Heading</include>
 				<visible>Container.Content(albums)</visible>
 			</control>
@@ -156,7 +156,7 @@
 				<posy>30</posy>
 				<align>left</align>
 				<label>$INFO[ListItem.Artist] &#xEF; $INFO[ListItem.Year]</label>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<include>Heading3</include>
 				<visible>Container.Content(albums)</visible>
 			</control>

@@ -512,7 +512,7 @@
 				<font>osd1</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<include>Heading</include>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -522,7 +522,7 @@
 				<font>osd1</font>
 				<align>left</align>
 				<textcolor>Color6</textcolor>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<include>Heading</include>
 				<visible>Container.Content(tvshows)</visible>
 			</control>

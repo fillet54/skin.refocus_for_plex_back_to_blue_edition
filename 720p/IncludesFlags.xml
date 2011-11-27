@@ -333,7 +333,7 @@
 		
 	</include>
 	<!-- custom flag list for "full info" window -->
-	<include name="typeFlagsFullInfo">
+	<include name="flags_Type-info">
 		<control type="grouplist" id="100">
 			<width>900</width>
 			<height>64</height>
@@ -512,7 +512,7 @@
 				<height>36</height>
 				<align>right</align>
 				<textcolor>Color4</textcolor>
-				<include>screen_Width</include>
+				<width>screen_Width</width>
 				<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 			</control>
 		</control>
@@ -524,7 +524,7 @@
 			<width>128</width>
 			<align>right</align>
 			<textcolor>Color4</textcolor>
-			<include>screen_Width</include>
+			<width>screen_Width</width>
 			<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
 		</control>
 	</include>
