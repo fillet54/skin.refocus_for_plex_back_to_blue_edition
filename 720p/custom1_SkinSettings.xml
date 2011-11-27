@@ -176,20 +176,12 @@
 				<include>transition2</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
-				<control type="radiobutton" id="211">
-					<description>deactivate fanart slideshow on home screen</description>
-					<label>turn off slideshows on home screen</label>
-					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
-					<selected>Skin.HasSetting(FanartSlideShow)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
 				<control type="radiobutton" id="212">
 					<description>set personalised slideshow folder</description>
 					<label>set your own slideshow folder for home screen</label>
 					<onclick>Skin.SetPath(SlideShow)</onclick>
 					<onclick>Skin.ToggleSetting(personalSlideShow)</onclick>
 					<selected>Skin.HasSetting(personalSlideShow)</selected>
-					<enable>!Skin.HasSetting(FanartSlideShow)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="208">
