@@ -203,12 +203,13 @@
 		<spinposx>5000</spinposx>
 		<spinposy>5140</spinposy>
 	</default>
-<!-- MOD : DEACTIVATED GREEN COLOR OVERLAY FOR PROGRESS BAR IN SEEK CONTROLS  -->
+	
 	<default type="progress">
-		<texturebg>dialogs/progressBackground.png</texturebg>
+		<texturebg border="10">new_dialogs/progressBackground.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture border="3">dialogs/progressSlider.png</midtexture>
+		<midtexture border="10.5">new_dialogs/progressSlider.png</midtexture>
 		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
 	</default>
 	
 	<default type="sliderex">
