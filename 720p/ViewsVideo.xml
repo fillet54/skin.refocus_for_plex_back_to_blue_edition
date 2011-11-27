@@ -284,7 +284,7 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
-					<texture fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
@@ -293,7 +293,7 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
-					<texture fallback="thumbs/tvshowSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
@@ -520,7 +520,7 @@
 				<control type="image">
 					<width>177</width>
 					<height>250</height>
-					<texture fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="177" height="250">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -529,7 +529,7 @@
 				<control type="image">
 					<width>177</width>
 					<height>250</height>
-					<texture fallback="thumbs/tvshowSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="177" height="250">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -558,7 +558,7 @@
 				<control type="image">
 					<width>177</width>
 					<height>250</height>
-					<texture fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="177" height="250">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -568,7 +568,7 @@
 				<control type="image">
 					<width>177</width>
 					<height>250</height>
-					<texture fallback="thumbs/tvshowSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="177" height="250">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -627,7 +627,7 @@
 					<width>134</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/tvshowSmall.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
@@ -636,7 +636,7 @@
 					<width>134</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/movieSmall.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<visible>Container.Content(movies)</visible>
@@ -666,7 +666,7 @@
 					<width>134</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<include>focus_ThumbPosterInfo</include>
@@ -676,7 +676,7 @@
 					<width>134</width>
 					<height>185</height>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<include>focus_ThumbPosterInfo</include>
@@ -743,14 +743,14 @@
 					<width>750</width>
 					<height>422</height>
 					<aspectratio>scale</aspectratio>
-					<texture fallback="thumbs/movie.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<width>750</width>
 					<height>422</height>
 					<aspectratio>scale</aspectratio>
-					<texture fallback="thumbs/tvshow.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
@@ -773,7 +773,7 @@
 					<width>750</width>
 					<height>422</height>
 					<aspectratio>scale</aspectratio>
-					<texture fallback="thumbs/movie.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(movies)</visible>
 					<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
 				</control>
@@ -781,7 +781,7 @@
 					<width>750</width>
 					<height>422</height>
 					<aspectratio>scale</aspectratio>
-					<texture fallback="thumbs/tvshow.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<visible>Container.Content(tvshows)</visible>
 					<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.TVShowTitle)">Conditional</animation>
 				</control>

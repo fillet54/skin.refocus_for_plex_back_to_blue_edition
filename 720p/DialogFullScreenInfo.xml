@@ -24,7 +24,7 @@
 			<width>150</width>
 			<height>100</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture fallback="thumbs/tvshow.png" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture fallback="thumbs/tvshow_portrait.jpg" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
 			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
 			<visible>[VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
 		</control>
@@ -35,7 +35,7 @@
 			<width>113</width>
 			<height>170</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture fallback="thumbs/movie.png" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture fallback="thumbs/movie_portrait.jpg" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
 			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
 			<visible>[VideoPlayer.Content(movies)] + ![Window.IsActive(2901)]</visible>
 		</control>

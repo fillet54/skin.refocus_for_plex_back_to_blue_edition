@@ -246,7 +246,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
-			<texture fallback="thumbs/movie.png" background="true">$INFO[ListItem.Thumb]</texture>
+			<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 			<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
 			<bordersize>22</bordersize>
 			<aspectratio align="center">stretch</aspectratio>
