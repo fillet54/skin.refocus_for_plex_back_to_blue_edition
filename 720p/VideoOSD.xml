@@ -4,19 +4,19 @@
 		<control type="group">
 			<control type="group">
 			<control type="group" id="600">
-				<posx>478</posx>
-				<posy>303</posy>
+				<posx>514</posx>
+				<posy>315</posy>
 				<visible allowhiddenfocus="true">ControlGroup(600).HasFocus</visible>
 				<include>toggle_PlayerMenu</include>
 				<control type="image">
-					<width>325</width>
-					<height>274</height>
+					<width>252</width> <!-- 325 -->
+					<height>267</height> <!-- 274 -->
 					<texture>new_osd/settingsMenu.png</texture>
 				</control>
 				<control type="grouplist" id="601">
-					<posx>13</posx>
+					<posx>9</posx>
 					<posy>8</posy>
-					<width>307</width>
+					<width>252</width>
 					<height>240</height>
 					<align>top</align>
 					<onleft>701</onleft>
@@ -27,7 +27,7 @@
 					<itemgap>0</itemgap>
 					<!--video settings-->
 					<control type="button" id="603">
-						<width>299</width>
+						<width>234</width>
 						<label>$LOCALIZE[13395]</label>
 						<onback>SetFocus(599)</onback>
 						<include>dialog_Button-list</include>
@@ -36,42 +36,16 @@
 					</control>
 					<!--audio settings-->
 					<control type="button" id="604">
-						<width>299</width>
+						<width>234</width>
 						<label>$LOCALIZE[13396]</label>
 						<onback>SetFocus(599)</onback>
 						<include>dialog_Button-list</include>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
 						<onclick>XBMC.ActivateWindow(124)</onclick>
 					</control>
-					<!--bookmarks-->
-					<control type="button" id="605">
-						<width>299</width>
-						<label>Bookmarks</label>
-						<onback>SetFocus(599)</onback>
-						<include>dialog_Button-list</include>
-						<onclick>Dialog.Close(VideoOSD,true)</onclick>
-						<onclick>XBMC.ActivateWindow(125)</onclick>
-						<!-- Plex crashed bij episodes?? -->
-						<visible>!VideoPlayer.Content(episodes)</visible>
-					</control>
-					<!--get subtitles
-					<control type="togglebutton" id="606">
-						<width>307</width>
-						<label>$LOCALIZE[31980]</label>
-						<onback>SetFocus(599)</onback>
-						<onclick>-</onclick>
-						<onclick>Dialog.Close(VideoOSD,true)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(Subscript)])</onclick>
-						<include>dialog_Button-list</include>
-						<visible>Videoplayer.Content(movies) | Videoplayer.Content(episodes) | Videoplayer.Content(files)</visible>
-						<enable>Skin.HasSetting(addonSubtitles)</enable>
-					</control>-->
-					
-					
-					
 					<!--dvd menu-->
 					<control type="button" id="610">
-						<width>307</width>
+						<width>234</width>
 						<label>$LOCALIZE[33061]</label>
 						<onback>SetFocus(599)</onback>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
