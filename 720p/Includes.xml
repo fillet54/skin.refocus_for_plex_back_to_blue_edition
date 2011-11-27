@@ -130,7 +130,6 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal)</visible>
 			<include>transition_BG</include>
 		</control>
 	</include>
@@ -798,10 +797,9 @@
 	
 	<!-- SLIDESHOWS -->
 	<include name="slideshows">
-		<control type="multiimage" id="1">
+		<control type="multiimage" id="10101">
 			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
-			<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
@@ -819,7 +817,7 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>[!Skin.HasSetting(FanartSlideShow) + Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<visible>!Skin.HasSetting(FanartSlideShow) + Skin.HasSetting(personalSlideShow) + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
 			<include>fadeinout</include>
 		</control>
 	</include>
