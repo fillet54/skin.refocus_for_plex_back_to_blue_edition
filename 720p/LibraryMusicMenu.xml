@@ -308,14 +308,6 @@
 						<include>newHomeMenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
-					<control type="radiobutton" id="213">
-						<label>hide frame rate</label>
-						<onclick>Container.SetViewMode(52)</onclick>
-						<onclick>Skin.ToggleSetting(slidehideframerate)</onclick>
-						<selected>Skin.HasSetting(slidehideframerate)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
-						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-					</control>
 					<control type="radiobutton" id="207">
 						<label>hide video codec</label>
 						<onclick>Container.SetViewMode(52)</onclick>

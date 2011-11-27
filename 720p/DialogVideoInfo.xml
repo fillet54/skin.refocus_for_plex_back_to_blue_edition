@@ -330,7 +330,7 @@
 		<!--flags-->
 		<control type="group">
 			<posx>470</posx>
-			<posy>610</posy>
+			<posy>650</posy>
 			<include>flags_Type-info</include>
 			<include>transition_Container</include>
 			<include>toggle_Menu</include>
