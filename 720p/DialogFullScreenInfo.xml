@@ -24,8 +24,7 @@
 			<width>150</width>
 			<height>100</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture fallback="thumbs/tvshow_portrait.jpg" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
-			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
+			<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[VideoPlayer.Cover]</texture>
 			<visible>[VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
 		</control>
 
@@ -35,22 +34,11 @@
 			<width>113</width>
 			<height>170</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture fallback="thumbs/movie_portrait.jpg" diffuse="frames/posterFrameMask.png" background="true">$INFO[VideoPlayer.Cover]</texture>
-			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
+			<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[VideoPlayer.Cover]</texture>
 			<visible>[VideoPlayer.Content(movies)] + ![Window.IsActive(2901)]</visible>
 		</control>
 
 
-<!--
-		<control type="image" id="1">
-			<posx>-50</posx>
-			<posy>490</posy>
-			<width>1500</width>
-			<height>250</height>
-			<texture border="10">dialogs/square_dialog_background.png</texture>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<include>videoFullScreenInfo</include>
-		</control> -->
 		<!-- audio player -->
 		<control type="image" id="1">
 			<posx>-50</posx>
@@ -77,7 +65,7 @@
 			<posx>30</posx>
 			<posy>515</posy>
 			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<include>videoFullScreenInfo</include>
+			<include>transition_OSD</include>
 			<control type="group">
 				<posx>1225</posx>
 				<posy>-10</posy>
@@ -97,7 +85,7 @@
 				<width>800</width>
 				<posx>150</posx>
 				<align>left</align>
-				<label>$INFO[VideoPlayer.Year] &#xB7; $INFO[Player.Time] / $INFO[Player.Duration]</label>
+				<label>$INFO[VideoPlayer.Year] • $INFO[Player.Time] / $INFO[Player.Duration]</label>
 				<textcolor>Color2</textcolor>
 				<font>osd2</font>
 				<visible>VideoPlayer.Content(movies)</visible>
@@ -118,7 +106,7 @@
 				<width>800</width>
 				<posx>150</posx>
 				<align>left</align>
-				<label>$LOCALIZE[31096] &#xB7; $INFO[Player.Duration]</label>
+				<label>$LOCALIZE[31096] • $INFO[Player.Duration]</label>
 				<textcolor>Color2</textcolor>
 				<font>osd2</font>
 				<visible>VideoPlayer.Content(episodes)</visible>
@@ -151,24 +139,6 @@
 				<font>info</font>
 				<visible>VideoPlayer.Content(musicvideos)</visible>
 			</control>
-			<!-- plot separator 
-			<control type="image">
-				<posx>-250</posx>
-				<posy>64</posy>
-				<width>1530</width>
-				<height>2</height>
-				<texture>views/separatorFaded.png</texture>
-				<colordiffuse>Color4</colordiffuse>
-			</control>-->
-			<!-- second plot separator 
-			<control type="image">
-				<posx>-250</posx>
-				<posy>185</posy>
-				<width>1530</width>
-				<height>1</height>
-				<texture>views/separatorFaded.png</texture>
-				<colordiffuse>Color4</colordiffuse>
-			</control>-->
 			<control type="textbox" id="8">
 				<posy>65</posy>
 				<posx>150</posx>
@@ -178,8 +148,7 @@
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.PlotOutline]</label>
 				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<textcolor>Color1</textcolor>
-				<font>description</font>
+				<include>description_OSD</include>
 			</control>
 			<control type="textbox" id="8">
 				<posy>65</posy>
@@ -190,23 +159,15 @@
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<textcolor>Color1</textcolor>
-				<font>description</font>
+				<include>description_OSD</include>
 			</control>
-			<!-- <control type="progress" id="1">
-				<description>Progressbar</description>
-				<posy>140</posy>
-				<width>1220</width>
-				<height>2</height>
-				<info>Player.Progress</info>
-			</control> -->
 		</control>
 		<!-- MUSIC VIDEOS -->
 		<control type="group" id="1">
 			<posx>30</posx>
 			<posy>585</posy>
 			<visible>VideoPlayer.Content(musicvideos) + ![Window.IsActive(2901)]</visible>
-			<include>videoFullScreenInfo</include>
+			<include>transition_OSD</include>
 			<control type="group">
 				<posx>280r</posx>
 				<posy>5</posy>
@@ -266,14 +227,14 @@
 				<align>left</align>
 				<orientation>horizontal</orientation>
 				<control type="label" id="1">
-					<label>$INFO[MusicPlayer.Artist] &#xB7; $INFO[MusicPlayer.Title]</label>
+					<label>$INFO[MusicPlayer.Artist] • $INFO[MusicPlayer.Title]</label>
 					<width min="29" max="1120">auto</width>
 					<textcolor>Color4</textcolor>
 					<font>osd1</font>
 					<scroll>true</scroll>
 				</control>
 				<control type="label" id="1">
-					<label>&#xB7; $INFO[MusicPlayer.Duration]</label>
+					<label>• $INFO[MusicPlayer.Duration]</label>
 					<width min="29" max="120">auto</width>
 					<textcolor>Color4</textcolor>
 					<font>osd1</font>

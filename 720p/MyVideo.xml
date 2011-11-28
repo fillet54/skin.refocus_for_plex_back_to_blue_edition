@@ -331,7 +331,7 @@
 			</control>
 			<control type="label">
 				<posx>1015</posx>
-				<label>&#xB7; $INFO[Container(53).ListItem(1).TVShowTitle]</label>
+				<label>• $INFO[Container(53).ListItem(1).TVShowTitle]</label>
 				<include>info_Title</include>
 				<width>750</width>
 				<visible>Container.Content(tvshows) + ![Control.HasFocus(8000)]</visible>

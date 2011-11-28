@@ -377,7 +377,7 @@
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
-					<label>$INFO[ListItem.Title,, ][COLOR=Color2]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
+					<label>$INFO[ListItem.Title,, ][COLOR=Color2]• $INFO[ListItem.Artist][/COLOR]</label>
 					<include>grainywhitetext</include>
 					<font>small</font>
 					<selectedcolor>Color5</selectedcolor>
@@ -416,7 +416,7 @@
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
-					<label>[COLOR=Color5]$INFO[ListItem.Title,, ]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
+					<label>[COLOR=Color5]$INFO[ListItem.Title,, ]• $INFO[ListItem.Artist][/COLOR]</label>
 					<font>small</font>
 					<visible>!Skin.HasSetting(usesmallcase)</visible>
 				</control>
