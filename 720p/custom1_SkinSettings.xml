@@ -266,13 +266,6 @@
 					<selected>Skin.HasSetting(hidescrolloffset)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				<control type="radiobutton" id="284">
-					<description>Developer mode</description>
-					<label>developer mode</label>
-					<onclick>Skin.ToggleSetting(dev.enable)</onclick>
-					<selected>Skin.HasSetting(dev.enable)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
 			</control>
 			<!-- about reFocus -->
 			<control type="group" id="5000">
