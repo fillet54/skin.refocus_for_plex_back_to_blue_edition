@@ -799,26 +799,42 @@
 	<include name="slideshows">
 		<control type="multiimage" id="10101">
 			<include>screen_Dimensions</include>
-			<aspectratio>scale</aspectratio>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			<aligny>top</aligny>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>!Skin.HasSetting(personalSlideShow) + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)] + !ControlGroup(2100).HasFocus</visible>
-			<animation type="WindowOpen" condition="Window.Previous(2999)">
-				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
+			<visible>!Skin.HasSetting(personalSlideShow)</visible>
+			<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
+			<animation effect="fade" end="100" time="500" delay="100">Visible</animation>
+			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="350"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="350"/>
 			</animation>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
-			<aspectratio>scale</aspectratio>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			<aligny>top</aligny>
 			<info>Skin.String(SlideShow)</info>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>Skin.HasSetting(personalSlideShow) + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
-			<include>fadeinout</include>
+			<visible>Skin.HasSetting(personalSlideShow)</visible>
+			<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
+			<animation effect="fade" end="100" time="500" delay="100">Visible</animation>
+			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="350"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="350"/>
+			</animation>
 		</control>
 	</include>
 	<!-- STARTUP SLIDES -->
