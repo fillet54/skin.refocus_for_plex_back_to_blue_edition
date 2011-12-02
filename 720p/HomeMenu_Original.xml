@@ -127,6 +127,12 @@
 					<onclick>SetFocus(1110)</onclick>
 					<visible>!Skin.HasSetting(homeMenuPlugins)</visible>
 				</item>
+				 <item id="7">
+                    <description>Search Menu</description>
+                    <label>$LOCALIZE[31400]</label>
+                    <onclick>Plex.ActivateWindow(10051)</onclick>
+        			<visible>false</visible>
+                </item>
 				<!--
 				<item id="20">
 					<label>iTunes</label>

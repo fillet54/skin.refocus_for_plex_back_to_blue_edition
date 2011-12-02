@@ -36,6 +36,7 @@
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
 	<include file="IncludesBackgrounds.xml" />
+	<include file="IncludesSearch.xml" />
 	
 	<include name="newtypelogo">
 		<control type="group">

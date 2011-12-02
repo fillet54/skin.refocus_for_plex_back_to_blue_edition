@@ -269,6 +269,38 @@
 			<size>56</size>
 		</font>
 
+<!-- Search fonts -->
+		<font>
+			<name>LargeSearchFont</name>
+			<filename>Regular.ttf</filename>
+			<variant>Bold</variant>
+			<size>20</size>
+		</font>
+		<font>
+			<name>MediumSearchFont</name>
+			<filename>Regular.ttf</filename>
+			<variant>Bold</variant>
+			<size>18</size>
+		</font>
+		<font>
+			<name>SearchResult</name>
+			<filename>Regular.ttf</filename>
+			<variant>Bold</variant>
+			<size>16</size>
+		</font>
+		<font>
+			<name>SearchResultSmaller</name>
+			<filename>Regular.ttf</filename>
+			<variant>Bold</variant>
+			<size>14</size>
+		</font>
+		<font>
+			<name>SearchResultSmall</name>
+			<filename>Regular.ttf</filename>
+			<size>13</size>
+		</font>
+
+
 
 <!--- SCRIPT REFERENCE/LEGACY -->
 		<font>

@@ -230,6 +230,7 @@ to the entire Plex team and everyone over at the Plex Forums, specifically the P
 <string id="31975">Small Grid</string>
 
 <!--plex-->
+<string id="31400">Search</string>
 <string id="31976">Plex Online</string>
 <string id="31977">Disable RSS Feed</string>
 
@@ -246,5 +247,4 @@ to the entire Plex team and everyone over at the Plex Forums, specifically the P
 <string id="3300">Mute</string>
 <string id="33006">Today</string>
 <string id="33020">Condition</string>
-
 </strings>
