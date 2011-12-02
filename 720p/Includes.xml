@@ -938,49 +938,6 @@
 		<textureslidernibfocus border="1">-</textureslidernibfocus>
 	</include>
 	<!--Added from older version of this skin-->
-	<include name="scrollLeftView">
-		<width>24</width>
-		<height>24</height>
-		<texture>views/scrollLeftIndicatorAlt.png</texture>
-		<aspectratio>keep</aspectratio>
-		<include>transition2</include>
-		<include>contextMenuHide</include>
-		<visible>Skin.HasSetting(scrollIndicators)</visible>
-	</include>
-	<include name="scrollLeftDialog">
-		<width>24</width>
-		<height>24</height>
-		<texture>dialogs/scrollLeftIndicator.png</texture>
-		<aspectratio>keep</aspectratio>
-		<include>fadeinout</include>
-		<visible>Skin.HasSetting(scrollIndicators)</visible>
-	</include>
-	<include name="scrollRightView">
-		<width>24</width>
-		<height>24</height>
-		<texture>views/scrollRightIndicatorAlt.png</texture>
-		<aspectratio>keep</aspectratio>
-		<include>fadeinout</include>
-		<visible>Skin.HasSetting(scrollIndicators)</visible>
-	</include>
-	<include name="scrollRightDialog">
-		<width>24</width>
-		<height>24</height>
-		<texture>dialogs/scrollRightIndicator.png</texture>
-		<aspectratio>keep</aspectratio>
-		<include>fadeinout</include>
-		<visible>Skin.HasSetting(scrollIndicators)</visible>
-	</include>
-	<include name="scrollDownView">
-		<width>24</width>
-		<height>24</height>
-		<texture>views/scrollDownIndicatorAlt.png</texture>
-		<aspectratio>keep</aspectratio>
-		<include>transition2</include>
-		<include>contextMenuHide</include>
-		<visible>Skin.HasSetting(scrollIndicators)</visible>
-	</include>
-	<!--Added from older version of this skin-->
 	<include name="watchedOverlay">
 		<width>32</width>
 		<height>32</height>
