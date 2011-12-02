@@ -2,7 +2,7 @@
 	<defaultcontrol>888</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>themeBackground2</include>
+		<include>global_Background</include>
 		
 		<include>allscreens</include>
 		<!-- reFocus logo -->

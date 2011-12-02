@@ -35,6 +35,7 @@
 	<include file="IncludesAnimations.xml">-</include>
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
+	<include file="IncludesBackgrounds.xml" />
 	
 	<include name="newtypelogo">
 		<control type="group">
@@ -93,99 +94,6 @@
 		<include>global_Itemcount</include>
 		<include>global_Devmode</include>
 	</include>
-	
-	<!-- BACKGROUNDS / FANART -->
-	<!-- this is the grainy edition bg elsewhere than homescreen -->
-	<!-- the animations are included here for ease of modding, came from "transition2.5" IncludesAnimations.xml -->
-	<include name="grainyeditionback">
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/background.png</texture>
-			<visible>-</visible>
-			<animation type="WindowOpen">
-				<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
-				<!-- "end" is the final opacity that let's through the fanart -->
-				<effect type="fade" time="400" center="640,360" start="0" easing="out" end="90"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>
-				<effect type="fade" time="250" center="640,360" start="90" easing="in" end="0"/>
-			</animation>
-		</control>
-		<!--vignette-->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">overlays/vignette.png</texture>
-		</control>
-	</include>
-	<include name="themeBackground2">
-		<control type="largeimage">
-			<include>screen_Dimensions</include>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<include>fanartFadeTime</include>
-			<visible>Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>movies bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/library/moviesNoFanart.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(movies) | Window.IsActive(21) | Window.IsActive(22) | Window.IsActive(23) | Window.IsActive(24) | Window.IsActive(25)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>tv bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/library/tvshowsNoFanart.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(tvshows) | Container.Content(seasons)  | Container.Content(episodes)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>music bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/iTunes02.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>pictures bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/library/picturesDefault.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + Window.IsActive(2) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>settings bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/background.jpg</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + [Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>skin bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">settings/refocusbg.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + Window.IsActive(59) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>skin bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">settings/programs.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + Window.IsActive(programs) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>playlist now bg</description>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/iTunes01.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + Window.IsActive(musicplaylist)</visible>
-			<include>transition2</include>
-		</control>
-		<include>grainyeditionback</include>
-	</include>
-	
 	
 	<!---NOTIFICATIONS------>
 	<include name="toast_Top">
@@ -773,50 +681,7 @@
 		<selectedcolor>Selected</selectedcolor>
 	</include>
 	
-	
-	
-	<!-- SLIDESHOWS -->
-	<include name="slideshows">
-		<control type="multiimage" id="10101">
-			<include>screen_Dimensions</include>
-			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-			<aligny>top</aligny>
-			<timeperimage>8000</timeperimage>
-			<fadetime>1000</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<visible>!Skin.HasSetting(personalSlideShow)</visible>
-			<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
-			<animation effect="fade" end="100" time="500" delay="100">Visible</animation>
-			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="350"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="350"/>
-			</animation>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-			<aligny>top</aligny>
-			<info>Skin.String(SlideShow)</info>
-			<timeperimage>8000</timeperimage>
-			<fadetime>1000</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<visible>Skin.HasSetting(personalSlideShow)</visible>
-			<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
-			<animation effect="fade" end="100" time="500" delay="100">Visible</animation>
-			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="350"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="350"/>
-			</animation>
-		</control>
-	</include>
+
 	<!-- STARTUP SLIDES -->
 	<include name="startupSlides">
 		<control type="multiimage" id="1">

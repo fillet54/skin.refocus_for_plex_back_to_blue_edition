@@ -4,7 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>555</views>
 	<controls>
-		<include>themeBackground2</include>
+		<include>global_Background</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>view_List_GrainyEdition</include>

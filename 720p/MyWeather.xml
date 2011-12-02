@@ -15,7 +15,7 @@
 				<effect type="fade" start="40" end="0" time="200"/>
 			</animation>
 		</control>
-		<include>themeBackground2</include>
+		<include>global_Background</include>
 		<!-- fake info trigger button -->
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>

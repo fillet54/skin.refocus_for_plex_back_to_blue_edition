@@ -3,7 +3,7 @@
 	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>themeBackground2</include>
+		<include>global_Background</include>
 		<include>allscreens</include>
 		<include>nav_Indicator</include>
 		

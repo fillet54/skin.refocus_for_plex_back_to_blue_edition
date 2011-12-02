@@ -265,6 +265,35 @@
 		</animation>
 	</include>
 	
+	<include name="transition_Fanart">		
+		<animation type="WindowOpen">
+			<effect type="zoom" time="transition_Open" center="auto" start="160" end="100" tween="cubic" easing="out" reversible="false"/>
+			<effect type="fade" time="transition_Open" start="0" tween="cubic" easing="out" end="100" reversible="false"/>
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="transition_Close" center="auto" start="100" end="160" tween="cubic" easing="in" reversible="false" />
+			<effect type="fade" time="transition_Close" start="100" tween="cubic" easing="in" end="0" />
+		</animation>
+	</include>
+	<include name="transition_BG">
+		<animation type="WindowOpen" condition="!Skin.HasSetting(FanartGlobal) + !Skin.HasSetting(backgroundVideoGlobal)">
+			<effect type="zoom" time="transition_Open" center="auto" start="160" end="100" tween="cubic" easing="out" reversible="false" />
+			<effect type="fade" time="transition_Open" start="0" tween="cubic" easing="out" end="100" reversible="false" />
+		</animation>			
+		<animation type="WindowClose" condition="!Skin.HasSetting(FanartGlobal) + !Skin.HasSetting(backgroundVideoGlobal)">
+			<effect type="zoom" time="transition_Close" center="auto" start="100" end="160" tween="cubic" easing="in" reversible="false"/>
+			<effect type="fade" time="transition_Close" start="100" tween="cubic" easing="in" end="0" delay="200" />
+		</animation>
+		<animation type="WindowOpen" condition="Skin.HasSetting(FanartGlobal) | Skin.HasSetting(backgroundVideoGlobal)">
+			<effect type="zoom" time="transition_Open" center="auto" start="160" end="100" tween="cubic" easing="out" reversible="false" />
+			<effect type="fade" time="transition_Open" start="0" tween="cubic" easing="out" end="94" reversible="false" />
+		</animation>			
+		<animation type="WindowClose" condition="Skin.HasSetting(FanartGlobal) | Skin.HasSetting(backgroundVideoGlobal)">
+			<effect type="zoom" time="transition_Close" center="auto" start="100" end="160" tween="cubic" easing="in" reversible="false"/>
+			<effect type="fade" time="transition_Close" start="94" tween="cubic" easing="in" end="0" delay="200" />
+		</animation>
+	</include>
+	
 	<include name="transition_Container">
 		<animation type="WindowOpen">
 			<effect type="zoom" time="transition_Open" center="screen_Center" start="160" end="100" tween="cubic" easing="out" />

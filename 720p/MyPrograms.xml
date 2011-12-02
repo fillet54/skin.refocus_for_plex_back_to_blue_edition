@@ -6,7 +6,7 @@
 	
 	<controls>
 
-		<include>themeBackground2</include>	
+		<include>global_Background</include>	
 		
 		<include>transition2</include>
 		<include>contextMenuHide</include>

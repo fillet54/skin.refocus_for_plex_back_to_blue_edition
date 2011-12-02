@@ -11,7 +11,7 @@
 				<effect type="fade" start="0" end="100" time="2000" delay="0"/>
 			</animation>
 		</control>
-		<include>grainyeditionback</include>
+		<include>global_Background</include>
 		<!-- Normal view -->
 		<control type="group">
 			<visible>!MusicPlayer.NowPlayingFlipped</visible>

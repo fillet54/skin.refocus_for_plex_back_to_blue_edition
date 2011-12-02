@@ -2,21 +2,25 @@
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<!-- BACKGROUND MEDIA -->
-		<include>slideshows</include>
-		
-		<!-- fanart slides and other overlays -->
-		<control type="multiimage" id="1">
+		<!-- global background --->
+		<control type="largeimage">
 			<include>screen_Dimensions</include>
+			<texture background="true">backgrounds/background.png</texture>
 			<aspectratio>scale</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
-			<timeperimage>7000</timeperimage>
-			<fadetime>850</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="600" delay="0" />
+			</animation>
+			<animation type="WindowOpen" condition="!Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="200" delay="0" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" delay="0" />
+			</animation>
+			<visible>![Player.HasVideo + !Skin.HasSetting(backgroundVideoGlobal)] | Skin.HasSetting(FanartGlobal)</visible>
 		</control>
+		<!-- slideshows--->
+		<include>home_Slideshows</include>
+		
 		<control type="largeimage">
 			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -25,20 +29,12 @@
 			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
 			<include>fadeinout</include>
 		</control>
-		<control type="largeimage">
-			<include>screen_Dimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<fadetime>1400</fadetime>
-			<include>fadeinout</include>
-		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
-			<include>transition_Toast</include>
+			<include>fadeinout</include>
 			<texture>home/menuBackground.png</texture>
 		</control>
 		
-		<!-- reFocus logo positioned underneath the home overlay for a little softness -->
 		<control type="group">
 			<posx>5</posx>
 			<posy>555</posy>
