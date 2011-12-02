@@ -7,7 +7,6 @@
 		<include>themeBackground2</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
-		<include>videoFanartPageLabels</include>
 		<include>view_Banner</include>
 		<include>view_BigList</include>
 		<include>view_GalleryFull</include>

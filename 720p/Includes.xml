@@ -95,19 +95,6 @@
 	</include>
 	
 	<!-- BACKGROUNDS / FANART -->
-	<!-- GRAINY EDITION BACKGROUND -->
-	<include name="grainyeditionthemeoverlay">
-		<!-- homescreen -->
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/background.png</texture>
-			<animation type="Conditional" condition="True">
--                <effect type="fade" start="0" end="0" time="600" delay="0"/>
-			</animation>
-			<visible>-</visible>
-		</control>
-	</include>
 	<!-- this is the grainy edition bg elsewhere than homescreen -->
 	<!-- the animations are included here for ease of modding, came from "transition2.5" IncludesAnimations.xml -->
 	<include name="grainyeditionback">
@@ -130,7 +117,6 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-			<include>transition_BG</include>
 		</control>
 	</include>
 	<include name="themeBackground2">
@@ -197,13 +183,7 @@
 			<visible>Skin.HasSetting(FanartGlobal) + Window.IsActive(musicplaylist)</visible>
 			<include>transition2</include>
 		</control>
-		<!--<control type="videowindow">
-			<include>screen_Dimensions</include>
-			<visible>Skin.HasSetting(backgroundVideoGlobal) + ![Window.IsActive(pictures) + Control.IsVisible(56)]</visible>
-		</control>-->
 		<include>grainyeditionback</include>
-		<!--<include condition="!Skin.HasSetting(plex)">bluethemeback</include>
-		<include condition="Skin.HasSetting(plex)">blackthemeback</include>-->
 	</include>
 	
 	

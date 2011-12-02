@@ -169,7 +169,6 @@
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 		</control>-->
-		<include>videoFanartPageLabels</include>
 		<!--<include>musicOverlay</include>-->
 		<!--<include>indicatorScrolling</include>-->
 		<include>LibraryMusicMenu</include>

@@ -4,8 +4,6 @@
 	<controls>
 		<!-- BACKGROUND MEDIA -->
 		<include>slideshows</include>
-		<!-- grainy bg for home screen only -->
-		<include>grainyeditionthemeoverlay</include>
 		
 		<!-- fanart slides and other overlays -->
 		<control type="multiimage" id="1">
