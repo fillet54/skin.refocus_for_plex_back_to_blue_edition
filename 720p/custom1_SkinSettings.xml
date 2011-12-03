@@ -420,6 +420,13 @@
 					<selected>Skin.HasSetting(homeMenuPlugins)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
+				<!-- search -->
+				<control type="radiobutton" id="291">
+					<label>Show Search in Main Menu</label>
+					<onclick>Skin.ToggleSetting(homeMenuSearch)</onclick>
+					<selected>Skin.HasSetting(homeMenuSearch)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
 			</control>
 		</control>
 		<!-- Separator New Home Menu -->

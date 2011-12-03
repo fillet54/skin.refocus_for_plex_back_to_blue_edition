@@ -70,6 +70,39 @@
 
 		</control>
 	</include>
+	
+	<include name="newtypelogosearch">
+		<control type="group">
+			<control type="image">
+				<posx>15</posx>
+				<posy>30</posy>
+				<width>224</width>
+				<texture>logos/refocuslogo.png</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>transition2</include>
+			</control>
+
+			<control type="image">
+				<posx>45</posx>
+				<posy>60</posy>
+				<width>193</width>
+				<height>70</height>
+				<texture>home/forplexlogo.png</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>transition2</include>
+			</control>
+
+			<control type="label" id="200">
+				<posx>170</posx>
+				<posy>115</posy>
+				<font>homeMenu</font>
+				<label>Search</label>
+				<textcolor>Color3</textcolor>
+				<include>transition2</include>
+			</control>
+
+		</control>
+	</include>
 
 	<!-- view_ListVideo, view_BigList, view_Poster, view_PosterInfo -->
 	<include name="grainypagefade">

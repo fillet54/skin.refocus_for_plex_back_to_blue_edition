@@ -20,6 +20,30 @@
 		<texture>new_dialogs/separator.png</texture>
 	</include>
 	
+	<include name="dialog_CommonListItem">
+		<posx>15</posx>
+		<height>35</height>
+		<font>small</font>
+		<aligny>center</aligny>
+		<textcolor>Color4</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+	</include>
+	<include name="dialog_CommonList">
+		<height>40</height>
+		<texture border="3">dialogs/list-nofocus.png</texture>
+	</include>
+	<include name="dialog_CommonListItemFocus">
+		<posx>15</posx>
+		<height>35</height>
+		<font>small</font>
+		<aligny>center</aligny>
+		<textcolor>Color1</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+	</include>
+	<include name="dialog_CommonListFocus">
+		<height>40</height>
+		<texture border="3">dialogs/list-focus.png</texture>
+	</include>
 	
 	<include name="dialog_Radio">
 		<textcolor>Color4</textcolor>

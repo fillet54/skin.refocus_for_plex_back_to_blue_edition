@@ -1,26 +1,37 @@
 <includes>
 	<!-- Search -->
 	<include name="Search_Header_background">
-		<posx>1</posx>
-		<texture>plex-search-header.png</texture>
-		<width>910</width>
+		<control type="image">
+			<width>900</width>
+			<height>35</height>
+			<texture border="8">search/header.png</texture>
+			<colordiffuse>column3</colordiffuse>
+		</control>
+		<control type="image">
+			<width>185</width>
+			<height>35</height>
+			<texture>search/arrow.png</texture>
+			<colordiffuse>column2</colordiffuse>
+		</control>
 	</include>
+	
+	
 	<include name="Search_Label">
-		<posy>7</posy>
-		<posx>880</posx>
-		<align>right</align>
-		<font>MediumSmallTitleFont2</font>
-		<textcolor>orange</textcolor>
-		<width>278</width>
+		<posy>1</posy>
+		<posx>10</posx>
+		<align>left</align>
+		<font>smallerCaps</font>
+		<textcolor>Color1</textcolor>
+		<width>160</width>
 		<height>30</height>
 	</include>
 	<include name="Search_Label_Unfocused">
-		<posy>7</posy>
-		<posx>880</posx>
-		<align>right</align>
-		<font>MediumSmallTitleFont2</font>
-		<textcolor>Unfocused</textcolor>
-		<width>278</width>
+		<posy>1</posy>
+		<posx>10</posx>
+		<align>left</align>
+		<font>smallerCaps</font>
+		<textcolor>LightBlue</textcolor>
+		<width>160</width>
 		<height>30</height>
 	</include>
 	<include name="Search_Result">
@@ -46,7 +57,7 @@
 				<scroll>false</scroll>
 				<label>$INFO[ListItem.tvshowtitle]</label>
 				<font>MediumSmallTitleFont</font>
-				<textcolor>FF999999</textcolor>
+				<textcolor>Color2</textcolor>
 				<wrapmultiline>false</wrapmultiline>
 			</control>
 			<control type="label">
@@ -135,29 +146,5 @@
 		<texturenofocus border="20">new_dialogs/button.png</texturenofocus>
 		<texturefocus border="20">new_dialogs/button-focus.png</texturefocus>
 		<textureclick border="20">-</textureclick>
-	</include>
-	<include name="Search_Keyboard_ToggleButton">
-		<width>36</width>
-		<height>36</height>
-		<font>LargeDefaultFont</font>
-		<textcolor>HomeMain</textcolor>
-		<focusedcolor>Focused</focusedcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-		<texturenofocus border="18" diffuse="grey.png">button_keyboard.png</texturenofocus>
-		<texturefocus border="18" diffuse="masks/10b9f2.png">button_keyboard.png</texturefocus>
-		<textureclick border="18">-</textureclick>
-	</include>
-	<include name="Search_Keyboard_Big_Button">
-		<width>80</width>
-		<height>80</height>
-		<font>LargeDefaultFont</font>
-		<textcolor>HomeMain</textcolor>
-		<focusedcolor>Focused</focusedcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-		<texturenofocus>button_kb.png</texturenofocus>
-		<texturefocus>button_kb_on.png</texturefocus>
-		<textureclick>button_kb_click.png</textureclick>
 	</include>
 </includes>

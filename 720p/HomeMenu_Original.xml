@@ -66,11 +66,11 @@
 				
 				<!-- dummy entries to prevent crash, investigate! -->
                                         <item id="7">
-                                                <description>Search Menu</description>
-                                                <label>$LOCALIZE[31400]</label>
-                                                <onclick>Plex.ActivateWindow(10051)</onclick>
-                                                <visible>false</visible>
-                                        </item>
+											<description>Search Menu</description>
+											<label>$LOCALIZE[31400]</label>
+											<onclick>Plex.ActivateWindow(10051)</onclick>
+											<visible>Skin.HasSetting(homeMenuSearch)</visible>
+										</item>
                                       
                                         <item id="2">
                                                 <description>My Music Button</description>
@@ -127,11 +127,11 @@
 					<onclick>SetFocus(1110)</onclick>
 					<visible>!Skin.HasSetting(homeMenuPlugins)</visible>
 				</item>
-				 <item id="7">
+				<item id="7">
                     <description>Search Menu</description>
                     <label>$LOCALIZE[31400]</label>
                     <onclick>Plex.ActivateWindow(10051)</onclick>
-        			<visible>false</visible>
+        			<visible>!Skin.HasSetting(homeMenuSearch)</visible>
                 </item>
 				<!--
 				<item id="20">

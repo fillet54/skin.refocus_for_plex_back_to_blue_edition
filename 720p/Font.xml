@@ -274,7 +274,7 @@
 			<name>LargeSearchFont</name>
 			<filename>Regular.ttf</filename>
 			<variant>Bold</variant>
-			<size>20</size>
+			<size>24</size>
 		</font>
 		<font>
 			<name>MediumSearchFont</name>
