@@ -76,6 +76,7 @@
 		<control type="group" id="6100">
 			<posx>20</posx>
 			<posy>20</posy>
+			<visible>!Window.IsActive(busydialog) + !Control.IsVisible(9900)</visible>
 			<include>transition_Indicator</include>
 			<control type="image">
 				<width>48</width>

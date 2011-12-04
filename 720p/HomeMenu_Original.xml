@@ -2,15 +2,17 @@
 
 	<include name="HeightNoLogo">
 		<height>700</height>
+		<movement>10</movement>
 	</include>
 	
 	<include name="HeightWithLogo">
-		<height>540</height>
+		<height>560</height>
+		<movement>7</movement>
 	</include>
 	
 
 	<include name="HomeMenu_Original">
-		<control type="list" id="300">
+		<control type="fixedlist" id="300">
 			<posy>20</posy>
 			<width>1100</width>
 			<include condition="!Skin.HasSetting(hideplexhomelogo)">HeightWithLogo</include>
