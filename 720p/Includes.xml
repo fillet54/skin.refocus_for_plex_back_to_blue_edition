@@ -37,6 +37,7 @@
 	<include file="IncludesPageControl.xml">-</include>
 	<include file="IncludesBackgrounds.xml" />
 	<include file="IncludesSearch.xml" />
+	<include file="IncludesHomeNewLists.xml" />
 	
 	<include name="newtypelogo">
 		<control type="group">
@@ -365,7 +366,7 @@
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="80,0,0,0">home/menuSelect.png</texture>
 				<include>home_ListScroll</include>
-				<visible allowhiddenfocus="true">[Container(300).HasFocus(7) | Container(300).HasFocus(12)  | Container(300).HasFocus(13)]</visible>	
+				<visible allowhiddenfocus="true">[Container(300).HasFocus(12)]</visible>	
 			</control>
 
 			<control type="label">

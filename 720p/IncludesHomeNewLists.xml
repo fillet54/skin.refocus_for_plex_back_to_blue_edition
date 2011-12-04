@@ -1,0 +1,68 @@
+<includes>
+	<include name="Home_Header_background">
+		<control type="image">
+			<width>880</width>
+			<height>35</height>
+			<texture border="8">search/header.png</texture>
+			<colordiffuse>column3</colordiffuse>
+		</control>
+		<control type="image">
+			<width>185</width>
+			<height>35</height>
+			<texture>search/arrow.png</texture>
+			<colordiffuse>column2</colordiffuse>
+		</control>
+	</include>
+	
+	<include name="Home_Label">
+		<posy>1</posy>
+		<posx>10</posx>
+		<align>left</align>
+		<font>smallerCaps</font>
+		<textcolor>Color1</textcolor>
+		<width>160</width>
+		<height>30</height>
+	</include>
+	<include name="Home_Label_Unfocused">
+		<posy>1</posy>
+		<posx>10</posx>
+		<align>left</align>
+		<font>smallerCaps</font>
+		<textcolor>LightBlue</textcolor>
+		<width>160</width>
+		<height>30</height>
+	</include>
+	
+	<include name="Home_Overlay">
+		<control type="image">
+			<posx>92</posx>
+			<posy>147</posy>
+			<width>32</width>
+			<height>32</height>
+			<info>ListItem.Overlay</info>
+		</control>
+	</include>
+	
+	<include name="Home_EpisodeInfo">
+		<control type="image">
+			<posx>6</posx>
+			<posy>161</posy>
+			<width>118</width>
+			<height>18</height>
+			<texture>black.png</texture>
+			<colordiffuse>column3</colordiffuse>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>159</posy>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>S $INFO[ListItem.Season] [COLOR=Color2]•[/COLOR] E $INFO[ListItem.Episode]</label>
+			<font>SearchResultSmaller</font>
+			<wrapmultiline>false</wrapmultiline>
+			<visible>![IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]</visible>
+			<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
+		</control>
+	</include>
+
+</includes>

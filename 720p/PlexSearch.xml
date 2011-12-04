@@ -654,7 +654,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -753,7 +753,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -853,7 +853,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -1024,7 +1024,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -1115,7 +1115,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -1265,7 +1265,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -1413,7 +1413,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
@@ -1486,7 +1486,7 @@
 						<!-- title bar infos -->
 						<control type="grouplist">
 							<posx>200</posx>
-							<posy>4</posy>
+							<posy>5</posy>
 							<height>30</height>
 							<orientation>horizontal</orientation>
 							<itemgap>0</itemgap>
