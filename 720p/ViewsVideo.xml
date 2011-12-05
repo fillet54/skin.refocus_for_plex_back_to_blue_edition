@@ -7,7 +7,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>[[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)] + Control.IsVisible(51) + !ControlGroup(300).HasFocus()</visible>
+			<visible>[[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent) | Container.Content(movies)] + Control.IsVisible(51) + !ControlGroup(300).HasFocus()</visible>
 			<control type="image">
 				<posx>29</posx>
 				<posy>237</posy>
@@ -36,7 +36,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
-			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)</visible>
+			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent) | Container.Content(movies)</visible>
 			<itemlayout width="625" height="150">
 				<control type="image">
 					<width>246</width>
@@ -55,13 +55,75 @@
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
+					<width>246</width>
+					<height>138</height>
+					<posy>3</posy>
+					<texture background="true">frames/new/frame_Square-small.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<width>247</width>
+					<height>144</height>
+					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordersize>6</bordersize>
+					<aspectratio>stretch</aspectratio>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
 					<posx>209</posx>
 					<posy>106</posy>
 					<width>32</width>
 					<height>32</height>
 					<include>watchedOverlay</include>
-					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
 				</control>
+				
+				
+				<!-- movies -->
+				<control type="label">
+					<posx>260</posx>
+					<posy>28</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</label>
+					<include>list_Label-sub</include>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				
+				<!-- episodes -->
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, • ]</label>
+						<include>list_Label-sub</include>
+					</control>
+				</control>
+				
+				<!-- plugincontent -->
+				<control type="group">
+					<visible>Container.Content(plugincontent)</visible>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$INFO[ListItem.Year]</label>
+						<include>list_Label-sub</include>
+						<visible>IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<include>list_Label-sub</include>
+						<visible>IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+				
+				<!-- general -->
 				<control type="label" id="1">
 					<posx>260</posx>
 					<posy>2</posy>
@@ -86,32 +148,6 @@
 					<include>list_Label</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
-
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, • ]</label>
-					<include>list_Label-sub</include>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Year]</label>
-					<include>list_Label-sub</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<include>list_Label-sub</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
-				</control>
-				
-				
 				<control type="textbox" id="4">
 					<posx>260</posx>
 					<posy>65</posy>
@@ -143,13 +179,67 @@
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
+					<width>247</width>
+					<height>144</height>
+					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordersize>6</bordersize>
+					<aspectratio>stretch</aspectratio>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
 					<posx>209</posx>
 					<posy>106</posy>
 					<width>32</width>
 					<height>32</height>
 					<include>watchedOverlay</include>
-					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
 				</control>
+				
+				
+				<!-- movies -->
+				<control type="label">
+					<posx>260</posx>
+					<posy>28</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</label>
+					<include>list_Label-sub-focus</include>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				
+				<!-- episodes -->
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, • ]</label>
+						<include>list_Label-sub-focus</include>
+					</control>
+				</control>
+				
+				<!-- plugincontent -->
+				<control type="group">
+					<visible>Container.Content(plugincontent)</visible>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$INFO[ListItem.Year]</label>
+						<include>list_Label-sub-focus</include>
+						<visible>IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label" id="1">
+						<posx>260</posx>
+						<posy>28</posy>
+						<width>770</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<include>list_Label-sub-focus</include>
+						<visible>IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+				
+				<!-- general -->
 				<control type="label" id="1">
 					<posx>260</posx>
 					<posy>2</posy>
@@ -174,46 +264,15 @@
 					<include>list_Label-focus</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
-
-
-				<!-- MOD : end -->
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, • ] • $INFO[ListItem.Duration,, ]</label>
-					<include>list_Label-sub-focus</include>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Year]</label>
-					<include>list_Label-sub-focus</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>260</posx>
-					<posy>28</posy>
-					<width>770</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<include>list_Label-sub-focus</include>
-					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
-				</control>
-				
 				<control type="textbox" id="4">
 					<posx>260</posx>
 					<posy>65</posy>
 					<width>930</width>
 					<height>60</height>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 					<font>descriptionSmall</font>
 					<textcolor>Focused</textcolor>
 					<include>autoscroll-plot</include>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" delay="100" time="1200"/>
-					</animation>
 				</control>
 				
 				<control type="image">
@@ -227,28 +286,6 @@
 				</control>
 			</focusedlayout>
 		</control>
-		<!-- plot textbox 
-		<control type="group" id="4000">
-			<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)]</visible>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<control type="textbox" id="4">
-				<posx>290</posx>
-				<posy>301</posy>
-				<width>930</width>
-				<height>60</height>
-				<label>$INFO[ListItem(0).Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
-				<font>descriptionSmall</font>
-				<textcolor>Focused</textcolor>
-				<include>autoscroll-plot</include>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="100" delay="100" time="1200"/>
-				</animation>
-				<visible>Control.IsVisible(51)</visible>
-			</control>
-		</control>-->
 	</include>
 	<!-- SLIDE VIEW POSTER [updated] -->
 	<include name="view_SlidePoster">
