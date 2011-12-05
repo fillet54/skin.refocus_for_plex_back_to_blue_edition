@@ -693,7 +693,7 @@
 								<control type="group">
 									<posy>12</posy>							
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -706,7 +706,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -792,7 +792,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -805,7 +805,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -892,9 +892,9 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>90</height>
-										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+										<width>130</width>
+										<height>80</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
@@ -941,9 +941,9 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>90</height>
-										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+										<width>130</width>
+										<height>80</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">views/list-focus-bigAlt.png</bordertexture>
 										<bordersize>6</bordersize>
@@ -1054,7 +1054,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -1067,7 +1067,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -1154,8 +1154,8 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>134</height>
+										<width>130</width>
+										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
@@ -1192,8 +1192,8 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>134</height>
+										<width>130</width>
+										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
@@ -1303,8 +1303,8 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>134</height>
+										<width>130</width>
+										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
@@ -1341,8 +1341,8 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
-										<height>134</height>
+										<width>130</width>
+										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="6">views/list-focus-bigAlt.png</bordertexture>
@@ -1443,7 +1443,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -1456,7 +1456,7 @@
 								<control type="group">
 									<posy>12</posy>
 									<control type="image">
-										<width>134</width>
+										<width>130</width>
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
@@ -1524,8 +1524,8 @@
 							<itemlayout width="440" height="100">
 								<posy>12</posy>
 								<control type="image">
-									<width>134</width>
-									<height>90</height>
+									<width>130</width>
+									<height>80</height>
 									<posy>10</posy>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/movie_landscape">$INFO[ListItem.Thumb]</texture>
@@ -1570,8 +1570,8 @@
 							</itemlayout>
 							<focusedlayout width="440" height="100">
 								<control type="image">
-									<width>134</width>
-									<height>90</height>
+									<width>130</width>
+									<height>80</height>
 									<posy>10</posy>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/movie_landscape">$INFO[ListItem.Thumb]</texture>
