@@ -131,7 +131,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
 			<texture>backgrounds/background.png</texture>
-			<animation effect="fade" start="0" end="90" time="250" condition="true">Visible</animation>
+			<animation effect="fade" delay="500" start="0" end="90" time="250" condition="true">Visible</animation>
 			<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
 		</control>
 
@@ -141,8 +141,8 @@
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
 			<texture>backgrounds/background.png</texture>
-			<animation effect="fade" start="100" end="90" time="400" condition="true">Visible</animation>
-			<animation effect="fade" start="90" end="100" time="0" condition="true">Hidden</animation>
+			<animation effect="fade" start="0" end="90" time="250" condition="true">Visible</animation>
+			<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
 		</control>
 	</include>
 	
