@@ -127,7 +127,7 @@
 
 		<control type="image">
 			<visible>Skin.HasSetting(showNewLists)</visible>
-			<visible>Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(12000)</visible>
+			<visible>Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
 			<texture>backgrounds/background.png</texture>

@@ -121,7 +121,7 @@
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(300).HasFocus() | ControlGroup(5000).HasFocus()]</visible>
-			<animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(300) | ControlGroup(5100).HasFocus">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(300) | ControlGroup(5100).HasFocus | ControlGroup(5200).HasFocus">Conditional</animation>
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
@@ -170,11 +170,11 @@
 		<control type="group" id="5000">
 			<visible>Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)</visible>
 			
-			<animation type="Conditional" condition="!Skin.HasSetting(showNewLists) + ControlGroup(5100).HasFocus">
+			<animation type="Conditional" condition="!Skin.HasSetting(showNewLists) + [ControlGroup(5100).HasFocus | ControlGroup(5200).HasFocus]">
 				<effect type="fade" time="250" center="screen_Center" start="0" end="100" />
 			</animation>	
 			
-			<animation type="Conditional" condition="!Skin.HasSetting(showNewLists) + !ControlGroup(5100).HasFocus">
+			<animation type="Conditional" condition="!Skin.HasSetting(showNewLists) + ![ControlGroup(5100).HasFocus | ControlGroup(5200).HasFocus]">
 				<effect type="fade" time="250" center="screen_Center" start="100" end="0" />
 			</animation>
 			
@@ -620,7 +620,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">views/list-focus-bigAlt.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
@@ -904,9 +904,9 @@
 			</control>
 			<!-- "Queue" (nog doen) -->
 			<control type="grouplist" id="5200">
-				<visible>false</visible>
+				<visible>true</visible>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>230</posy>
 				<width>890</width>
 				<height>720</height>
 				<ondown>-</ondown>
@@ -916,28 +916,21 @@
 				<orientation>vertical</orientation>
 				<!-- Queue(11003) -->
 				<control type="group" id="7003">
-					<height>230</height>
+					<height>226</height>
 					<control type="group">
-						<visible allowhiddenfocus="false">true</visible>
-						<control type="image">
-							<posy>269</posy>
-							<posx>-2</posx>
-							<visible>ControlGroup(7003).HasFocus</visible>
-							<texture background="true">newlistselector.png</texture>
-							<animation effect="fade" start="0" end="100" time="400" condition="true">Visible</animation>
-							<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
-						</control>
-						<!-- list title -->
+						<posy>5</posy>
+						<include>Home_Header_background</include>
+						<visible>Control.IsVisible(11003)</visible>
 						<control type="label" id="8001">
-							<visible>Control.IsVisible(11003)</visible>
-							<posx>870</posx>
-							<font>MediumSmallTitleFont2</font>
-							<textcolor>orange</textcolor>
-							<shadowcolor>FF222222</shadowcolor>
-							<width>350</width>
-							<height>30</height>
-							<posy>483</posy>
-							<align>right</align>
+							<visible>ControlGroup(7003).HasFocus</visible>
+							<posx>6</posx>
+							<include>Home_Label</include>
+							<label>Queue</label>
+						</control>
+						<control type="label" id="8001">
+							<visible>!ControlGroup(7003).HasFocus</visible>
+							<posx>6</posx>
+							<include>Home_Label_Unfocused</include>
 							<label>Queue</label>
 						</control>
 					</control>
@@ -948,11 +941,11 @@
 						<onup>-</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
-						<posx>-14</posx>
-						<posy>250</posy>
-						<width>880</width>
-						<height>230</height>
-						<itemlayout width="140" height="230">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>870</width>
+						<height>400</height>
+						<itemlayout width="148" height="200">
 							<!-- album -->
 							<!-- deactivated for the moment, not allowed yet -->
 							<control type="group">
@@ -1015,136 +1008,44 @@
 							<!-- web content -->
 							<!-- clip -->
 							<control type="group">
-								<visible>ListItem.Type(clip)</visible>
-								<posy>0</posy>
-								<!-- drop shadow -->
+								<!-- <visible>ListItem.Type(clip)</visible> -->
+								<posy>42</posy>
 								<control type="image">
-									<posx>28</posx>
-									<posy>30</posy>
 									<width>134</width>
-									<height>128</height>
-									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-									<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+									<height>134</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordersize>6</bordersize>
 								</control>
-								<control type="image">
-									<posx>37</posx>
-									<posy>39</posy>
-									<width>116</width>
-									<height>110</height>
-									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>157</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>189</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>169</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Title]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FFdddddd</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>200</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Property(sourceTitle)]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FFdddddd</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-								</control>
-							</control>
-							<!-- generic -->
-							<control type="group">
-								<visible>!ListItem.Type(clip)</visible>
-								<posy>0</posy>
-								<!-- drop shadow -->
-								<control type="image">
-									<posx>28</posx>
-									<posy>30</posy>
-									<width>134</width>
-									<height>128</height>
-									<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-									<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-								</control>
-								<control type="image">
-									<posx>37</posx>
-									<posy>39</posy>
-									<width>116</width>
-									<height>110</height>
-									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>157</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>189</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>169</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Title]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FFdddddd</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>200</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Property(sourceTitle)]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FFdddddd</textcolor>
-									<wrapmultiline>false</wrapmultiline>
+								<control type="group">
+									<posx>67</posx>
+									<posy>140</posy>
+									<control type="label">
+										<posy>0</posy>
+										<width>125</width>
+										<align>center</align>
+										<scroll>false</scroll>
+										<label>$INFO[ListItem.Title]</label>
+										<font>SearchResultSmaller</font>
+										<textcolor>Color3</textcolor>
+										<wrapmultiline>false</wrapmultiline>
+										<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
+									</control>
+									<control type="label">
+										<posy>20</posy>
+										<width>125</width>
+										<align>center</align>
+										<scroll>false</scroll>
+										<label>$INFO[ListItem.Property(sourceTitle)]</label>
+										<font>SearchResultSmaller</font>
+										<textcolor>Color3</textcolor>
+										<wrapmultiline>false</wrapmultiline>
+									</control>
 								</control>
 							</control>
 						</itemlayout>
-						<focusedlayout width="165" height="250">
+						<focusedlayout width="148" height="200">
 							<!-- album -->
 							<control type="image">
 								<posx>15</posx>
@@ -1202,271 +1103,71 @@
 							</control>
 							<!-- clip -->
 							<control type="group">
-								<posy>0</posy>
+								<!-- <visible>ListItem.Type(clip)</visible> -->
+								<posy>42</posy>
 								<control type="image">
-									<posx>34</posx>
-									<posy>36</posy>
-									<width>122</width>
-									<height>116</height>
-									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-									<visible>ListItem.Type(clip)</visible>
-									<bordertexture border="10">frameOrange.png</bordertexture>
-									<bordersize>3</bordersize>
+									<width>134</width>
+									<height>134</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture border="6">views/list-focus-bigAlt.png</bordertexture>
+									<bordersize>6</bordersize>
 								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>157</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-									<visible>ListItem.Type(clip)</visible>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>189</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-									<visible>ListItem.Type(clip)</visible>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>169</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Title]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>ListItem.Type(clip)</visible>
-									<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>200</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Property(sourceTitle)]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
-									<wrapmultiline>false</wrapmultiline>
-									<visible>ListItem.Type(clip)</visible>
-								</control>
-							</control>
-							<!-- generic -->
-							<control type="group">
-								<visible>!ListItem.Type(clip)</visible>
-								<posy>0</posy>
-								<control type="image">
-									<posx>34</posx>
-									<posy>36</posy>
-									<width>122</width>
-									<height>116</height>
-									<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-									<texture diffuse="episodeMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="10">frameOrange.png</bordertexture>
-									<bordersize>3</bordersize>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>157</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="image">
-									<posx>35</posx>
-									<posy>189</posy>
-									<width>120</width>
-									<height>27</height>
-									<texture border="10">whitewiderounded.png</texture>
-									<colordiffuse>FF000000</colordiffuse>
-									<animation effect="fade" start="0" end="20" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>169</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Title]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<wrapmultiline>false</wrapmultiline>
-									<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>95</posx>
-									<posy>200</posy>
-									<width>100</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<label>$INFO[ListItem.Property(sourceTitle)]</label>
-									<font>SearchResultSmaller</font>
-									<textcolor>FF3d3d3d</textcolor>
-									<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
-									<wrapmultiline>false</wrapmultiline>
+								<control type="group">
+									<posx>67</posx>
+									<posy>140</posy>
+									<control type="label">
+										<posy>0</posy>
+										<width>125</width>
+										<align>center</align>
+										<scroll>false</scroll>
+										<label>$INFO[ListItem.Title]</label>
+										<font>SearchResultSmaller</font>
+										<textcolor>Color2</textcolor>
+										<wrapmultiline>false</wrapmultiline>
+										<animation effect="fade" start="0" end="60" time="400" condition="true">Conditional</animation>
+									</control>
+									<control type="label">
+										<posy>20</posy>
+										<width>125</width>
+										<align>center</align>
+										<scroll>false</scroll>
+										<label>$INFO[ListItem.Property(sourceTitle)]</label>
+										<font>SearchResultSmaller</font>
+										<textcolor>Color3</textcolor>
+										<wrapmultiline>false</wrapmultiline>
+									</control>
 								</control>
 							</control>
 						</focusedlayout>
-						<height>200</height>
 					</control>
 					<!-- title bar Labels -->
 					<control type="grouplist">
-						<posx>26</posx>
-						<posy>483</posy>
-						<height>25</height>
+						<posx>200</posx>
+						<posy>10</posy>
+						<height>30</height>
 						<orientation>horizontal</orientation>
 						<visible>Control.IsVisible(11003)</visible>
 						<itemgap>0</itemgap>
-						<!-- tv specific -->
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Title] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>orange</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="300">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Title) + Container(11003).ListItem(0).Type(episode)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).TVShowTitle] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).TVShowTitle) + Container(11003).ListItem(0).Type(episode)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>Season $INFO[Container(11003).ListItem(0).Season] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Season) + Container(11003).ListItem(0).Type(episode)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>Episode $INFO[Container(11003).ListItem(0).Episode] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Episode) + Container(11003).ListItem(0).Type(episode)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Date] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Date) + Container(11003).ListItem(0).Type(episode)</visible>
-						</control>
-						<!-- music specific -->
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Artist] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + Container(11003).ListItem(0).Type(album)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Album] &#xB7; </label>
-							<font>SearchResultSmaller</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Album)</visible>
-						</control>
-						<!-- movie -->
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Title] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="300">auto</width>
-							<visible>ControlGroup(7003).HasFocus + [Container(11003).ListItem(0).Type(movie)]</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label>$INFO[Container(11003).ListItem(0).Year] &#xB7; </label>
-							<font>SearchResult</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + Container(11003).ListItem(0).Type(movie)</visible>
-						</control>
-						<!-- clip -->
+						<!-- general -->
 						<control type="label">
 							<align>left</align>
 							<label>$INFO[Container(11003).ListItem(0).Title]</label>
-							<font>MediumSmallTitleFont2</font>
+							<font>smallerCaps</font>
 							<scroll>false</scroll>
-							<textcolor>orange</textcolor>
 							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="500">auto</width>
-							<visible>ControlGroup(7003).HasFocus + Container(11003).ListItem(0).Type(clip)</visible>
+							<width>370</width>
+							<visible>ControlGroup(7003).HasFocus)</visible>
 						</control>
 						<control type="label">
-							<align>left</align>
-							<label> &#xB7; $INFO[Container(11003).ListItem(0).Year]</label>
-							<font>MediumSmallTitleFont2</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
+							<align>right</align>
+							<label>$INFO[Container(11003).ListItem(0).Property(sourceTitle)]</label>
+							<font>smallerCaps</font>
+							<textcolor>LightBlue</textcolor>
+							<scroll>true</scroll>
 							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="100">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Year) + Container(11003).ListItem(0).Type(clip)</visible>
-						</control>
-						<control type="label">
-							<align>left</align>
-							<label> &#xB7; $INFO[Container(11003).ListItem(0).Property(sourceTitle)]</label>
-							<font>MediumSmallTitleFont2</font>
-							<scroll>false</scroll>
-							<textcolor>orange</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Property(sourceTitle)) + Container(11003).ListItem(0).Type(clip)</visible>
-						</control>
-						<!-- generic -->
-						<control type="label">
-							<align>left</align>
-							<label> &#xB7; $INFO[Container(11003).ListItem(0).Duration]</label>
-							<font>MediumSmallTitleFont2</font>
-							<scroll>false</scroll>
-							<textcolor>FFFFFFFF</textcolor>
-							<wrapmultiline>false</wrapmultiline>
-							<width min="1" max="200">auto</width>
-							<visible>ControlGroup(7003).HasFocus + !IsEmpty(Container(11003).ListItem(0).Duration) + Container(11003).ListItem(0).Type(clip)</visible>
+							<width>300</width>
+							<visible>ControlGroup(7003).HasFocus</visible>
 						</control>
 					</control>
 				</control>
