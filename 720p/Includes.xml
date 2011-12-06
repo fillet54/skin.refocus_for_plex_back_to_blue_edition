@@ -349,6 +349,11 @@
 			</control>
 		</itemlayout>
 		<focusedlayout width="640" height="52">
+			<!-- Hack to make slideshow work when opening menu, by Jason Mehring -->
+			<control type="button">
+				<width>640</width>
+				<onfocus>Play</onfocus>
+			</control>
 			<!-- normal focus background -->
 			<control type="image">
 				<posy>0</posy>
