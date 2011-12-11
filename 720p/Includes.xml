@@ -38,6 +38,7 @@
 	<include file="IncludesBackgrounds.xml" />
 	<include file="IncludesSearch.xml" />
 	<include file="IncludesHomeNewLists.xml" />
+	<include file="ViewList.xml" />
 	
 	<include name="newtypelogo">
 		<control type="group">

@@ -332,7 +332,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
-			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			<visible>Control.IsVisible(555) + [Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 		</control>
 		<control type="label">
 			<posx>460</posx>
@@ -346,7 +346,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
-			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			<visible>Control.IsVisible(555) + [Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 		</control>
 	</include>
 	<!-- MUSIC VIEWS -->

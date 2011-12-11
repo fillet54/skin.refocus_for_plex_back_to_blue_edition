@@ -2,12 +2,14 @@
 <window id="502">
 	<defaultcontrol always="false">555</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>555</views>
+	<views>51,555</views>
 	<controls>
 		<include>global_Background</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>view_List_GrainyEdition</include>
+		<include>view_ListMusic</include>
+		<include>view_BigList</include>
 		<include>nav_Indicator</include>
 		<!--<include>ListViewCommon</include>-->
 		<!-- FAKE INFO BUTTON -->

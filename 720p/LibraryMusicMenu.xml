@@ -68,16 +68,15 @@
 				<!-- list -->
 				<control type="button" id="9019">
 					<label>$LOCALIZE[535]</label>
-					<onclick>Container.SetViewMode(555)</onclick>
+					<onclick>Container.SetViewMode(50)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<!--<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>-->
 				</control>
-				<!-- big list (tv show episodes) -->
+				<!-- big list (albums and songs) -->
 				<control type="button" id="9004">
 					<label>$LOCALIZE[537]</label>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(albums) | Container.Content(songs)</visible>
 				</control>
 				<!-- slide (movies, tv shows & seasons) -->
 				<control type="button" id="9005">
@@ -260,13 +259,6 @@
 					<itemgap>0</itemgap>
 					<include>transition2</include>
 					<visible>ControlGroup(9100).HasFocus(9001)</visible>
-					<!-- common -->
-					<control type="button" id="201">
-						<description>Add to favorites</description>
-						<label>$LOCALIZE[1036]</label>
-						<onclick>ActivateWindow(Favourites)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
-					</control>
 					<!-- slide -->
 					<control type="button" id="202">
 						<description>SLIDE: use posters</description>
