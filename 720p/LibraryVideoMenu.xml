@@ -380,6 +380,23 @@
 						<include>newHomeMenuSubSettingsButton</include>
 						<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
 					</control>
+					<!-- big list -->
+					<control type="button" id="202">
+						<description>BIGLIST: use posters</description>
+						<label>$LOCALIZE[31061]</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+						<onclick>Skin.ToggleSetting(view.biglist.posters)</onclick>
+						<include>newHomeMenuSubSettingsButton</include>
+						<visible>Control.IsVisible(51) + [Container.Content(tvshows) | Container.Content(movies)] + !Skin.HasSetting(view.biglist.posters)</visible>
+					</control>
+					<control type="button" id="203">
+						<description>BIGLIST: use fanart</description>
+						<label>$LOCALIZE[31039]</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+						<onclick>Skin.ToggleSetting(view.biglist.posters)</onclick>
+						<include>newHomeMenuSubSettingsButton</include>
+						<visible>Control.IsVisible(51) + [Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)</visible>
+					</control>	
 				</control>
 			</control>
 		</control>
