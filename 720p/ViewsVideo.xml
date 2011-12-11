@@ -7,13 +7,13 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>[[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent) | Container.Content(movies)] + Control.IsVisible(51) + !ControlGroup(300).HasFocus()</visible>
 			<control type="image">
 				<posx>29</posx>
 				<posy>237</posy>
 				<width>1205</width>
 				<height>146</height>
 				<texture border="10">views/list-focus-bigAlt.png</texture>
+				<visible>![Window.IsActive(movieinformation)] + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)] + Control.IsVisible(51)</visible>
 				<visible>!ControlGroup(300).HasFocus() + !Control.HasFocus(78)</visible>
 			</control>
 		</control>
@@ -36,39 +36,34 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
-			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent) | Container.Content(movies)</visible>
-			<itemlayout width="625" height="150">
+			<visible>![Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(files)]</visible>
+			<itemlayout condition="Container.Content(episodes) | [!Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]]" width="625" height="150">
 				<control type="image">
-					<width>246</width>
-					<height>138</height>
-					<posy>3</posy>
-					<texture background="true">frames/new/frame_Square-small.png</texture>
+					<width>247</width>
+					<height>144</height>
+					<texture fallback="thumbs/movie_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordertexture border="6" width="384" height="384">frames/new/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<width>247</width>
 					<height>144</height>
-					<texture fallback="backgrounds/library/TVShowsNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordertexture border="6" width="384" height="384">frames/new/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>stretch</aspectratio>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="image">
+					<width>247</width>
+					<height>144</height>
+					<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="384" height="384">frames/new/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>scale</aspectratio>
 					<visible>Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<width>246</width>
-					<height>138</height>
-					<posy>3</posy>
-					<texture background="true">frames/new/frame_Square-small.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>Container.Content(movies)</visible>
-				</control>
-				<control type="image">
-					<width>247</width>
-					<height>144</height>
-					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<bordersize>6</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<posx>209</posx>
@@ -76,7 +71,7 @@
 					<width>32</width>
 					<height>32</height>
 					<include>watchedOverlay</include>
-					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
 				</control>
 				
 				
@@ -120,6 +115,18 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<include>list_Label-sub</include>
 						<visible>IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+				
+				<!-- tvshows -->
+				<control type="group">
+					<posx>260</posx>
+					<posy>28</posy>
+					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
+					<control type="label">
+						<width>770</width>
+						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
+						<include>list_Label-sub</include>
 					</control>
 				</control>
 				
@@ -167,24 +174,40 @@
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + ![Skin.HasSetting(hideratings) | Skin.HasSetting(episodehiderating)]</visible>
 				</control>
+				<control type="image">
+					<posx>1155</posx>
+					<posy>8</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
 			</itemlayout>
 			<!-- FOCUSED BIG LIST ITEM [updated] -->
-			<focusedlayout width="625" height="150">
+			<focusedlayout condition="Container.Content(episodes) | [!Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]]" width="625" height="150">
 				<control type="image">
 					<width>247</width>
 					<height>144</height>
-					<texture fallback="backgrounds/library/TVShowsNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/movie_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<bordersize>6</bordersize>
 					<aspectratio>scale</aspectratio>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<width>247</width>
 					<height>144</height>
-					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<bordersize>6</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<visible>Container.Content(movies)</visible>
+					<aspectratio>scale</aspectratio>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="image">
+					<width>247</width>
+					<height>144</height>
+					<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
 					<posx>209</posx>
@@ -192,7 +215,7 @@
 					<width>32</width>
 					<height>32</height>
 					<include>watchedOverlay</include>
-					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
 				</control>
 				
 				
@@ -236,6 +259,18 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<include>list_Label-sub-focus</include>
 						<visible>IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+				
+				<!-- tvshows -->
+				<control type="group">
+					<posx>260</posx>
+					<posy>28</posy>
+					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
+					<control type="label">
+						<width>770</width>
+						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
+						<include>list_Label-sub-focus</include>
 					</control>
 				</control>
 				
@@ -283,6 +318,14 @@
 					<info>ListItem.StarRating</info>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + ![Skin.HasSetting(hideratings) | Skin.HasSetting(episodehiderating)]</visible>
+				</control>
+				<control type="image">
+					<posx>1155</posx>
+					<posy>8</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
 				</control>
 			</focusedlayout>
 		</control>
