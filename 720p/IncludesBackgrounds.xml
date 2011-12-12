@@ -63,6 +63,14 @@
 			<include>transition_Fanart</include>
 			<fadetime>fadetime_Fanart</fadetime>
 		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screen_Dimensions</include>
+			<texture background="true">$INFO[MusicPlayer.Fanart]</texture>
+			<visible>Player.HasAudio + Window.IsActive(50)</visible>
+			<include>transition_Fanart</include>
+			<fadetime>fadetime_Fanart</fadetime>
+		</control>
 		<!--playing video background-->
 		<control type="group">
 			<visible>Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)</visible>

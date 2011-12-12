@@ -1,16 +1,5 @@
-<?xml version="1.0"?>
 <window id="50">
-	<animation effect="fade" start="0" end="100" time="1000" reversible="true">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="1000" reversible="true">WindowClose</animation>
 	<controls>
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screen_Dimensions</include>
-			<texture background="true">$INFO[MusicPlayer.Fanart]</texture>
-			<animation type="Conditional" condition="True">
-				<effect type="fade" start="0" end="100" time="2000" delay="0"/>
-			</animation>
-		</control>
 		<include>global_Background</include>
 		<!-- Normal view -->
 		<control type="group">
