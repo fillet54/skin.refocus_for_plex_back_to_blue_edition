@@ -24,7 +24,7 @@
 					<width>228</width>
 					<height>316</height>
 					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(movies)</visible>
@@ -33,7 +33,7 @@
 					<width>228</width>
 					<height>316</height>
 					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
@@ -50,7 +50,7 @@
 					<width>228</width>
 					<height>316</height>
 					<texture fallback="thumbs/movie_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<include>focus_SlidePoster</include>
@@ -60,7 +60,7 @@
 					<width>228</width>
 					<height>316</height>
 					<texture fallback="thumbs/tvshow_portrait.jpg" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="40">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<include>focus_SlidePoster</include>
@@ -102,7 +102,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<bordertexture border="31">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(movies)</visible>
@@ -111,7 +111,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<bordertexture border="31">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(tvshows)</visible>
@@ -128,7 +128,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<bordertexture border="27">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(movies)</visible>
@@ -138,7 +138,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanartSmall.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<bordertexture border="27">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(tvshows)</visible>
@@ -180,7 +180,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="31">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(episodes) | Container.Content(plugincontent)</visible>
@@ -189,7 +189,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/videos.jpg" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="31">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>!Container.Content(episodes)</visible>
@@ -206,7 +206,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanart.png" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="27">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Container.Content(episodes) | Container.Content(plugincontent)</visible>
@@ -216,7 +216,7 @@
 					<width>450</width>
 					<height>272</height>
 					<texture fallback="backgrounds/library/moviesNoFanartSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="27">frames/new/frame_Square.png</bordertexture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>!Container.Content(episodes) + !Container.Content(plugincontent)</visible>

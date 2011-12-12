@@ -697,7 +697,7 @@
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 								</control>
@@ -796,7 +796,7 @@
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 								</control>
@@ -896,7 +896,7 @@
 										<height>80</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 									<control type="group">
@@ -1058,7 +1058,7 @@
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 								</control>
@@ -1158,7 +1158,7 @@
 										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 									<control type="group">
@@ -1196,7 +1196,7 @@
 										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 									<control type="group">
@@ -1307,7 +1307,7 @@
 										<height>130</height>
 										<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 										<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 									<control type="group">
@@ -1447,7 +1447,7 @@
 										<height>185</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 										<texture background="true" fallback="thumbs/actor_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-										<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+										<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 										<bordersize>6</bordersize>
 									</control>
 								</control>
@@ -1529,7 +1529,7 @@
 									<posy>10</posy>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/movie_landscape">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">

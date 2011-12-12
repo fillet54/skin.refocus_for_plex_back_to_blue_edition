@@ -11,7 +11,7 @@
 				<width>1280</width>
 				<height>478</height>
 				<aspectratio align="center">stretch</aspectratio>
-				<texture border="29" background="true">frames/new/frame_Gallery.png</texture>
+				<texture border="29" background="true">frames/frame_Gallery.png</texture>
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Window.IsActive(2)] + Control.IsVisible(53) + !Window.IsActive(progressdialog)</visible>
 			</control>
 		</control>

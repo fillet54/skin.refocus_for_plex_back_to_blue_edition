@@ -35,6 +35,19 @@
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 		</control>
+		<control type="scrollbar" id="85">
+			<description>thumbnails episodes</description>
+			<posx>1245</posx>
+			<posy>130</posy>
+			<height>525</height>
+			<onleft>575</onleft>
+			<visible allowhiddenfocus="true">Control.IsVisible(575) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(85)]</visible>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+
+		
 		<control type="scrollbar" id="65">
 			<description>slide posters</description>
 			<posx>30</posx>

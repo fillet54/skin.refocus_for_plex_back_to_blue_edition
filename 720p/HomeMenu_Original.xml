@@ -241,7 +241,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
@@ -279,7 +279,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.GrandparentThumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_EpisodeInfo</include>
@@ -294,7 +294,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
@@ -310,7 +310,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
@@ -498,7 +498,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
@@ -536,7 +536,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/album.png">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
@@ -564,7 +564,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.GrandparentThumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_EpisodeInfo</include>
@@ -579,7 +579,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$INFO[ListItem.GrandparentThumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_EpisodeInfo</include>
@@ -594,7 +594,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
@@ -608,7 +608,7 @@
 									<height>185</height>
 									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 									<texture background="true" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
@@ -1019,7 +1019,7 @@
 									<height>134</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture border="6">frames/new/frame_Square-small.png</bordertexture>
+									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">

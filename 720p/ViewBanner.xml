@@ -69,7 +69,7 @@
 					<posy>16</posy>
 					<width>800</width>
 					<height>148</height>
-					<texture diffuse="frames/new/frame_Wide-mask.png" fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Banner]</texture>
+					<texture diffuse="frames/frame_Wide-mask.png" fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Banner]</texture>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 					<include>focus_Banner</include>
 				</control>
