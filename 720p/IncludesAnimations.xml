@@ -133,6 +133,15 @@
 			<effect type="zoom" tween="Quadratic" start="130" end="100" center="112,100" time="200" />
 		</animation>
 	</include>
+		<include name="focus_SlideMusic">
+		<animation type="focus">
+			<effect type="zoom" tween="Quadratic" start="100" end="135" center="150,150" easing="Out" time="200"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="Quadratic" start="135" end="100" center="150,150" easing="Out" time="200" />
+		</animation>
+	</include>
+
 	<include name="focus_SlidePosterOverlay">
 		<animation type="focus">
 			<effect type="zoom" tween="Back" start="100" end="120" easing="Out" reversible="false" center="55,85" time="250"/>

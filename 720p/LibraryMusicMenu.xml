@@ -120,13 +120,6 @@
 					<include>newHomeMenuCategoryButton</include>
 					<visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
 				</control>
-				<!-- AVAILABLE -->
-				<control type="button" id="9013">
-					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
-					<include>newHomeMenuCategoryButton</include>
-					<visible>false</visible>
-				</control>
 				<!-- thumbs square -->
 				<control type="button" id="9014">
 					<label>thumbnails</label>
@@ -141,13 +134,19 @@
 					<include>newHomeMenuCategoryButton</include>
 					<visible>[Container.Content(artists)]</visible>
 				</control>
-				<!-- AVAILABLE -->
+				<!-- slide artist -->
 				<control type="button" id="9018">
-					<label>$LOCALIZE[5]</label>
-					<onclick>SetFocus(1150)</onclick>
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(55)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<include>newHomeMenuCategoryNoFocusBg</include>
-					<visible>false</visible>
+					<visible>[Container.Content(artists)]</visible>
+				</control>
+				<!-- slide square -->
+				<control type="button" id="9013">
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(522)</onclick>
+					<include>newHomeMenuCategoryButton</include>
+					<visible>[Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
 				<!-- view options -->
 				<control type="button" id="9001">
@@ -263,6 +262,20 @@
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9017)</visible>
 					</control>
+					<!-- slide wide (artist) -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/slideartist.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9018)</visible>
+					</control>
+					<!-- slide wide (square) -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/slidesquare.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9013)</visible>
+					</control>
 					
 					
 					
@@ -278,20 +291,20 @@
 					<visible>ControlGroup(9100).HasFocus(9001)</visible>
 					<!-- slide -->
 					<control type="button" id="202">
-						<description>SLIDE: use posters</description>
-						<label>$LOCALIZE[31061]</label>
-						<onclick>Container.SetViewMode(52)</onclick>
-						<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
+						<description>SLIDE: use square</description>
+						<label>use square</label>
+						<onclick>Container.SetViewMode(522)</onclick>
+						<onclick>Skin.ToggleSetting(slideViewFanartArtist)</onclick>
 						<include>newHomeMenuSubSettingsButton</include>
-						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Skin.HasSetting(slideViewFanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+						<visible>[Control.IsVisible(55) | Control.IsVisible(522)] + !Skin.HasSetting(slideViewFanartArtist) + [Container.Content(artists)]</visible>
 					</control>
 					<control type="button" id="203">
 						<description>SLIDE: use fanart</description>
 						<label>$LOCALIZE[31039]</label>
 						<onclick>Container.SetViewMode(55)</onclick>
-						<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
+						<onclick>Skin.ToggleSetting(slideViewFanartArtist)</onclick>
 						<include>newHomeMenuSubSettingsButton</include>
-						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+						<visible>[Control.IsVisible(55) | Control.IsVisible(522)] + Skin.HasSetting(slideViewFanartArtist) + [Container.Content(artists)]</visible>
 					</control>					
 					<control type="radiobutton" id="205">
 						<label>hide rating</label>

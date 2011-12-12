@@ -48,6 +48,25 @@
 		</control>
 
 		
+		<!---slide slide square------>
+		<control type="scrollbar" id="72">
+			<description></description>
+			<posx>30</posx>
+			<posy>405</posy>
+			<width>1220</width>
+			<onup>555</onup>
+			<orientation>horizontal</orientation>
+			<include>xScroller</include>
+			<animation effect="slide" end="0,-34" time="0" condition="[Container.Content(episodes)] + Control.IsVisible(58)">Conditional</animation>
+			<animation effect="slide" end="0,8" time="0" condition="[Container.Content(albums) + Control.IsVisible(52)]">Conditional</animation>
+			<animation effect="slide" end="0,-12" time="0" condition="[Container.Content(files) | Container.Content(musicvideos)] + Control.IsVisible(58)">Conditional</animation>
+			<visible allowhiddenfocus="true">[Control.IsVisible(522)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(72)]</visible>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+
+		
 		<control type="scrollbar" id="65">
 			<description>slide posters</description>
 			<posx>30</posx>
@@ -181,7 +200,5 @@
 			<visible allowhiddenfocus="true">[Control.IsVisible(573)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(83)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 		</control>
-
-
 	</include>
 </includes>
