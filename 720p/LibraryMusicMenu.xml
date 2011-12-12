@@ -127,19 +127,19 @@
 					<include>newHomeMenuCategoryButton</include>
 					<visible>false</visible>
 				</control>
-				<!-- AVAILABLE -->
+				<!-- thumbs square -->
 				<control type="button" id="9014">
-					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
+					<label>thumbnails</label>
+					<onclick>Container.SetViewMode(572)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<include>newHomeMenuCategoryNoFocusBg</include>
-					<visible>false</visible>
+					<visible>[Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
-				<!-- AVAILABLE -->
+				<!-- thumbs artists -->
 				<control type="button" id="9017">
-					<label>$LOCALIZE[5]</label>
+					<label>thumbnails</label>
+					<onclick>Container.SetViewMode(573)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<visible>false</visible>
+					<visible>[Container.Content(artists)]</visible>
 				</control>
 				<!-- AVAILABLE -->
 				<control type="button" id="9018">
@@ -202,7 +202,7 @@
 					</control>
 					<!-- big list -->
 					<control type="image">
-						<texture border="10" diffuse="frames/episodeframemask.png">views/listbig.jpg</texture>
+						<texture border="10" diffuse="frames/episodeframemask.png">views/listbigalbums.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9004)</visible>
@@ -249,6 +249,23 @@
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9012)</visible>
 					</control>
+					<!-- thumbs square (album + song) -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/thumbssquarealbum.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9014)</visible>
+					</control>
+					<!-- thumbs wide (artist) -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/thumbswideartist.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9017)</visible>
+					</control>
+					
+					
+					
 				</control>
 				<!-- view options -->
 				<control type="grouplist" id="200">

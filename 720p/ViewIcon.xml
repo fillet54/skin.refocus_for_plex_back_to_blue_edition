@@ -210,7 +210,69 @@
 		</control>
 	</include>
 	
-	
+	<!---WIDE------>
+	<include name="view_IconFiles">
+		<control type="panel" id="573">
+			<viewtype label="Thumbnails">bigicon</viewtype>
+			<posx>80</posx>
+			<posy>104</posy>
+			<width>1240</width>
+			<height>510</height>
+			<onleft>300</onleft>
+			<onright>83</onright>
+			<onup>573</onup>
+			<ondown>573</ondown>
+			<preloaditems>2</preloaditems>
+			<pagecontrol>83</pagecontrol>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>[Window.IsActive(mypictures) | Container.Content(artists)]</visible>
+			<itemlayout height="170" width="220">
+				<control type="image">
+					<width>215</width>
+					<height>165</height>
+					<texture fallback="thumbs/artist_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="image">
+					<width>215</width>
+					<height>165</height>
+					<texture fallback="thumbs/picture_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<visible>!Container.Content(artists)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="170" width="220">
+				<control type="image">
+					<width>215</width>
+					<height>165</height>
+					<texture fallback="thumbs/artist_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<include>focus_WideThumbs</include>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="image">
+					<width>215</width>
+					<height>165</height>
+					<texture fallback="thumbs/picture_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<include>focus_WideThumbs</include>
+					<visible>!Container.Content(artists)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
 	
 	<!---BIGWIDE------>
 	<include name="view_ThumbEpisode">
@@ -315,6 +377,50 @@
 					<posx>336</posx>
 					<posy>184</posy>
 					<include>watchedOverlay</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<!---SQUARE (ALBUMS)------>
+	<include name="view_IconSquare2">
+		<control type="panel" id="572">
+			<viewtype label="Thumbnails">icons</viewtype>
+			<posx>45</posx>
+			<posy>95</posy>
+			<width>1240</width>
+			<height>507</height>
+			<onleft>300</onleft>
+			<onright>86</onright>
+			<onup>572</onup>
+			<ondown>572</ondown>
+			<pagecontrol>86</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<animation effect="slide" end="0,15" condition="true">Conditional</animation>
+			<visible>Container.Content(albums) | Container.Content(songs)</visible>
+			<itemlayout height="169" width="169">
+				<control type="image">
+					<width>169</width>
+					<height>169</height>
+					<texture fallback="thumbs/album.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="169" height="169">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</itemlayout>											
+			<focusedlayout height="169" width="169">
+				<control type="image">
+					<width>169</width>
+					<height>169</height>
+					<texture fallback="thumbs/album.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="6" width="169" height="169">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>scale</aspectratio>
+					<include>focus_Thumbs</include>
 				</control>
 			</focusedlayout>
 		</control>
