@@ -2,34 +2,18 @@
 <includes>
 	<include file="Defaults.xml">-</include>
 	<include file="Includes_Plex.xml">-</include>
-	<include file="ViewsFiles.xml">-</include>
-	<include file="ViewsGrainy.xml">-</include>
-	<include file="ViewsMusic.xml">-</include>
-	<include file="ViewsVideo.xml">-</include>
-	<include file="ViewsPictures.xml">-</include>
-	<include file="ViewsAddons.xml">-</include>
-	<include file="ViewsShared.xml">-</include>
-	<include file="HomeMenu.xml">-</include>
-	<include file="homeMenu.xml">-</include>
 	<include file="HomeMenu_Original.xml">-</include>
-	<include file="HomeSubMenu.xml">-</include>
-	<include file="HomeSubMenuNew.xml">-</include>
 	<include file="HomeSubMenu_Original.xml">-</include>
-	<include file="HomeMusicMenu.xml">-</include>
-	<include file="HomeVideoMenu.xml">-</include>
-	<include file="HomePicturesMenu.xml">-</include>
-	<include file="HomeAccessoriesMenu.xml">-</include>
-	<include file="HomeSettingsMenu.xml">-</include>
-	<include file="HomeExitMenu.xml">-</include>
+	
 	<include file="LibraryVideoMenu.xml">-</include>
 	<include file="LibraryMusicMenu.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
-	<include file="LibraryPlaylistMenu.xml">-</include>
-	<include file="NowPlayingNew.xml">-</include>
 	<include file="FilesMenu.xml">-</include>
-	<include file="WeatherMenu.xml">-</include>
+
+	<include file="NowPlayingNew.xml">-</include>
 	<include file="InfoDialogMenu.xml">-</include>
 	<include file="DialogFullScreenInfoNew.xml">-</include>
+	
 	<include file="IncludesFlags.xml">-</include>
 	<include file="IncludesPageLabels.xml">-</include>
 	<include file="IncludesAnimations.xml">-</include>
@@ -38,7 +22,21 @@
 	<include file="IncludesBackgrounds.xml" />
 	<include file="IncludesSearch.xml" />
 	<include file="IncludesHomeNewLists.xml" />
+	
 	<include file="ViewList.xml" />
+	<include file="ViewSlide.xml" />
+	<include file="ViewIcon.xml" />
+	<include file="ViewGallery.xml" />
+	<include file="ViewBanner.xml" />
+	
+	<!-- moeten weggewerkt worden -->
+	<include file="ViewsFiles.xml">-</include>
+	<include file="ViewsGrainy.xml">-</include>
+	<include file="ViewsMusic.xml">-</include>
+	<include file="ViewsPictures.xml">-</include>
+	<include file="ViewsAddons.xml">-</include>
+	<include file="ViewsShared.xml">-</include>
+	
 	
 	<include name="newtypelogo">
 		<control type="group">
