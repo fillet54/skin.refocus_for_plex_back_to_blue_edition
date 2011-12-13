@@ -42,7 +42,7 @@
 	</include>
 	<include name="dialog_CommonListFocus">
 		<height>40</height>
-		<texture border="3">dialogs/list-focus.png</texture>
+		<texture border="3">new_dialogs/list-focus.png</texture>
 	</include>
 	
 	<include name="dialog_Radio">
