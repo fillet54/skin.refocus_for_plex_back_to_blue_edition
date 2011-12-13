@@ -240,13 +240,22 @@
 					<visible>Container.Content(artists)</visible>
 				</control>
 				<control type="image">
+					<posx>7</posx>
+					<posy>6</posy>
+					<width>203</width>
+					<height>153</height>
+					<texture background="true">black.png</texture>
+					<aspectratio>scale</aspectratio>
+					<visible>Window.IsActive(mypictures)</visible>
+				</control>
+				<control type="image">
 					<width>215</width>
 					<height>165</height>
-					<texture fallback="thumbs/picture_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/picture_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>scale</aspectratio>
-					<visible>!Container.Content(artists)</visible>
+					<visible>Window.IsActive(mypictures)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="170" width="220">
@@ -261,14 +270,24 @@
 					<visible>Container.Content(artists)</visible>
 				</control>
 				<control type="image">
+					<posx>7</posx>
+					<posy>6</posy>
+					<width>203</width>
+					<height>153</height>
+					<texture background="true">black.png</texture>
+					<aspectratio>scale</aspectratio>
+					<include>focus_WideThumbs</include>
+					<visible>Window.IsActive(mypictures)</visible>
+				</control>
+				<control type="image">
 					<width>215</width>
 					<height>165</height>
-					<texture fallback="thumbs/picture_landscape.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/picture_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>scale</aspectratio>
 					<include>focus_WideThumbs</include>
-					<visible>!Container.Content(artists)</visible>
+					<visible>Window.IsActive(mypictures)</visible>
 				</control>
 			</focusedlayout>
 		</control>

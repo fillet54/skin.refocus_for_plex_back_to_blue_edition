@@ -110,7 +110,7 @@
 				<!-- thumbnails photo -->
 				<control type="button" id="9009">
 					<label>thumbnails</label>
-					<onclick>Container.SetViewMode(572)</onclick>
+					<onclick>Container.SetViewMode(573)</onclick>
 					<include>newHomeMenuCategoryButton</include>
 					<visible>Window.IsActive(2)</visible>
 				</control>
@@ -270,6 +270,13 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9012)</visible>
+					</control>
+					<!-- icon wide photo -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/thumbswidephoto.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9009)</visible>
 					</control>
 				</control>
 				<!-- view options -->
