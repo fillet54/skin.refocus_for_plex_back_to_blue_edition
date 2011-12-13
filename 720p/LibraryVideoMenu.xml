@@ -121,12 +121,12 @@
 					<include>newHomeMenuCategoryButton</include>
 					<visible>Container.Content(tvshows) </visible>
 				</control>
-				<!-- gallery (movies & tv shows) -->
+				<!-- gallery (movies & tv shows & pictures) -->
 				<control type="button" id="9012">
 					<label>$LOCALIZE[31002]</label>
 					<onclick>Container.SetViewMode(53)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
+					<visible>[Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(2)]</visible>
 				</control>
 				<!-- Episode thumbs -->
 				<control type="button" id="9013">
@@ -269,7 +269,14 @@
 						<texture border="10" diffuse="frames/episodeframemask.png">views/gallery.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
-						<visible>ControlGroup(9100).HasFocus(9012)</visible>
+						<visible>ControlGroup(9100).HasFocus(9012) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+					</control>
+					<!-- gallery (photo) -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/galleryphoto.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9012) + ![Container.Content(movies) | Container.Content(tvshows)]</visible>
 					</control>
 					<!-- icon wide photo -->
 					<control type="image">

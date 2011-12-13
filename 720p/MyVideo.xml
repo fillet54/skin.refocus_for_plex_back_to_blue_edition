@@ -306,37 +306,6 @@
 			<include>transition3</include>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
-			<posy>102</posy>
-			<control type="label">
-				<posx>265</posx>
-				<label>$INFO[ListItem.Title]</label>
-				<include>info_Title</include>
-				<width>750</width>
-				<visible>[Container.Content(movies) | Container.Content(episodes)] + ![Control.HasFocus(8000)]</visible>
-			</control>
-			<control type="label">
-				<posx>265</posx>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<include>info_Title</include>
-				<width>750</width>
-				<visible>Container.Content(tvshows) + ![Control.HasFocus(8000)]</visible>
-			</control>
-			<control type="label">
-				<posx>1015</posx>
-				<label>$INFO[Container(53).ListItem(1).Title]</label>
-				<include>info_Title</include>
-				<width>750</width>
-				<visible>Container.Content(movies) + ![Control.HasFocus(8000)]</visible>
-				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<posx>1015</posx>
-				<label>• $INFO[Container(53).ListItem(1).TVShowTitle]</label>
-				<include>info_Title</include>
-				<width>750</width>
-				<visible>Container.Content(tvshows) + ![Control.HasFocus(8000)]</visible>
-				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-			</control>
 		</control>
 		<!-- studio flags -->
 		<control type="group">
