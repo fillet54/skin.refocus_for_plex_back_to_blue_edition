@@ -132,6 +132,7 @@
 					<posy>60</posy>
 					<width>960</width>
 					<height>170</height>
+					<visible>!Container.Content(songs)</visible>
 					<label>$INFO[ListItem.Plot]</label>
 					<include>description_Small</include>
 				</control>
