@@ -106,6 +106,21 @@
 					<width>920</width>
 					<label>$INFO[ListItem.Property(Genre)]</label>
 					<include>info_Sub</include>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="label">
+					<posy>28</posy>
+					<width>920</width>
+					<label>$INFO[ListItem.Artist]$INFO[ListItem.Year, • ]</label>
+					<include>info_Sub</include>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="label">
+					<posy>28</posy>
+					<width>920</width>
+					<label>$INFO[ListItem.Artist]</label>
+					<include>info_Sub</include>
+					<visible>Container.Content(songs)</visible>
 				</control>
 				<control type="grouplist">
 					<posy>28</posy>

@@ -49,16 +49,17 @@
 			<visible>Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)</visible>
 		</control>
 		
-		<!-- now playing for legcy home screen -->
+		<!-- now playing for legcy home screen  -->
 		<control type="group">
-			<visible>![Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)]</visible>
+<!--			<visible>![Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)]</visible> -->
 			<visible>Player.HasAudio</visible>
 			<posx>905</posx>
 			<posy>-15</posy>
 			<include>grainyeditionnowplayinghome</include>
 		</control>
+
 		<!-- time and date -->
-		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		<include>libClock</include>
 		
 		<!-- left screen edge shadow -->
 			<control type="image">

@@ -159,15 +159,9 @@
 		<posy>22</posy>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>progress</font>
+		<font>toastProgress</font>
 		<textcolor>Color1</textcolor>
 		<include>transition_Toast</include>
-		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
-			<effect type="slide" time="0" start="0" end="-60" />
-		</animation>
-		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(videoscan) | Window.IsActive(musicscan)]">
-			<effect type="slide" time="0" start="0" end="-60" />
-		</animation>
 	</include>
 	<!--notificationIcon-->
 	<include name="toast_Icon">
@@ -415,23 +409,21 @@
 	</include>
 	<!-- global clock & date -->
 	<include name="libClock">
-		<include>transition2</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(homeTime) + !Window.IsActive(113) + !Window.IsActive(107) + !Window.isActive(busydialog)</visible>
-			<control type="label" id="200">
+			<include>toggle_ToastMute</include>
+			<visible>[!Player.HasMedia | Window.isActive(0)] + !Skin.HasSetting(homeTime) + !Window.IsActive(107) + !Window.isActive(busydialog) + !Window.isActive(infodialog)</visible>
+			<control type="label">
 				<posx>25r</posx>
 				<label>[B]$INFO[System.Time][/B]</label>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Top</include>
-				<visible>!Skin.HasSetting(homeTime) | ![Player.HasMedia + !Skin.HasSetting(overlay) + !Window.IsActive(Home)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)]</visible>
 			</control>
 			<!-- date under the clock -->
-			<control type="label" id="200">
+			<control type="label">
 				<posx>25r</posx>
 				<label>[UPPERCASE]$INFO[System.Date][/UPPERCASE]</label>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom</include>
-				<visible>![Player.HasMedia + !Skin.HasSetting(overlay) + !Window.IsActive(Home)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)]</visible>
 			</control>
 		</control>
 	</include>

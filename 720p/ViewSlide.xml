@@ -166,7 +166,7 @@
 				<texture fallback="thumbs/artist_landscape.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<bordertexture border="31">frames/frame_Square.png</bordertexture>
 				<bordersize>22</bordersize>
-				<aspectratio align="center">stretch</aspectratio>
+				<aspectratio align="center">scale</aspectratio>
 				<visible>Container.Content(artists)</visible>
 			</control>
 		</itemlayout>
@@ -177,7 +177,7 @@
 				<texture fallback="thumbs/artist_landscape.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<bordertexture border="27">frames/frame_Square.png</bordertexture>
 				<bordersize>22</bordersize>
-				<aspectratio align="center">stretch</aspectratio>
+				<aspectratio align="center">scale</aspectratio>
 				<visible>Container.Content(artists)</visible>
 				<include>focus_SlideWide</include>
 			</control>
@@ -266,7 +266,7 @@
 	
 	<!---SQUARE------>
 	<include name="view_SlideSquare">
-		<control type="wraplist" id="522">
+		<control type="fixedlist" id="522">
 			<viewtype label="Slide">info</viewtype>
 			<posx>-55</posx>
 			<posy>115</posy>

@@ -340,15 +340,6 @@
 		<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="250" />
 		</animation>
-		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) | Window.IsActive(614)]">
-			<effect type="slide" time="0" start="0" end="-60" />
-		</animation>
-		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(videoscan) | Window.IsActive(musicscan)]">
-			<effect type="slide" time="0" start="0" end="-60" />
-		</animation>
-		<animation type="Conditional" condition="Player.Muted">
-			<effect type="slide" time="0" start="0" end="-50" />
-		</animation>
 	</include>
 	
 	
@@ -372,6 +363,12 @@
 		<animation type="Conditional" condition="![ControlGroup(6000).HasFocus] + !Skin.HasSetting(global.kiosk)">
 			<effect type="zoom" time="250" center="screen_Center" start="140" end="100" />
 			<effect type="fade" time="250" center="screen_Center" start="20" end="100" />
+		</animation>
+	</include>
+
+	<include name="toggle_ToastMute">
+		<animation type="Conditional" condition="Player.Muted">
+			<effect type="slide" time="200" start="0" end="-50" tween="Cubic" easing="Out" />
 		</animation>
 	</include>
 

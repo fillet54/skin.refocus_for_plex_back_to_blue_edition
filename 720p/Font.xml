@@ -56,6 +56,11 @@
 			<filename>LightCaps.ttf</filename>
 			<size>42</size> 
 		</font>
+		<font>
+			<name>toastProgress</name>
+			<filename>LightCaps.ttf</filename>
+			<size>42</size> 
+		</font>
 
 <!-- containers -->
 		<font>

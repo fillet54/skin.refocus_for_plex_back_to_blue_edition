@@ -694,6 +694,13 @@
 					<include>list_Label-sub</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
+				<control type="label">
+					<posy>70</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Duration]</label>
+					<include>list_Label-sub</include>
+					<visible>Container.Content(songs)</visible>
+				</control>
 			</control>
 			<control type="image">
 				<posx>1060</posx>
@@ -748,6 +755,13 @@
 					<label>$INFO[ListItem.Genre]</label>
 					<include>list_Label-sub-focus</include>
 					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="label">
+					<posy>70</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Duration]</label>
+					<include>list_Label-sub-focus</include>
+					<visible>Container.Content(songs)</visible>
 				</control>
 			</control>
 			<control type="image">

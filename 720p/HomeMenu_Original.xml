@@ -6,7 +6,7 @@
 	</include>
 	
 	<include name="HeightWithLogo">
-		<height>560</height>
+		<height>550</height>
 		<movement>7</movement>
 	</include>
 	
