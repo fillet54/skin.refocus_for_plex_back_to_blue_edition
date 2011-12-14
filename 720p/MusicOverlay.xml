@@ -6,7 +6,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0)]</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(50) | Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0)]</visible>
 			<include>toggle_ToastMute</include>
 			<control type="label" id="200">
 				<posx>130r</posx>

@@ -156,7 +156,7 @@
 		<include>transition_Toast</include>
 	</include>
 	<include name="toast_Side">
-		<posy>22</posy>
+		<posy>24</posy>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>toastProgress</font>
