@@ -6,15 +6,13 @@
 				<!-- pause animations -->
 				<animation condition="!Player.Paused" type="Conditional">
 					<effect type="rotatey" center="200" start="-180" end="0" time="500" easing="out" reversible="false"/>
-					<effect type="fade" start="50" end="90" time="250" delay="0"/>
 				</animation>
 				<animation condition="Player.Paused" type="Conditional">
 					<effect type="rotatey" center="200" start="0" end="-180" time="500" easing="out" reversible="false"/>
-					<effect type="fade" start="90" end="50" time="250" delay="0"/>
 				</animation>
 				<control type="group">
-					<posx>239</posx>
-					<posy>599</posy>
+					<posx>198</posx>
+					<posy>558</posy>
 					<align>right</align>
 					<!-- effects when closing/opening window -->
 					<animation type="WindowOpen">
@@ -26,9 +24,17 @@
 					
 					<!-- cover now playing -->
 					<control type="group">
+					
+					
+						<animation condition="Skin.HasSetting(showNewLists) + [Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)]">
+							<effect type="zoom" easing="in" time="600" center="160,160" start="100" end="70" tween="cubic" />
+						</animation>
+						<animation condition="!Skin.HasSetting(showNewLists) + [ControlGroup(5100).HasFocus | ControlGroup(5200).HasFocus]">
+							<effect type="zoom" easing="out" time="250" center="160,160" start="100" end="70" tween="cubic" />
+						</animation>
 						<control type="image">
-							<width>140</width>
-							<height>140</height>
+							<width>180</width>
+							<height>180</height>
 							<info>MusicPlayer.Cover</info>
 							<bordertexture border="40">frames/frame_Square.png</bordertexture>
 							<bordersize>22</bordersize>
@@ -40,7 +46,13 @@
 						<description>Current track info</description>
 						<visible>Player.HasMusicPlaylist</visible>
 						<posx>10</posx>
-						<posy>49</posy>
+						<posy>89</posy>
+						<animation condition="Skin.HasSetting(showNewLists) + [Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)]">
+							<effect type="slide" easing="in" start="0,0" end="45,00" tween="Cubic" time="600"/>
+						</animation>
+						<animation condition="!Skin.HasSetting(showNewLists) + [ControlGroup(5100).HasFocus | ControlGroup(5200).HasFocus]">
+							<effect type="slide" easing="out" start="0,0" end="45,00" tween="Cubic" time="250"/>
+						</animation>
 						<control type="label">
 							<width>500</width>
 							<include>list_Label-sub</include>
