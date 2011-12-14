@@ -43,7 +43,7 @@
 				<onleft>300</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(20)</visible>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(20) | Container(301).HasFocus(20)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>

@@ -33,13 +33,11 @@
 					<onclick>SetFocus(1110)</onclick>
 					<visible>Skin.HasSetting(homeMenuPlugins)</visible>
 				</item>
-				<!--
 				<item id="20">
 					<label>iTunes</label>
 					<onclick>SetFocus(1120)</onclick>
 					<visible>Skin.HasSetting(iTunesHome)</visible>
 				</item>
-				-->
 				<item id="15">
 					<label>$LOCALIZE[0]</label>
 					<onclick>ActivateWindow(Programs)</onclick>
@@ -136,13 +134,11 @@
                     <onclick>Plex.ActivateWindow(10051)</onclick>
         			<visible>!Skin.HasSetting(homeMenuSearch)</visible>
                 </item>
-				<!--
 				<item id="20">
 					<label>iTunes</label>
 					<onclick>SetFocus(1120)</onclick>
 					<visible>!Skin.HasSetting(iTunesHome)</visible>
 				</item>
-				-->
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
