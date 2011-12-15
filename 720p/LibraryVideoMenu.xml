@@ -60,6 +60,7 @@
 			</control>
 			<!-- LEFT -->
 			<control type="grouplist" id="9100">
+				<visible>!Skin.HasSetting(global.kiosk)</visible>
 				<onup>9100</onup>
 				<ondown>9100</ondown>
 				<onleft>555</onleft>

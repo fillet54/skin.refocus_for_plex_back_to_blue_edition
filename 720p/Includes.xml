@@ -433,7 +433,7 @@
 		<control type="group" id="6100">
 			<posx>20</posx>
 			<posy>24</posy>
-			<visible>!Window.IsActive(busydialog) + [Window.IsActive(programs) | Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(videofiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(pictures) | Window.IsActive(600)] + !Control.IsVisible(9900)</visible>
+			<visible>!Window.IsActive(busydialog) + !Skin.HasSetting(global.kiosk) + [Window.IsActive(programs) | Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(videofiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(pictures) | Window.IsActive(600)] + !Control.IsVisible(9900)</visible>
 			<animation effect="slide" end="0,-3" condition="true">Conditional</animation>
 			<include>transition_Indicator</include>
 			<control type="image">
@@ -457,7 +457,7 @@
 		<control type="group" id="6100">
 			<posx>20</posx>
 			<posy>24</posy>
-			<visible>!Window.IsActive(busydialog) + [Window.IsActive(movieinformation) | Window.IsActive(musicinformation)] + !Control.IsVisible(9900)</visible>
+			<visible>!Window.IsActive(busydialog) + !Skin.HasSetting(global.kiosk) + [Window.IsActive(movieinformation) | Window.IsActive(musicinformation)] + !Control.IsVisible(9900)</visible>
 			<animation effect="slide" end="0,-3" condition="true">Conditional</animation>
 			<include>transition_Indicator</include>
 			<control type="image">

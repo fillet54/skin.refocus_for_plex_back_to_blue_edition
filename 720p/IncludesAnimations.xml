@@ -404,11 +404,11 @@
 
 
 	<include name="contextMenuHide">
-		<animation type="Conditional" condition="[ControlGroup(300).HasFocus | Window.IsActive(111) | ControlGroup(200).HasFocus()]">
+		<animation type="Conditional" condition="[ControlGroup(300).HasFocus | Window.IsActive(111) | ControlGroup(200).HasFocus()] + !Skin.HasSetting(global.kiosk)">
 			<effect type="zoom" time="250" center="640,360" start="100" end="55"/>
 			<effect type="fade" time="250" center="640,360" start="100" end="20"/>
 		</animation>
-		<animation type="Conditional" condition="![ControlGroup(300).HasFocus | Window.IsActive(111) | ControlGroup(200).HasFocus()]">
+		<animation type="Conditional" condition="![ControlGroup(300).HasFocus | Window.IsActive(111) | ControlGroup(200).HasFocus()] + !Skin.HasSetting(global.kiosk)">
 			<effect type="zoom" time="250" center="640,360" start="140" end="100"/>
 			<effect type="fade" time="250" center="640,360" start="20" end="100"/>
 		</animation>

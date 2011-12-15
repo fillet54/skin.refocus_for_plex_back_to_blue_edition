@@ -266,6 +266,13 @@
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)">Conditional</animation>
 				<include>transition2</include>
+				<control type="radiobutton" id="281">
+					<description>kiosk mode</description>
+					<label>Kiosk mode</label>
+					<onclick>Skin.ToggleSetting(global.kiosk)</onclick>
+					<selected>Skin.HasSetting(global.kiosk)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
 				<control type="radiobutton" id="283">
 					<description>Letter Offset Scrolling</description>
 					<label>show "first letter offset" scrolling in library views</label>
