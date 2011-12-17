@@ -24,6 +24,9 @@
 	<color name="column3">dd0c2134</color>
 	<color name="column4">ee2d5a83</color>
 	
+	<color name="column2_black">ff818181</color>
+	<color name="column3_black">dd333333</color>
+	
 	<!-- search -->
 	<color name="LightBlue">ff6aa6cb</color>
 </colors>

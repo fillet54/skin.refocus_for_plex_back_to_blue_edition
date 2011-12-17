@@ -671,7 +671,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9001).ListItem(0).Year] • $LOCALIZE[180]: $INFO[Container(9001).ListItem(0).Duration]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<scroll>false</scroll>
 								<wrapmultiline>false</wrapmultiline>
 								<width>220</width>
@@ -770,7 +770,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9002).ListItem(0).Year] • $LOCALIZE[180]: $INFO[Container(9002).ListItem(0).Duration]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<scroll>false</scroll>
 								<wrapmultiline>false</wrapmultiline>
 								<width>220</width>
@@ -870,7 +870,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9004).ListItem(0).Date] • $INFO[Container(9004).ListItem(0).Title] • $INFO[Container(9004).ListItem(0).Duration]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<scroll>true</scroll>
 								<wrapmultiline>false</wrapmultiline>
 								<width>420</width>
@@ -1132,7 +1132,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9009).ListItem(0).Album] • $INFO[Container(9009).ListItem(0).Year]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<scroll>false</scroll>
 								<wrapmultiline>false</wrapmultiline>
 								<width>420</width>
@@ -1281,7 +1281,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9010).ListItem(0).Title] • $INFO[Container(9010).ListItem(0).Duration]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<scroll>false</scroll>
 								<wrapmultiline>false</wrapmultiline>
 								<width>420</width>
@@ -1503,7 +1503,7 @@
 								<align>right</align>
 								<label>$INFO[Container(9012).ListItem(0).Duration]</label>
 								<font>smallerCaps</font>
-								<textcolor>LightBlue</textcolor>
+								<include>Right_Color</include>
 								<wrapmultiline>false</wrapmultiline>
 								<width>120</width>
 							</control>

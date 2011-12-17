@@ -273,6 +273,13 @@
 					<selected>Skin.HasSetting(global.kiosk)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
+				<control type="radiobutton" id="282">
+					<description>black edition</description>
+					<label>Black Edition</label>
+					<onclick>Skin.ToggleSetting(overlay.black)</onclick>
+					<selected>Skin.HasSetting(overlay.black)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
 				<control type="radiobutton" id="283">
 					<description>Letter Offset Scrolling</description>
 					<label>show "first letter offset" scrolling in library views</label>

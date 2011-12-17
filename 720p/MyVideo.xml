@@ -431,7 +431,7 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<aspectratio align="left">stretch</aspectratio>
-			<texture>home/menuBackground.png</texture>
+			<include>menu_Background_Image</include>
 			<include>fadeinout</include>
 			<visible>Control.IsVisible(56) + ControlGroup(300).HasFocus()</visible>
 		</control>

@@ -5,12 +5,28 @@
 			<height>35</height>
 			<texture border="8">search/header.png</texture>
 			<colordiffuse>column3</colordiffuse>
+			<visible>!Skin.HasSetting(overlay.black)</visible>
 		</control>
 		<control type="image">
 			<width>185</width>
 			<height>35</height>
 			<texture>search/arrow.png</texture>
 			<colordiffuse>column2</colordiffuse>
+			<visible>!Skin.HasSetting(overlay.black)</visible>
+		</control>
+		<control type="image">
+			<width>880</width>
+			<height>35</height>
+			<texture border="8">search/header.png</texture>
+			<colordiffuse>column3_black</colordiffuse>
+			<visible>Skin.HasSetting(overlay.black)</visible>
+		</control>
+		<control type="image">
+			<width>185</width>
+			<height>35</height>
+			<texture>search/arrow.png</texture>
+			<colordiffuse>column2_black</colordiffuse>
+			<visible>Skin.HasSetting(overlay.black)</visible>
 		</control>
 	</include>
 	
@@ -23,12 +39,13 @@
 		<width>160</width>
 		<height>30</height>
 	</include>
+	
 	<include name="Home_Label_Unfocused">
 		<posy>1</posy>
 		<posx>10</posx>
 		<align>left</align>
 		<font>smallerCaps</font>
-		<textcolor>LightBlue</textcolor>
+		<include>Right_Color</include>
 		<width>160</width>
 		<height>30</height>
 	</include>

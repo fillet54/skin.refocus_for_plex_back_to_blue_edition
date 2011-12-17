@@ -388,7 +388,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11001).ListItem(0).Date]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>150</width>
@@ -428,7 +428,7 @@
 							<align>right</align>
 							<label>$LOCALIZE[180]: $INFO[Container(11001).ListItem(0).Duration]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>200</width>
@@ -761,7 +761,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11000).ListItem(0).Date]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>150</width>
@@ -801,7 +801,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11000).ListItem(0).Title]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>400</width>
@@ -812,7 +812,7 @@
 							<align>right</align>
 							<label>$LOCALIZE[180]: $INFO[Container(11000).ListItem(0).Duration]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>200</width>
@@ -841,7 +841,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11000).ListItem(0).Date]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>150</width>
@@ -871,7 +871,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11000).ListItem(0).Album] • $INFO[Container(11000).ListItem(0).Year]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>true</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>370</width>
@@ -882,7 +882,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11000).ListItem(0).Title]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>670</width>
@@ -893,7 +893,7 @@
 							<align>right</align>
 							<label>$LOCALIZE[180]: $INFO[Container(11000).ListItem(0).Duration]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>200</width>
@@ -1163,7 +1163,7 @@
 							<align>right</align>
 							<label>$INFO[Container(11003).ListItem(0).Property(sourceTitle)]</label>
 							<font>smallerCaps</font>
-							<textcolor>LightBlue</textcolor>
+							<include>Right_Color</include>
 							<scroll>true</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>300</width>

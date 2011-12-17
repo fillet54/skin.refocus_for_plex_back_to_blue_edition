@@ -66,6 +66,17 @@
 				<label>"Back to Blue" Edition</label>
 				<textcolor>Color3</textcolor>
 				<include>transition2</include>
+				<visible>!Skin.HasSetting(overlay.black)</visible>
+			</control>
+
+			<control type="label" id="200">
+				<posx>120</posx>
+				<posy>112</posy>
+				<font>list</font>
+				<label>Black Edition</label>
+				<textcolor>Color3</textcolor>
+				<include>transition2</include>
+				<visible>Skin.HasSetting(overlay.black)</visible>
 			</control>
 
 		</control>
@@ -103,6 +114,48 @@
 
 		</control>
 	</include>
+	
+	
+<!-- black / blue version -->	
+	<include name="background_Image">
+		<include condition="!Skin.HasSetting(overlay.black)">blue_Background</include>
+		<include condition="Skin.HasSetting(overlay.black)">black_Background</include>
+	</include>
+
+	<include name="blue_Background">
+		<texture background="true">backgrounds/background.png</texture>
+	</include>
+
+	<include name="black_Background">
+		<texture background="true">backgrounds/background_black.png</texture>
+	</include>
+
+	<include name="menu_Background_Image">
+		<include condition="!Skin.HasSetting(overlay.black)">blue_Menu_Background</include>
+		<include condition="Skin.HasSetting(overlay.black)">black_Menu_Background</include>
+	</include>
+
+	<include name="blue_Menu_Background">
+		<texture background="true">home/menuBackground.png</texture>
+	</include>
+
+	<include name="black_Menu_Background">
+		<texture background="true">home/menuBackground_black.png</texture>
+	</include>
+	
+	<include name="Right_Color">
+		<include condition="!Skin.HasSetting(overlay.black)">LightBlueTextColor</include>
+		<include condition="Skin.HasSetting(overlay.black)">LightBlackTextColor</include>
+	</include>
+	
+	<include name="LightBlueTextColor">
+		<textcolor>LightBlue</textcolor>
+	</include>
+	<include name="LightBlackTextColor">
+		<textcolor>Color3</textcolor>
+	</include>
+
+
 
 	<!-- view_ListVideo, view_BigList, view_Poster, view_PosterInfo -->
 	<include name="grainypagefade">
@@ -619,7 +672,16 @@
 		<focusedcolor>Color1</focusedcolor>
 		<texturenofocus>views/column_focus2.png</texturenofocus>
 		<texturefocus border="8">views/column_focus.png</texturefocus>
+		<include condition="!Skin.HasSetting(overlay.black)">diffuse_Blue</include>
+		<include condition="Skin.HasSetting(overlay.black)">diffuse_Black</include>
+	</include>
+	
+	<include name="diffuse_Blue">
 		<colordiffuse>column3</colordiffuse>
+	</include>
+	
+	<include name="diffuse_Black">
+		<colordiffuse>column3_black</colordiffuse>
 	</include>
 	
 <!---THUMBS------>

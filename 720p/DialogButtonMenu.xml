@@ -9,7 +9,7 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<aspectratio>stretch</aspectratio>
-			<texture>overlays/background.png</texture>
+			<include>background_Image</include>
 			<include>transition2.5</include>
 		</control>
 		<control type="group">

@@ -89,7 +89,7 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/background.png</texture>
+			<include>background_Image</include>
 			<include>transition_BG</include>
 		</control>
 		<!--vignette-->
@@ -138,7 +138,7 @@
 			<visible>Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
-			<texture>backgrounds/background.png</texture>
+			<include>background_Image</include>
 			<animation effect="fade" delay="500" start="0" end="90" time="250" condition="true">Visible</animation>
 			<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
 		</control>
@@ -148,7 +148,7 @@
 			<visible>ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus</visible>
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
-			<texture>backgrounds/background.png</texture>
+			<include>background_Image</include>
 			<animation effect="fade" start="0" end="90" time="250" condition="true">Visible</animation>
 			<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
 		</control>
