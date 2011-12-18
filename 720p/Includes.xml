@@ -450,15 +450,34 @@
 	</include>
 	<!-- CLOCK IN VIDEO INFO SCREEN -->
 	<include name="clock">
-		<control type="label" id="200">
-				<posy>0</posy>
-				<width>110</width>
-				<height>34</height>
+		<control type="group">
+			<animation type="Conditional" condition="Player.Muted">
+				<effect type="slide" time="0" start="0" end="-50" />
+			</animation>
+			<visible>!Window.IsActive(infodialog)</visible>
+			<control type="label">
+				<posx>25r</posx>
 				<label>$INFO[System.Time]</label>
-				<align>right</align>
-				<font>small</font>
-				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Top</include>
 			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<label>$INFO[System.Date]</label>
+				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom</include>
+				<visible>!Window.IsActive(fullscreenvideo)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<label>$LOCALIZE[31068]</label> <!-- 31068 = eind tijd + finishtime-->
+				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom</include>
+				<visible>Window.IsActive(fullscreenvideo)</visible>
+			</control>
+		</control>
 	</include>
 	<!-- global clock & date -->
 	<include name="libClock">
