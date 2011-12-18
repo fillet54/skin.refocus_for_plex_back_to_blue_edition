@@ -208,6 +208,19 @@
 			<filename>Light.ttf</filename>
 			<size>38</size>
 		</font>
+		
+<!---OSD------>	
+		<font>
+			<name>osdTitle</name>
+			<filename>LightCaps.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>osdHeader</name>
+			<filename>Light.ttf</filename>
+			<size>48</size>
+		</font>
+
 
 <!-- dialogs -->		
 		<font>

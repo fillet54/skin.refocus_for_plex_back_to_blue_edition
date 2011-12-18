@@ -557,4 +557,24 @@
 			</control>
 		</control>
 	</include>
+	
+<!---RESOLUTION------>
+	<include name="flag_Res">
+		<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/video/resolution/,.png]</texture>
+		<visible>!IsEmpty(Listitem.VideoResolution)</visible>
+	</include>
+	<include name="flag_Res-play">
+		<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/video/resolution/,.png]</texture>
+		<colordiffuse>Color4</colordiffuse>
+	</include>
+	<include name="flag_HD">
+		<texture>flags/video/HD/HD.png</texture>
+		<visible>stringcompare(Listitem.Property(mediaTag-videoResolution),720) | stringcompare(Listitem.Property(mediaTag-videoResolution),1080)</visible>
+	</include>
+	<include name="flag_HD-play">
+		<texture>flags/video/HD/HD.png</texture>
+		<visible>stringcompare(VideoPlayer.VideoResolution,720) | stringcompare(VideoPlayer.VideoResolution,1080)</visible>
+	</include>
+	
+	
 </includes>

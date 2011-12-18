@@ -189,18 +189,19 @@
 		<width>340</width>
 		<align>right</align>
 		<height>40</height>
-		<font>notification</font>
+		<font>info</font>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<scrollout>false</scrollout>
 		<pauseatend>2000</pauseatend>
 		<include>transition_Toast</include>
 	</include>
+	<!--notificationBottom-->
 	<include name="toast_Bottom">
 		<posy>26</posy>
 		<width>340</width>
 		<align>right</align>
-		<font>notificationSmall</font>
+		<font>listInfo</font>
 		<height>40</height>
 		<aligny>center</aligny>
 		<textcolor>Color2</textcolor>
@@ -208,6 +209,7 @@
 		<pauseatend>2000</pauseatend>
 		<include>transition_Toast</include>
 	</include>
+	
 	<include name="toast_Side">
 		<posy>24</posy>
 		<align>left</align>
@@ -617,12 +619,12 @@
 		<font>normalCaps</font>
 		<textcolor>Color1</textcolor>
 	</include>
-	<!--Heading3-->
 	<include name="info_Sub">
 		<height>25</height>
 		<aligny>center</aligny>
-		<font>smallCaps</font>
+		<font>info</font>
 		<textcolor>Color2</textcolor>
+		<visible>!StringCompare(ListItem.Label,..)</visible>
 	</include>
 
 <!---TEXTBOXES------>

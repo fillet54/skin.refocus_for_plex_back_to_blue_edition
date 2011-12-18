@@ -341,6 +341,25 @@
 			<effect type="fade" start="100" end="0" time="250" />
 		</animation>
 	</include>
+	<include name="transition_OSD">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,200" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
+			<effect type="fade" start="0" end="100" easing="Out" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,200" tween="Cubic" center="auto" easing="Out" time="400" />
+			<effect type="fade" start="100" end="0" easing="Out" time="400" />
+		</animation>
+		<animation type="Visible">
+			<effect type="slide" start="0,200" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
+			<effect type="fade" start="0" end="100" easing="Out" time="400" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,200" tween="Cubic" center="auto" easing="Out" time="400" />
+			<effect type="fade" start="100" end="0" easing="Out" time="400" />
+		</animation>
+	</include>
+	
 	
 	
 	<!-- TOGGLES / SELECTS -->
