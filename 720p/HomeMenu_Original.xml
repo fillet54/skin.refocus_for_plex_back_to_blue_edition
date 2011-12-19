@@ -56,14 +56,6 @@
 					<label2>$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Title]</label2>
 					<visible>Player.HasAudio</visible>
 				</item>
-				<item id="13">
-					<label>$LOCALIZE[13350]</label>
-					<onclick>ActivateWindow(videoplaylist)</onclick>
-					<visible>Player.HasVideo</visible>
-					<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>
-				</item>
-				
-				
 				<!-- dummy entries to prevent crash, investigate! -->
                                         <item id="7">
 											<description>Search Menu</description>
@@ -123,6 +115,12 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
+				<item id="13">
+					<label>$LOCALIZE[13350]</label>
+					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<visible>Player.HasVideo</visible>
+					<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>
+				</item>
 				<item id="10">
 					<label>Channels</label>
 					<onclick>SetFocus(1110)</onclick>
