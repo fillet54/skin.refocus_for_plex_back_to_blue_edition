@@ -8,37 +8,39 @@
 			<posy>300</posy>
 			<include>transition_OSD</include>
 			<!-- video player -->
-			<control type="image">
-				<height>200</height>
-				<width>screen_Width</width>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-				<texture>new_osd/infoOverlayTop.png</texture>
+			<control type="group">
 				<visible>!Skin.HasSetting(overlay.black)</visible>
+				<control type="image">
+					<height>200</height>
+					<width>screen_Width</width>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+					<texture>new_osd/infoOverlayTop.png</texture>
+				</control>
+				<control type="image" id="1">
+					<posy>200</posy>
+					<height>220</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+					<texture border="0,1,0,11">new_osd/infoOverlay.png</texture>
+				</control>
 			</control>
-			<control type="image" id="1">
-				<posy>200</posy>
-				<height>220</height>
-				<width>screen_Width</width>
-				<aspectratio>stretch</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-				<texture border="0,1,0,11">new_osd/infoOverlay.png</texture>
-				<visible>!Skin.HasSetting(overlay.black)</visible>
-			</control>
-			<control type="image">
-				<height>200</height>
-				<width>screen_Width</width>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-				<texture>new_osd/infoOverlayTop_black.png</texture>
+			<control type="group">
 				<visible>Skin.HasSetting(overlay.black)</visible>
-			</control>
-			<control type="image" id="1">
-				<posy>500</posy>
-				<height>220</height>
-				<width>screen_Width</width>
-				<aspectratio>stretch</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-				<texture border="0,1,0,11">new_osd/infoOverlay_black.png</texture>
-				<visible>Skin.HasSetting(overlay.black)</visible>
+				<control type="image">
+					<height>200</height>
+					<width>screen_Width</width>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+					<texture>new_osd/infoOverlayTop_black.png</texture>
+				</control>
+				<control type="image" id="1">
+					<posy>200</posy>
+					<height>220</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+					<texture border="0,1,0,11">new_osd/infoOverlay_black.png</texture>
+				</control>
 			</control>
 			
 			<!---flags--->
