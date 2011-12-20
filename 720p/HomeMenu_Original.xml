@@ -151,10 +151,17 @@
 					<label>$LOCALIZE[5]</label>
 					<onclick>ActivateWindow(Settings)</onclick>
 				</item>
-				<item id="11">
+				<!--<item id="11">
 					<label>$LOCALIZE[31013]</label>
 					<onclick>SetFocus(1160)</onclick>
+				</item>-->
+				<item id="11">
+					<label>Quit Plex</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>Plex.Shutdown()</onclick>
 				</item>
+				
 			</content>
 		</control>
 	</include>
