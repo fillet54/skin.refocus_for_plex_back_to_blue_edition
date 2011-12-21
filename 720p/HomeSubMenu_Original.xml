@@ -95,12 +95,12 @@
 					<item id="2">
 						<label>Sleep System</label>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.SleepSystem()</onclick>
+						<onclick>Plex.Suspend()</onclick>
 					</item>
 					<item id="3">
 						<label>Shutdown</label>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.ShutDownSystem()</onclick>
+						<onclick>Plex.Powerdown()</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 				</content>
