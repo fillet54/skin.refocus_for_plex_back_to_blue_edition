@@ -29,21 +29,28 @@
 			<posy>0</posy>
 			<!-- text field bg -->
 			<control type="image">
-				<posx>21</posx>
-				<posy>220</posy>
-				<width>315</width>
-				<height>53</height>
-				
+				<posx>30</posx>
+				<posy>217</posy>
+				<width>305</width>
+				<height>40</height>
 				<texture border="10,0,10,0">search/textField.png</texture>
 			</control>
+			<control type="image">
+				<posx>12</posx>
+				<posy>209</posy>
+				<width>56</width>
+				<height>56</height>
+				<texture>search/search.png</texture>
+			</control>
+
 			<!-- text field -->
 			<control type="label" id="310">
-				<posx>30</posx>
-				<posy>220</posy>
+				<posx>65</posx>
+				<posy>209</posy>
 				<font>LargeSearchFont</font>
 				<textcolor>Color4</textcolor>
 				<focusedcolor>Color4</focusedcolor>
-				<width>278</width>
+				<width>248</width>
 				<height>50</height>
 				<onleft>-</onleft>
 				<ondown>9001</ondown>
