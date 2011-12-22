@@ -221,7 +221,14 @@
 						<texture border="10" diffuse="frames/episodeframemask.png">views/listbigmovies.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
-						<visible>ControlGroup(9100).HasFocus(9004) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+						<visible>ControlGroup(9100).HasFocus(9004) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+					</control>
+					<!-- big list seasons -->
+					<control type="image">
+						<texture border="10" diffuse="frames/episodeframemask.png">views/listbigseasons.jpg</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>transition2</include>
+						<visible>ControlGroup(9100).HasFocus(9004) + Container.Content(seasons)</visible>
 					</control>
 					<!-- slide (movies, tv shows & seasons) -->
 					<control type="image">
