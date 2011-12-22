@@ -78,7 +78,7 @@
 					<label>$LOCALIZE[537]</label>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
 				</control>
 				<!-- slide (movies, tv shows & seasons) -->
 				<control type="button" id="9005">
