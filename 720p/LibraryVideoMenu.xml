@@ -78,7 +78,7 @@
 					<label>$LOCALIZE[537]</label>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>newHomeMenuCategoryButton</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
 				</control>
 				<!-- slide (movies, tv shows & seasons) -->
 				<control type="button" id="9005">
@@ -221,7 +221,7 @@
 						<texture border="10" diffuse="frames/episodeframemask.png">views/listbigmovies.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
-						<visible>ControlGroup(9100).HasFocus(9004) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+						<visible>ControlGroup(9100).HasFocus(9004) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<!-- slide (movies, tv shows & seasons) -->
 					<control type="image">
@@ -232,7 +232,7 @@
 					</control>
 					<!-- slide (episodes) -->
 					<control type="image">
-						<texture border="10" diffuse="frames/episodeframemask.png">views/slide.jpg</texture>
+						<texture border="10" diffuse="frames/episodeframemask.png">views/slideepisode.jpg</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>transition2</include>
 						<visible>ControlGroup(9100).HasFocus(9006)</visible>

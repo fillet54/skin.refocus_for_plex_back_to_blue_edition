@@ -153,7 +153,7 @@
 				<width>1205</width>
 				<height>146</height>
 				<texture border="10">views/list-focus-bigAlt.png</texture>
-				<visible>![Window.IsActive(movieinformation)] + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)] + Control.IsVisible(51)</visible>
+				<visible>![Window.IsActive(movieinformation)] + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + Control.IsVisible(51)</visible>
 				<visible>!ControlGroup(300).HasFocus() + !Control.HasFocus(78)</visible>
 			</control>
 			<control type="image">
@@ -485,7 +485,7 @@
 				<colordiffuse>Color4</colordiffuse>
 			</control>
 		</focusedlayout>
-		<itemlayout condition="Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]" width="625" height="150">
+		<itemlayout condition="[Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]] | Container.Content(seasons)" width="625" height="150">
 			<control type="image">
 				<width>100</width>
 				<height>144</height>
@@ -502,7 +502,7 @@
 				<bordertexture border="6" width="384" height="384">frames/frame_Square-small.png</bordertexture>
 				<bordersize>6</bordersize>
 				<aspectratio>stretch</aspectratio>
-				<visible>Container.Content(tvshows)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<posx>62</posx>
@@ -510,7 +510,7 @@
 				<width>32</width>
 				<height>32</height>
 				<include>watchedOverlay</include>
-				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 			</control>
 			<control type="label">
 				<posx>120</posx>
@@ -532,7 +532,7 @@
 					<width>975</width>
 					<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 					<include>list_Label-sub</include>
-					<visible>Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 			</control>
 			<control type="textbox" id="4">
@@ -552,7 +552,7 @@
 				<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(ListItem.Title)</visible>
+				<visible>!IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<posx>1155</posx>
@@ -563,7 +563,7 @@
 				<aspectratio align="right">keep</aspectratio>
 			</control>
 		</itemlayout>
-		<focusedlayout condition="Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]" width="625" height="150">
+		<focusedlayout condition="[Skin.HasSetting(view.biglist.posters) + [Container.Content(tvshows) | Container.Content(movies)]] | Container.Content(seasons)" width="625" height="150">
 			<control type="image">
 				<width>100</width>
 				<height>144</height>
@@ -580,7 +580,7 @@
 				<bordertexture border="6" width="384" height="384">frames/frame_Square-small-border.png</bordertexture>
 				<bordersize>6</bordersize>
 				<aspectratio>stretch</aspectratio>
-				<visible>Container.Content(tvshows)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<posx>62</posx>
@@ -588,7 +588,7 @@
 				<width>32</width>
 				<height>32</height>
 				<include>watchedOverlay</include>
-				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies) |  Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(episodes) + Skin.HasSetting(overlayEpisodes) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 			</control>
 			
 			<control type="label">
@@ -612,7 +612,7 @@
 					<width>900</width>
 					<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 					<include>list_Label-sub-focus</include>
-					<visible>Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 			</control>
 			<control type="textbox" id="4">
@@ -635,7 +635,7 @@
 				<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
 				<colordiffuse>Color4</colordiffuse>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.Title)</visible>
+				<visible>!IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<posx>1155</posx>
