@@ -63,7 +63,33 @@
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>true</scroll>
 					<visible>![Container.Content(singles) | Container.Content(songs)]</visible>
+					<visible>IsEmpty(ListItem.Property(sourceTitle))</visible>
 				</control>
+				
+				<control type="label" id="1">
+					<posx>500</posx>
+					<posy>19</posy>
+					<width>730</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>listBig</font>
+					<textcolor>Color1</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>true</scroll>
+					<visible>![Container.Content(singles) | Container.Content(songs)]</visible>
+					<visible>!IsEmpty(ListItem.Property(sourceTitle))</visible>
+				</control>
+				
+				
+				<control type="label" id="2">
+					<posx>500</posx>
+					<posy>62</posy>
+					<width>600</width>
+					<label>$INFO[ListItem.Property(sourceTitle)] • $INFO[ListItem.Property(serverName)]</label>
+					<include>info_Sub</include>
+					<visible>!IsEmpty(ListItem.Property(sourceTitle))</visible>
+				</control>
+				
 				<!-- infos -->
 				<control type="label" id="2">
 					<posx>120</posx>

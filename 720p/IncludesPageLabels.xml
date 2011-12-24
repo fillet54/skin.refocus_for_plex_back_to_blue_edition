@@ -29,7 +29,13 @@
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>PageLabel</include>
-			<visible>!Window.IsActive(500) + !Window.IsActive(502) + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+			<visible>!Window.IsActive(500) + !Window.IsActive(502) + !Window.IsActive(sharedcontent) + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+		</control>
+		<!-- sharedcontent -->
+		<control type="label">
+			<label>Shared Content</label>
+			<include>PageLabel</include>
+			<visible>Window.IsActive(sharedcontent)</visible>
 		</control>
 		<!-- pictures -->
 		<control type="label">
