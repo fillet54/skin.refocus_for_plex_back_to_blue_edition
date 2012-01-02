@@ -744,6 +744,13 @@
 		<aspectratio align="right">keep</aspectratio>
 		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
 	</include>
+	
+	<include name="art_TVShowLogo">
+		<texture>$INFO[Listitem.Title,flags/tvshowslogos/,.png]</texture>
+		<aspectratio align="center">keep</aspectratio>
+		<fadetime>200</fadetime>
+		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
+	</include>
 
 
 <!---COLUMNS------>

@@ -392,6 +392,16 @@
 						<include>newHomeMenuSubSettingsButton</include>
 						<visible>Control.IsVisible(50) + !Skin.HasSetting(ListViewFanart)</visible>
 					</control>-->
+					
+					<!-- gallery -->
+					<control type="radiobutton" id="212">
+						<label>show tvshow logo's (if available)</label>
+						<onclick>Skin.ToggleSetting(tvshowlogos.enable)</onclick>
+						<selected>Skin.HasSetting(tvshowlogos.enable)</selected>
+						<include>newHomeMenuSubSettingsButton</include>
+						<visible>Control.IsVisible(53) + Container.Content(tvshows)</visible>
+					</control>
+					
 					<!-- big thumbnails -->
 					<control type="radiobutton" id="212">
 						<label>show studio logo on right bottom corner</label>
@@ -425,7 +435,7 @@
 						<onclick>Skin.ToggleSetting(view.biglist.posters)</onclick>
 						<include>newHomeMenuSubSettingsButton</include>
 						<visible>Control.IsVisible(51) + [Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)</visible>
-					</control>	
+					</control>
 				</control>
 			</control>
 		</control>

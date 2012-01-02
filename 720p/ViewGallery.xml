@@ -80,6 +80,13 @@
 				<visible>Window.IsActive(2)</visible>
 			</control>
 			<control type="image">
+				<posx>0</posx>
+				<posy>300</posy>
+				<width>750</width>
+				<height>96</height>
+				<include>art_TVShowLogo</include>
+			</control>
+			<control type="image">
 				<posx>718</posx>
 				<posy>390</posy>
 				<include>watchedOverlay</include>
@@ -110,6 +117,14 @@
 				<aspectratio>scale</aspectratio>
 				<texture fallback="thumbs/picture.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<visible>Window.IsActive(2)</visible>
+				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>300</posy>
+				<width>750</width>
+				<height>96</height>
+				<include>art_TVShowLogo</include>
 				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
 			</control>
 			<control type="image">
