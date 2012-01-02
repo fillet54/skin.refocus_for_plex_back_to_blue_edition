@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.refocus_for_plex_back_to_blue_edition" version="1.1.9" name="reFocus for Plex - Black to Blue Edition" provider-name="sandman4sure">
+<addon id="skin.refocus_for_plex_back_to_blue_edition" version="Laika" name="reFocus for Plex - Black to Blue Edition" provider-name="sandman4sure">
 	<requires>
 		<import addon="xbmc.gui" version="2.11"/>
 		<import addon="script.recentlyadded" version="1.0.8"/>
