@@ -746,7 +746,7 @@
 	</include>
 	
 	<include name="art_TVShowLogo">
-		<texture>$INFO[Listitem.Title,flags/tvshowslogos/,.png]</texture>
+		<texture>$INFO[Listitem.Title,../../extra.tvshowlogos/,.png]</texture>
 		<aspectratio align="center">keep</aspectratio>
 		<fadetime>200</fadetime>
 		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
