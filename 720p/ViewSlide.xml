@@ -122,6 +122,15 @@
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<control type="image">
+				<posx>32</posx>
+				<posy>176</posy>
+				<width>156</width>
+				<height>64</height>
+				<texture background="true">$INFO[Listitem.Title,../../extra.tvshowlogos/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Skin.HasSetting(tvshowlogos.enable) + Container.Content(tvshows)</visible>
+			</control>
+			<control type="image">
 				<posx>396</posx>
 				<posy>219</posy>
 				<include>watchedOverlay</include>
@@ -147,6 +156,16 @@
 				<bordersize>22</bordersize>
 				<aspectratio align="center">stretch</aspectratio>
 				<visible>Container.Content(tvshows)</visible>
+				<include>focus_SlideWide</include>
+			</control>
+			<control type="image">
+				<posx>32</posx>
+				<posy>176</posy>
+				<width>156</width>
+				<height>64</height>
+				<texture background="true">$INFO[Listitem.Title,../../extra.tvshowlogos/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Skin.HasSetting(tvshowlogos.enable) + Container.Content(tvshows)</visible>
 				<include>focus_SlideWide</include>
 			</control>
 			<control type="image">

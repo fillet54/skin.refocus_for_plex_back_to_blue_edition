@@ -399,7 +399,7 @@
 						<onclick>Skin.ToggleSetting(tvshowlogos.enable)</onclick>
 						<selected>Skin.HasSetting(tvshowlogos.enable)</selected>
 						<include>newHomeMenuSubSettingsButton</include>
-						<visible>Control.IsVisible(53) + Container.Content(tvshows)</visible>
+						<visible>[[Control.IsVisible(53) + Container.Content(tvshows)] | [Control.IsVisible(55) + Container.Content(tvshows)] | [Control.IsVisible(575) + !IsEmpty(Container.Property(mixedParents))]]</visible>
 					</control>
 					
 					<!-- big thumbnails -->
