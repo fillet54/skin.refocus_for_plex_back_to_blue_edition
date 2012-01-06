@@ -895,7 +895,8 @@
 							<scroll>false</scroll>
 							<wrapmultiline>false</wrapmultiline>
 							<width>200</width>
-							<visible>ControlGroup(7001).HasFocus + !Container(11000).ListItem(0).Type(album) + !Container(11001).ListItem(0).Type(episode)</visible>
+							<!-- quick fix: van movie naar tvshow terug naar movie liet de tijd niet zien -->
+							<visible>ControlGroup(7001).HasFocus + Container(11000).ListItem(0).Type(movie)</visible>
 						</control>
 					</control>
 				</control>
