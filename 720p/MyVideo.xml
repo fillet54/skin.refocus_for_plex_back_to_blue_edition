@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <window id="6">
-	<defaultcontrol always="false">555</defaultcontrol>
+	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,555,571,575</views>
+	<views>50,51,52,53,54,55,56,57,58,59,571,575</views>
 	<controls>
 		<include>global_Background</include>
 		<include>allscreens</include>
@@ -25,8 +25,151 @@
 			<width>500</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		<!-- LIST VIEW NEW -->
-		<include>view_List_GrainyEdition</include>
+		
+		<include>view_List</include>
+		<control type="group">
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<include>transition_Container</include>
+			<visible>Control.IsVisible(50)</visible>
+		<!---landscape--->
+			<control type="group">
+				<control type="group">
+					<posx>655</posx>
+					<posy>68</posy>
+					<visible>[[Container.Content(movies) | Container.Content(tvshows)] + !Skin.HasSetting(view.list.posters)] | Container.Content(artists) | Container.Content(episodes)</visible>
+					<control type="image">
+						<width>587</width>
+						<height>349</height>
+						<texture background="true" border="31">frames/frame_Square.png</texture>
+						<aspectratio align="center">stretch</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+					<control type="image">
+						<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+						<posx>22</posx>
+						<posy>22</posy>
+						<width>542</width>
+						<height>305</height>
+						<aspectratio align="center">scale</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="image">
+						<texture fallback="thumbs/movie_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<posx>22</posx>
+						<posy>22</posy>
+						<width>542</width>
+						<height>305</height>
+						<aspectratio align="center">scale</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="image">
+						<texture fallback="thumbs/tvshow_landscape.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<posx>22</posx>
+						<posy>22</posy>
+						<width>542</width>
+						<height>305</height>
+						<aspectratio align="center">scale</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+						<visible>![Container.Content(episodes) | Container.Content(movies)]</visible>
+					</control>
+					<control type="image">
+						<posx>22</posx>
+						<posy>220</posy>
+						<width>542</width>
+						<height>96</height>
+						<include>art_TVShowLogo</include>
+					</control>
+					<control type="image">
+						<posx>22</posx>
+						<posy>220</posy>
+						<width>542</width>
+						<height>96</height>
+						<texture background="true">$INFO[Listitem.TVShowTitle,../../extra.tvshowlogos/,.png]</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>!IsEmpty(Container.Property(mixedParents)) + Skin.HasSetting(tvshowlogos.enable)</visible>
+					</control>
+					<control type="group">
+						<posx>532</posx>
+						<posy>295</posy>
+						<control type="image">
+							<include>watchedOverlay</include>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<posx>685</posx>
+					<posy>420</posy>
+					<control type="textbox">
+						<width>525</width>
+						<height>244</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<include>description_Small</include>
+						<visible>[!Skin.HasSetting(view.list.posters) + [Container.Content(movies) | Container.Content(tvshows)]] | [Container.Content(episodes) + !IsEmpty(ListItem.Title)]</visible>
+					</control>
+					<control type="textbox">
+						<width>525</width>
+						<height>244</height>
+						<label>$INFO[Container.ShowPlot]</label>
+						<include>description_Small</include>
+						<visible>Container.Content(episodes) + IsEmpty(ListItem.Title)</visible>
+					</control>
+				</control>
+			</control>
+			<!---portrait--->
+			<control type="group">
+				<posx>750</posx>
+				<posy>65</posy>
+				<control type="group">
+					<visible>[ [Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.list.posters)] | Container.Content(seasons)</visible>
+					<control type="image">
+						<width>452</width>
+						<height>646</height>
+						<texture background="true" border="31">frames/frame_Square.png</texture>
+						<aspectratio align="center">stretch</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+					<control type="image">
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<posx>23</posx>
+						<posy>23</posy>
+						<width>406</width>
+						<height>600</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+					<control type="group">
+						<posx>397</posx>
+						<posy>591</posy>
+						<control type="image">
+							<include>watchedOverlay</include>
+						</control>
+					</control>
+				</control>
+			</control>
+			<!---filter icon--->
+			<control type="group">
+				<posx>740</posx>
+				<posy>65</posy>
+				<control type="group">
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<control type="image">
+						<posx>22</posx>
+						<posy>22</posy>
+						<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+						<width>445</width>
+						<height>445</height>
+						<aspectratio align="center">scale</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+				</control>
+			</control>
+		</control>
+<!--		<include>info_MusicList</include>-->
+		<include>info_AddonList</include>
+
 		<!-- SLIDE VIEW MOVIES & TVSHOWS [updated] -->
 		<!-- media flags -->
 		<control type="group">

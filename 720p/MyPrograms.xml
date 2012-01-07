@@ -1,8 +1,8 @@
 <window id="1">
-	<defaultcontrol always="false">555</defaultcontrol>
+	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>	
-	<views>555,573</views>
+	<views>50,573</views>
 	
 	<controls>
 
@@ -19,7 +19,7 @@
 			<include>PageLabel</include>
 		</control>
 		<include>FilesMenu</include>
-		<include>view_List_GrainyEdition</include>
+		<include>view_List</include>
 		<control type="group">
 			<posx>220</posx>
 			<posy>500</posy>

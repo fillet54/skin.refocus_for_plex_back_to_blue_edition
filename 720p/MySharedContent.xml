@@ -1,7 +1,7 @@
 <window id="6">
-	<defaultcontrol always="false">555</defaultcontrol>
+	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>555</views>
+	<views>50</views>
 	<controls>
 		<include>global_Background</include>
 		<include>allscreens</include>
@@ -18,7 +18,7 @@
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		<!-- LIST VIEW NEW -->
-		<include>view_List_GrainyEdition</include>
+		<include>view_List</include>
 		<include>LibraryVideoMenu</include>
 		<include>videoLibPageLabels</include>
 		<include>debugInfos</include>

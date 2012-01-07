@@ -1,13 +1,13 @@
 <window id="2">
-	<defaultcontrol always="false">555</defaultcontrol>
+	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>555,573,53</views>
+	<views>50,573,53</views>
 	<controls>
 		<include>global_Background</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>nav_Indicator</include>
-		<include>view_List_GrainyEdition</include>
+		<include>view_List</include>
 		
 		<!-- FAKE INFO BUTTON -->
 		<control type="button" id="8000">
@@ -25,29 +25,35 @@
 			<include>infoDialogHide</include>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
-			<visible>!Window.IsActive(2) + Control.IsVisible(50) + !IsEmpty(Container.FolderPath)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-				<posx>640</posx>
-				<posy>100</posy>
-				<include>transition2</include>
+				<posx>650</posx>
+				<posy>60</posy>
 				<control type="image">
-					<width>590</width>
-					<height>357</height>
-					<texture border="48">frames/wideFrame.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<include>fanartFadeTime</include>
+					<width>580</width>
+					<height>650</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<bordersize>22</bordersize>
+					<aligny>top</aligny>
+					<aspectratio align="center">keep</aspectratio>
+					<fadetime>fadetime_Thumb</fadetime>
+					<visible>ListItem.IsFolder</visible>
 				</control>
 				<control type="image">
-					<posx>26</posx>
-					<posy>27</posy>
-					<width>540</width>
-					<height>304</height>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture fallback="thumbs/picture.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
-					<include>fanartFadeTime</include>
+					<width>580</width>
+					<height>650</height>
+					<texture fallback="thumbs/picture_landscape.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="31" width="400" height="315">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+					<aligny>top</aligny>
+					<aspectratio align="center">keep</aspectratio>
+					<fadetime>fadetime_Thumb</fadetime>
+					<visible>!ListItem.IsFolder</visible>
 				</control>
 			</control>
 		</control>
+		<!---addons--->
+		<include>info_AddonList</include>
 		
 <!---THUMBNAILS VIEW------>
 		<include>view_IconFiles</include>

@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <window id="502">
-	<defaultcontrol always="false">555</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>51,55,522,555,572,573</views>
+	<views>51,55,522,50,572,573</views>
 	<controls>
 		<include>global_Background</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
-		<include>view_List_GrainyEdition</include>
-		<include>view_ListMusic</include>
+		<include>view_List</include>
 		<include>view_BigList</include>
 		<include>view_IconFiles</include>
 		<include>view_IconSquare2</include>
 		<include>view_SlideWide</include>
 		<include>view_SlideSquare</include>
 		<include>nav_Indicator</include>
+
+<!---LIST VIEW------>
+		<include>view_List</include>
+		<!---info--->
+		<include>info_MusicList</include>
+		<include>info_AddonList</include>
 
 
 <!---THUMBNAILS VIEW------>
@@ -76,7 +81,7 @@
 			</control>
 		</control>
 		
-		<!---SLIDE VIEW------>
+<!---SLIDE VIEW------>
 		<control type="group">
 			<include>contextMenuHide</include>
 			<include>transition_Info</include>

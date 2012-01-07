@@ -63,7 +63,7 @@
 				<visible>!Skin.HasSetting(global.kiosk)</visible>
 				<onup>9100</onup>
 				<ondown>9100</ondown>
-				<onleft>555</onleft>
+				<onleft>50</onleft>
 				<onright>200</onright>
 				<itemgap>0</itemgap>			
 				<!-- list -->

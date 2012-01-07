@@ -6,7 +6,7 @@
 			<posx>1245</posx>
 			<posy>89</posy>
 			<height>601</height>
-			<onleft>555</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">Control.IsVisible(555) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(23)]</visible>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -17,7 +17,7 @@
 			<posx>1245</posx>
 			<posy>102</posy>
 			<height>498</height>
-			<onleft>57</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">Control.IsVisible(57) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(64)]</visible>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -29,7 +29,7 @@
 			<posx>1245</posx>
 			<posy>113</posy>
 			<height>552</height>
-			<onleft>571</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">Control.IsVisible(571) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(77)]</visible>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -40,7 +40,7 @@
 			<posx>1245</posx>
 			<posy>130</posy>
 			<height>525</height>
-			<onleft>575</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">Control.IsVisible(575) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(85)]</visible>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -54,7 +54,7 @@
 			<posx>30</posx>
 			<posy>405</posy>
 			<width>1220</width>
-			<onup>555</onup>
+			<onup>50</onup>
 			<orientation>horizontal</orientation>
 			<include>xScroller</include>
 			<animation effect="slide" end="0,-34" time="0" condition="[Container.Content(episodes)] + Control.IsVisible(58)">Conditional</animation>
@@ -74,7 +74,7 @@
 			<width>1220</width>
 			<onup>52</onup>
 			<ondown>52</ondown>
-			<onleft>65</onleft>
+			<onleft>50</onleft>
 			<onright>65</onright>
 			<visible allowhiddenfocus="true">[Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows)]] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(65)]</visible>
 			<include>xScroller</include>
@@ -89,7 +89,7 @@
 			<width>1220</width>
 			<onup>55</onup>
 			<ondown>55</ondown>
-			<onleft>66</onleft>
+			<onleft>50</onleft>
 			<onright>66</onright>
 			<visible allowhiddenfocus="true">Control.IsVisible(55) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(66)]</visible>
 			<include>xScroller</include>
@@ -104,7 +104,7 @@
 			<width>1220</width>
 			<onup>58</onup>
 			<ondown>58</ondown>
-			<onleft>67</onleft>
+			<onleft>50</onleft>
 			<onright>67</onright>
 			<visible allowhiddenfocus="true">Control.IsVisible(58) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(67)]</visible>
 			<include>xScroller</include>
@@ -119,7 +119,7 @@
 			<width>1220</width>
 			<onup>52</onup>
 			<ondown>52</ondown>
-			<onleft>70</onleft>
+			<onleft>50</onleft>
 			<onright>70</onright>
 			<visible allowhiddenfocus="true">[Control.IsVisible(52) + [Container.Content(albums)]] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(70)]</visible>
 			<include>xScroller</include>
@@ -134,7 +134,7 @@
 			<width>1220</width>
 			<onup>55</onup>
 			<ondown>55</ondown>
-			<onleft>71</onleft>
+			<onleft>50</onleft>
 			<onright>71</onright>
 			<visible allowhiddenfocus="true">[Control.IsVisible(55) + Container.Content(artists)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(71)]</visible>
 			<include>xScroller</include>
@@ -147,7 +147,7 @@
 			<posx>1190</posx>
 			<posy>102</posy>
 			<height>497</height>
-			<onleft>57</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">[Control.IsVisible(57) + Window.IsActive(2)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(75)]</visible>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -158,7 +158,7 @@
 			<posx>1245</posx>
 			<posy>89</posy>
 			<height>601</height>
-			<onleft>54</onleft>
+			<onleft>50</onleft>
 			<visible allowhiddenfocus="true">Control.IsVisible(54) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(76)]</visible>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
@@ -169,7 +169,7 @@
 			<posx>1245</posx>
 			<posy>102</posy>
 			<height>582</height>
-			<onleft>51</onleft>
+			<onleft>50</onleft>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 			<visible allowhiddenfocus="true">Control.IsVisible(51) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(78)]</visible>
@@ -181,7 +181,7 @@
 			<posx>1245</posx>
 			<posy>118</posy>
 			<height>492</height>
-			<onleft>572</onleft>
+			<onleft>50</onleft>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 			<visible allowhiddenfocus="true">[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + [Control.IsVisible(573) | Control.IsVisible(572)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(86)]</visible>
@@ -193,12 +193,24 @@
 			<posx>1245</posx>
 			<posy>110</posy>
 			<height>496</height>
-			<onleft>555</onleft>
+			<onleft>50</onleft>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 			<animation effect="slide" end="0,6" time="0" condition="Window.IsActive(2)">Conditional</animation>
 			<visible allowhiddenfocus="true">[Control.IsVisible(573)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(83)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		
+		<!-- list -->
+		<control type="scrollbar" id="80">
+			<posx>1245</posx>
+			<posy>89</posy>
+			<height>601</height>
+			<onleft>50</onleft>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide) | Skin.HasSetting(scrollbarHide) + Control.HasFocus(80)]</visible>
 		</control>
 	</include>
 </includes>

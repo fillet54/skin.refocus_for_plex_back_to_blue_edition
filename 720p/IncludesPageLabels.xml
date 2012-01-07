@@ -38,12 +38,12 @@
 			<visible>Window.IsActive(sharedcontent)</visible>
 		</control>
 		<!-- pictures -->
-		<control type="label">
+		<!--<control type="label">
 			<description>programs</description>
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 			<include>PageLabel</include>
 			<visible>Control.IsVisible(50) + Window.IsActive(10002)</visible>
-		</control>
+		</control>-->
 		<!-- music playlist -->
 		<control type="label">
 			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[559][/COLOR]</label>
