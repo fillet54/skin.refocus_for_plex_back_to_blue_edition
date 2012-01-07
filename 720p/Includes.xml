@@ -562,7 +562,7 @@
 <!---LIST LABELS------>
 	<include name="list_Label-single">
 		<height>40</height>
-		<font>list</font>
+		<font>listBigLow</font>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
