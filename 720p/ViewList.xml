@@ -500,7 +500,7 @@
 			<control type="label">
 				<posx>40</posx>
 				<width>500</width>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.Label] $INFO[Container.SecondTitle]</label>
 				<include>list_Label-single</include>
 			</control>
 			<control type="image">
@@ -519,7 +519,7 @@
 				<height>100</height>
 				<texture border="0,30,0,30">views/list-focus.png</texture>
 				<include>focus_ListScrollAlt</include>
-				<visible>!ControlGroup(6000).HasFocus</visible>
+				<visible>!ControlGroup(300).HasFocus</visible>
 			</control>
 			<control type="label">
 				<posx>40</posx>

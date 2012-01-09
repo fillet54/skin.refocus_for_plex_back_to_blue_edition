@@ -1001,30 +1001,32 @@
 			<posx>675</posx>
 			<posy>100</posy>
 			<include>transition_Container</include>
-			<include>toggle_Menu</include>
+			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(50) + Container.Content(addons) | [substring(container.folderpath,plugin://) + !Container.Content(movies)] | substring(container.folderpath,addons://repos/)]</visible>
+			<visible>Control.IsVisible(50) + [Window.IsActive(programs) | Window.IsActive(addonbrowser)]</visible>
 			<control type="image">
-				<width>512</width>
+				<width>256</width>
+				<height>256</height>
+				<texture background="true">thumbs/addon_empty.png</texture>
+				<bordertexture border="6" width="200" height="150">frames/frame_Square-small.png</bordertexture>
+				<bordersize>6</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Control.IsVisible(50) + [Window.IsActive(programs) | Window.IsActive(addonbrowser)]</visible>
+			</control>
+			<control type="image">
+				<width>256</width>
 				<height>256</height>
 				<texture fallback="thumbs/addon.png" background="true">$INFO[ListItem.Thumb]</texture>
-				<aspectratio align="left">keep</aspectratio>
+				<bordertexture border="6" width="200" height="150"></bordertexture>
+				<bordersize>6</bordersize>
+				<aspectratio>keep</aspectratio>
 				<fadetime>fadetime_Thumb</fadetime>
-				<visible>Control.IsVisible(50) + !SubString(ListItem.Icon,default) + ![SubString(Container.FolderPath,plugin://) + [Container.Content(movies) | Container.Content(tvshows)]]</visible>
+				<visible>Control.IsVisible(50) + [Window.IsActive(programs) | Window.IsActive(addonbrowser)]</visible>
 			</control>
 			<control type="group">
 				<posx>0</posx>
 				<posy>290</posy>
-				<visible>Control.IsVisible(50) + [Container.Content(addons) | SubString(Container.FolderPath,plugin://)]</visible>
-				<control type="textbox">
-					<width>550</width>
-					<height>277</height>
-					<aligny>top</aligny>
-					<label>$INFO[ListItem.Property(Addon.Description)]</label>
-					<autoscroll>!Window.IsActive(146)</autoscroll>
-					<textcolor>Color7</textcolor>
-					<font>descriptionSmall</font>
-				</control>
+				<visible>Control.IsVisible(50) + [Window.IsActive(programs) | Window.IsActive(addonbrowser)]</visible>
 				<control type="textbox">
 					<width>550</width>
 					<height>277</height>
@@ -1032,7 +1034,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<textcolor>Color7</textcolor>
 					<font>descriptionSmall</font>
-					<visible>SubString(Container.FolderPath,plugin) + ![Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</control>
 			</control>
 		</control>
