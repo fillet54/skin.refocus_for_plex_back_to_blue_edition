@@ -223,9 +223,10 @@ transposition de reFocus par [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][
 <string id="31968">Système [COLOR=Color2]Information[/COLOR]</string>
 <string id="31969">Fichier [COLOR=Color2]Gestionnaire[/COLOR]</string>
 <string id="31970">Nouveaux Albums</string>
-<string id="31971">Récemment écouté</string>
-<string id="31972">Bonne nuit</string>
-<string id="31973">Personnaliser raccourcis Playlist</string>
+
+<string id="31971">Plug-ins Vidéo</string>
+<string id="31972">Plug-ins Musique</string>
+<string id="31973">Plug-ins Images</string>
 
 <string id="31974">Large Grille</string>
 <string id="31975">Small Grille</string>

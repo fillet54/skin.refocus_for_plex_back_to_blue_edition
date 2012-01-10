@@ -222,9 +222,10 @@ to the entire Plex team and everyone over at the Plex Forums, specifically the P
 <string id="31968">System [COLOR=Color2]Information[/COLOR]</string>
 <string id="31969">File [COLOR=Color2]Manager[/COLOR]</string>
 <string id="31970">New Albums</string>
-<string id="31971">Recently Played</string>
-<string id="31972">Good Night</string>
-<string id="31973">Custom Playlist Shortcuts</string>
+
+<string id="31971">Video Channels</string>
+<string id="31972">Music Channels</string>
+<string id="31973">Picture Channels</string>
 
 <string id="31974">Large Grid</string>
 <string id="31975">Small Grid</string>

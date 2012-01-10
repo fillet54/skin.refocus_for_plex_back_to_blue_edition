@@ -19,16 +19,16 @@
 				<visible allowhiddenfocus="true">Container(300).HasFocus(10) | Container(301).HasFocus(10)</visible>
 				<content>
 					<item id="1">
-						<label>Video Channels</label>
-						<onclick>ActivateWindow(6)</onclick>
+						<label>$LOCALIZE[31971]</label>
+						<onclick>XBMC.ActivateWindow(24)</onclick>
 					</item>
 					<item id="2">
-						<label>Music Channels</label>
-						<onclick>ActivateWindow(MyMusic)</onclick>
+						<label>$LOCALIZE[31972]</label>
+						<onclick>XBMC.ActivateWindow(5)</onclick>
 					</item>
 					<item id="3">
-						<label>Picture Channels</label>
-						<onclick>ActivateWindow(2)</onclick>
+						<label>$LOCALIZE[31973]</label>
+						<onclick>XBMC.ActivateWindow(2)</onclick>
 					</item>
 				</content>
 			</control>

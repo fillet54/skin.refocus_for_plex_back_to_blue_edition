@@ -212,9 +212,9 @@ Puedes colaborar con el desarrollo de XBMC donando hardware o dinero al equipo d
   <string id="31968">Información del[COLOR=Color2]Sistema[/COLOR]</string>
   <string id="31969">Gestor de [COLOR=Color2]Ficheros[/COLOR]</string>
   <string id="31970">Albumes Nuevos</string>
-  <string id="31971">Reproducido Recientemente</string>
-  <string id="31972">Buenas Noches</string>
-  <string id="31973">Mostrar Addons en el Menu Principal</string>
+  <string id="31971">Vídeos</string>
+  <string id="31972">Música</string>
+  <string id="31973">Fotografías</string>
   <string id="31975"></string>
 
   <!--addons-->
