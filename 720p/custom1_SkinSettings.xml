@@ -205,6 +205,15 @@
 					<selected>Skin.HasSetting(homeTime)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
+				
+				<control type="radiobutton" id="210">
+					<description>experimental!</description>
+					<label>experimental: show plot for OnDeck selected item</label>
+					<onclick>Skin.ToggleSetting(home.showinfo)</onclick>
+					<selected>Skin.HasSetting(home.showinfo)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				
 			</control>
 			<!-- fanart -->
 			<control type="grouplist" id="200">

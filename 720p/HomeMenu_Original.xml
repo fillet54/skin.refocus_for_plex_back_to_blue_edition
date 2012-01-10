@@ -214,6 +214,48 @@
 							<label>On Deck</label>
 						</control>
 					</control>
+					
+					<control type="group" id="8003">
+						<visible>Skin.HasSetting(home.showinfo)</visible>
+						<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
+							<effect type="fade" time="250" center="screen_Center" start="0" end="100" delay="600" />
+						</animation>
+						<animation type="Conditional" condition="!ControlGroup(7002).HasFocus">
+							<effect type="fade" time="600" center="screen_Center" start="100" end="0" />
+						</animation>
+						<posx>8</posx>
+						<posy>360</posy>
+						
+						<control type="image">
+							<width>862</width>
+							<height>110</height>
+							<texture border="8">home/infoBackground.png</texture>
+							<colordiffuse>column3</colordiffuse>
+							<visible>!Skin.HasSetting(overlay.black)</visible>
+						</control>
+						
+						<control type="image">
+							<width>862</width>
+							<height>110</height>
+							<texture border="8">home/infoBackground.png</texture>
+							<colordiffuse>column3_black</colordiffuse>
+							<visible>Skin.HasSetting(overlay.black)</visible>
+						</control>
+						
+						<control type="textbox">
+							<posx>10</posx>
+							<posy>3</posy>
+							<width>840</width>
+							<height>102</height>
+							<align>left</align>
+							<label>$INFO[Container(11001).ListItem(0).Plot]</label>
+							<font>description_Small</font>
+							<textcolor>Color1</textcolor>
+						</control>
+						
+					</control>
+					
+					
 					<control type="fixedlist" id="11001">
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
@@ -436,6 +478,11 @@
 				</control>
 				<!-- Recently Added (11000) + -->
 				<control type="group" id="7001">
+					
+					<animation type="Conditional" condition="Skin.HasSetting(home.showinfo) + ControlGroup(7002).HasFocus">
+						<effect type="slide" easing="in" start="0,0" end="0,115" tween="Cubic" time="600"/>
+					</animation>
+					
 					<height>226</height>
 					<control type="group">
 						<posy>133</posy>
