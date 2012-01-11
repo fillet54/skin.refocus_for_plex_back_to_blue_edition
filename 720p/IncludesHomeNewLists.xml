@@ -81,5 +81,73 @@
 			<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
 		</control>
 	</include>
+	
+	<include name="Home_RecentlyAddedInfo">
+		<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+			<effect type="fade" time="250" center="screen_Center" start="0" end="100" delay="600" />
+		</animation>
+		<animation type="Conditional" condition="!ControlGroup(7001).HasFocus">
+			<effect type="fade" time="600" center="screen_Center" start="100" end="0" />
+		</animation>
+		<control type="image">
+			<width>862</width>
+			<height>115</height>
+			<texture border="8">home/infoBackground.png</texture>
+			<colordiffuse>column3</colordiffuse>
+			<visible>!Skin.HasSetting(overlay.black)</visible>
+		</control>
+		
+		<control type="image">
+			<width>862</width>
+			<height>115</height>
+			<texture border="8">home/infoBackground.png</texture>
+			<colordiffuse>column3_black</colordiffuse>
+			<visible>Skin.HasSetting(overlay.black)</visible>
+		</control>
+		
+		<control type="image">
+			<posx>820</posx>
+			<posy>1</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>$INFO[Container(11000).ListItem(0).Property(mediaTag-videoResolution),flags/hd/nf-,.png]</texture>
+			<aspectratio align="right">keep</aspectratio>
+		</control>
+		
+		<control type="group">
+			<visible>Container(11000).ListItem(0).Type(movie)</visible>
+			<control type="label">
+				<posx>10</posx>
+				<posy>-8</posy>
+				<width>800</width>
+				<label>$INFO[Container(11000).ListItem(0).Genre]</label>
+				<include>list_Label-sub</include>
+			</control>
+			<control type="textbox">
+				<posx>10</posx>
+				<posy>25</posy>
+				<width>800</width>
+				<height>85</height>
+				<align>left</align>
+				<label>$INFO[Container(11000).ListItem(0).Plot]</label>
+				<font>description_Small</font>
+				<textcolor>Color1</textcolor>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>Container(11000).ListItem(0).Type(episode)</visible>
+			<control type="textbox">
+				<posx>10</posx>
+				<posy>3</posy>
+				<width>800</width>
+				<height>105</height>
+				<align>left</align>
+				<label>$INFO[Container(11000).ListItem(0).Plot]</label>
+				<font>description_Small</font>
+				<textcolor>Color1</textcolor>
+			</control>
+		</control>
+	</include>
 
 </includes>

@@ -25,6 +25,9 @@
 					<animation condition="Skin.HasSetting(home.showinfo) + ControlGroup(7002).HasFocus">
 						<effect type="slide" easing="in" start="0,0" end="0,120" tween="Cubic" time="600"/>
 					</animation>
+					<animation condition="Skin.HasSetting(home.showinfo) + ControlGroup(7001).HasFocus + Control.IsVisible(11001)">
+						<effect type="slide" easing="in" start="0,0" end="0,120" tween="Cubic" time="600"/>
+					</animation>
 					
 					<!-- cover now playing -->
 					<control type="group">
