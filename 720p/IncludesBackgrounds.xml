@@ -135,6 +135,7 @@
 
 		<control type="image">
 			<visible>Skin.HasSetting(showNewLists)</visible>
+			<visible>!Control.HasFocus(301) + !Control.HasFocus(1110) + !Control.HasFocus(1120) + !Control.HasFocus(1160)</visible>
 			<visible>Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(12000)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
@@ -145,6 +146,7 @@
 
 		<control type="image">
 			<visible>!Skin.HasSetting(showNewLists)</visible>
+			<visible>!Control.HasFocus(301) + !Control.HasFocus(1110) + !Control.HasFocus(1120) + !Control.HasFocus(1160)</visible>
 			<visible>ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus</visible>
 			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
