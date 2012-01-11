@@ -183,6 +183,12 @@
 					<selected>Skin.HasSetting(showNewLists)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
+				<control type="radiobutton" id="210">
+					<label>show info for OnDeck and Recently Added</label>
+					<onclick>Skin.ToggleSetting(home.showinfo)</onclick>
+					<selected>Skin.HasSetting(home.showinfo)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
 				<control type="radiobutton" id="212">
 					<description>set personalised slideshow folder</description>
 					<label>set your own slideshow folder for home screen</label>
@@ -205,15 +211,6 @@
 					<selected>Skin.HasSetting(homeTime)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				
-				<control type="radiobutton" id="210">
-					<description>experimental!</description>
-					<label>experimental: show plot for OnDeck selected item</label>
-					<onclick>Skin.ToggleSetting(home.showinfo)</onclick>
-					<selected>Skin.HasSetting(home.showinfo)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
-				
 			</control>
 			<!-- fanart -->
 			<control type="grouplist" id="200">
