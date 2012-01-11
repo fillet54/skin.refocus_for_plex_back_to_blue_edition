@@ -114,39 +114,33 @@
 			<aspectratio align="right">keep</aspectratio>
 		</control>
 		
-		<control type="group">
+		<control type="label">
 			<visible>Container(11000).ListItem(0).Type(movie)</visible>
-			<control type="label">
-				<posx>10</posx>
-				<posy>-8</posy>
-				<width>800</width>
-				<label>$INFO[Container(11000).ListItem(0).Genre]</label>
-				<include>list_Label-sub</include>
-			</control>
-			<control type="textbox">
-				<posx>10</posx>
-				<posy>25</posy>
-				<width>800</width>
-				<height>85</height>
-				<align>left</align>
-				<label>$INFO[Container(11000).ListItem(0).Plot]</label>
-				<font>description_Small</font>
-				<textcolor>Color1</textcolor>
-			</control>
+			<posx>10</posx>
+			<posy>-8</posy>
+			<width>800</width>
+			<label>$INFO[Container(11000).ListItem(0).Genre]</label>
+			<include>list_Label-sub</include>
+		</control>
+
+		<control type="label">
+			<visible>Container(11000).ListItem(0).Type(episode)</visible>
+			<posx>10</posx>
+			<posy>-8</posy>
+			<width>800</width>
+			<label>$LOCALIZE[180]: $INFO[Container(11000).ListItem(0).Duration]</label>
+			<include>list_Label-sub</include>
 		</control>
 		
-		<control type="group">
-			<visible>Container(11000).ListItem(0).Type(episode)</visible>
-			<control type="textbox">
-				<posx>10</posx>
-				<posy>3</posy>
-				<width>800</width>
-				<height>105</height>
-				<align>left</align>
-				<label>$INFO[Container(11000).ListItem(0).Plot]</label>
-				<font>description_Small</font>
-				<textcolor>Color1</textcolor>
-			</control>
+		<control type="textbox">
+			<posx>10</posx>
+			<posy>25</posy>
+			<width>800</width>
+			<height>85</height>
+			<align>left</align>
+			<label>$INFO[Container(11000).ListItem(0).Plot]</label>
+			<font>description_Small</font>
+			<textcolor>Color1</textcolor>
 		</control>
 	</include>
 
