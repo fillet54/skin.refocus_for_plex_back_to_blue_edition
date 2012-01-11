@@ -23,7 +23,7 @@
 					</animation>
 					
 					<animation condition="Skin.HasSetting(home.showinfo) + ControlGroup(7002).HasFocus">
-						<effect type="slide" easing="in" start="0,0" end="0,115" tween="Cubic" time="600"/>
+						<effect type="slide" easing="in" start="0,0" end="0,120" tween="Cubic" time="600"/>
 					</animation>
 					
 					<!-- cover now playing -->
