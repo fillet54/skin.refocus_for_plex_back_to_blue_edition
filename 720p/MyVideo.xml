@@ -149,19 +149,54 @@
 					</control>
 				</control>
 			</control>
-			<!---filter icon--->
+			
+			<!-- plugin content -->
 			<control type="group">
 				<posx>740</posx>
 				<posy>65</posy>
 				<control type="group">
-					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>Container.Content(plugincontent)</visible>
 					<control type="image">
 						<posx>22</posx>
 						<posy>22</posy>
 						<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
 						<width>445</width>
 						<height>445</height>
-						<aspectratio align="center">scale</aspectratio>
+						<aspectratio align="center">keep</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+					<control type="label">
+						<posx>22</posx>
+						<posy>470</posy>
+						<width>445</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<include>list_Label</include>
+					</control>
+					<control type="textbox">
+						<posx>22</posx>
+						<posy>500</posy>
+						<width>445</width>
+						<height>244</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<include>description_Small</include>
+						<visible>Container.Content(plugincontent)</visible>
+					</control>
+				</control>
+			</control>
+			
+			<!---filter icon--->
+			<control type="group">
+				<posx>740</posx>
+				<posy>65</posy>
+				<control type="group">
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(plugincontent)]</visible>
+					<control type="image">
+						<posx>22</posx>
+						<posy>22</posy>
+						<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+						<width>445</width>
+						<height>445</height>
+						<aspectratio align="center">keep</aspectratio>
 						<fadetime>fadetime_Thumb</fadetime>
 					</control>
 				</control>
