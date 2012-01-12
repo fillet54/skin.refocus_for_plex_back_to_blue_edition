@@ -4,15 +4,15 @@
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
 			<include>screen_Dimensions</include>
-			<visible>!Skin.HasSetting(musicVis) | Skin.HasSetting(musicVisBlend)</visible>
+			<visible>!Skin.HasSetting(fanart.visualization) | Skin.HasSetting(fanart.visualization.blend)</visible>
 		</control>
 		<control type="image">
 			<description>Fanart image</description>
 			<include>screen_Dimensions</include>
 			<texture fallback="backgrounds/artist.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<visible>Skin.HasSetting(musicVis)</visible>
+			<visible>Skin.HasSetting(fanart.visualization)</visible>
 			<include>transition_Fanart</include>
-			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(musicVisBlend)">Conditional</animation>
+			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(fanart.visualization.blend)">Conditional</animation>
 		</control>
 		<include>osd_Info</include>
 		<control type="group">

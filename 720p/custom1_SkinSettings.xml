@@ -230,16 +230,16 @@
 				</control>
 				<control type="radiobutton" id="222">
 					<label>Use Fanart in Music Visualisation Screen</label>
-					<onclick>Skin.ToggleSetting(musicVis)</onclick>
-					<onclick>Skin.ToggleSetting(musicVisBlend)</onclick>
-					<selected>Skin.HasSetting(musicVis)</selected>
+					<onclick>Skin.ToggleSetting(fanart.visualization)</onclick>
+					<onclick>Skin.ToggleSetting(fanart.visualization.blend)</onclick>
+					<selected>Skin.HasSetting(fanart.visualization)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="223">
 					<label>Blend Music Visualisation and Fanart</label>
-					<onclick>Skin.ToggleSetting(musicVisBlend)</onclick>
-					<selected>Skin.HasSetting(musicVisBlend)</selected>
-					<enable>Skin.HasSetting(musicVis)</enable>
+					<onclick>Skin.ToggleSetting(fanart.visualization.blend)</onclick>
+					<selected>Skin.HasSetting(fanart.visualization.blend)</selected>
+					<enable>Skin.HasSetting(fanart.visualization)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<!--<control type="button" id="224">

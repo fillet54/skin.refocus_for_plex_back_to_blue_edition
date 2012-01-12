@@ -1128,87 +1128,95 @@
 		</control>
 	</include>
 	
-	<!-- MUSIC OSD / SLIDESHOW -->
-	<include name="musicOSDInfo">
+<!---OSD / SLIDESHOW------>
+	<include name="osd_Info">
 		<control type="group">
-			<posx>10</posx>
-			<posy>235r</posy>
-			<include>videoFullScreenInfo</include>
-			<include>transition2</include>
-			<visible>Player.ShowInfo + ![Window.IsActive(2000) | Window.IsVisible(script-XBMC_Lyrics-main.xml)]</visible>
-			<control type="group">
-				<control type="image">
-					<width>1265</width>
-					<height>231</height>
-					<include>dialogWindow</include>
+			<posy>300</posy>
+			<include>transition_OSD</include>
+			<visible>[Player.ShowInfo | Window.IsActive(fullscreeninfo)] + ![Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsActive(musicosd)]</visible>
+			<!---overlays--->
+			<control type="image">
+				<height>200</height>
+				<width>screen_Width</width>
+				<texture>new_osd/infoOverlayTop.png</texture>
+			</control>
+			<control type="image" id="1">
+				<posy>200</posy>
+				<height>220</height>
+				<width>screen_Width</width>
+				<aspectratio>stretch</aspectratio>
+				<texture border="0,1,0,11">new_osd/infoOverlay.png</texture>
+			</control>
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>210</posy>
+				<width>170</width>
+				<height>170</height>
+				<texture fallback="thumbs/album.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="6" width="150" height="100">frames/frame_Square-small.png</bordertexture>
+				<bordersize>6</bordersize>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<!---info--->
+			<control type="group" id="1">
+				<posx>200</posx>
+				<posy>223</posy>
+			<!---line 1--->
+				<control type="label">
+					<width>970</width>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<font>osdTitle</font>
+					<textcolor>Color1</textcolor>
 				</control>
-				<control type="image">
-					<posx>232</posx>
-					<posy>130</posy>
-					<width>1051</width>
-					<height>1</height>
-					<texture>views/separatorFadedLeft.png</texture>
-					<colordiffuse>Color4</colordiffuse>
+				<control type="label">
+					<width>970</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<font>osdTitle</font>
+					<textcolor>Color1</textcolor>
 				</control>
-				<control type="image">
-					<posx>24</posx>
-					<posy>23</posy>
-					<width>190</width>
-					<height>182</height>
-					<texture background="true" diffuse="frames/albumFrameMask.png" fallback="thumbs/album.png" scalediffuse="false">$INFO[MusicPlayer.Cover]</texture>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<include>thumbFadeTime</include>
+			<!---line 2--->
+				<!--music-->
+				<control type="grouplist">
+					<itemgap>5</itemgap>
+					<posy>35</posy>
+					<control type="label">
+						<width>1000</width>
+						<height>20</height>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<font>info</font>
+						<textcolor>Color2</textcolor>
+					</control>
+					<control type="label">
+						<width>1000</width>
+						<label>$INFO[MusicPlayer.Album,, • ]$INFO[MusicPlayer.Year]</label>
+						<font>info</font>
+						<textcolor>Color2</textcolor>
+					</control>
+					<control type="label">
+						<width>1000</width>
+						<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,]$INFO[MusicPlayer.offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
+						<font>info</font>
+						<textcolor>Color3</textcolor>
+						<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					</control>
 				</control>
-				<control type="group">
-					<posx>175r</posx>
-					<posy>34</posy>
-					<include>typeFlagsVis</include>
-				</control>
-				<control type="label" id="1">
-					<posx>230</posx>
-					<posy>34</posy>
-					<width>800</width>
-					<align>left</align>
-					<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
-					<textcolor>Color4</textcolor>
-					<font>osd1</font>
-				</control>
-				<control type="label" id="1">
-					<posx>230</posx>
-					<posy>66</posy>
-					<width>800</width>
-					<label>$LOCALIZE[31082]</label>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
-					<font>osd2</font>
-				</control>
-				<control type="label" id="1">
-					<posx>230</posx>
-					<posy>90</posy>
-					<width>800</width>
-					<label>$LOCALIZE[31083]</label>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
+				<!--progress-->
+				<control type="label">
+					<posx>1038</posx>
+					<posy>30</posy>
+					<width>1000</width>
+					<align>right</align>
+					<label>$INFO[Player.Time,, / ]$INFO[Player.Duration]</label>
 					<font>info</font>
+					<textcolor>Color2</textcolor>
 				</control>
-				<control type="label" id="1">
-					<posx>230</posx>
-					<posy>148</posy>
-					<width>800</width>
-					<label>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration] &#xEF; $LOCALIZE[554] $INFO[MusicPlayer.PlaylistPosition,, $LOCALIZE[31108] ]$INFO[MusicPlayer.PlaylistLength]</label>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
-					<font>smallCaps</font>
-				</control>
-				<control type="label" id="1">
-					<posx>230</posx>
-					<posy>170</posy>
-					<width>800</width>
-					<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title,, ]$LOCALIZE[31106] $INFO[MusicPlayer.offset(1).Artist]</label>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
-					<font>smallCaps</font>
-					<visible>MusicPlayer.HasNext</visible>
+				<control type="progress" id="1">
+					<posy>125</posy>
+					<width>1038</width>
+					<height>18</height>
+					<texturebg border="10">new_dialogs/progressBackground.png</texturebg>
+					<info>Player.Progress</info>
 				</control>
 			</control>
 		</control>
