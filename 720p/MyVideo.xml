@@ -176,7 +176,7 @@
 						<posx>22</posx>
 						<posy>500</posy>
 						<width>445</width>
-						<height>244</height>
+						<height>144</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<include>description_Small</include>
 						<visible>Container.Content(plugincontent)</visible>
