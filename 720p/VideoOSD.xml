@@ -11,7 +11,7 @@
 				<control type="image">
 					<width>252</width> <!-- 325 -->
 					<height>267</height> <!-- 274 -->
-					<texture>new_osd/settingsMenu.png</texture>
+					<texture>osd/settingsMenu.png</texture>
 				</control>
 				<control type="grouplist" id="601">
 					<posx>9</posx>
@@ -61,7 +61,7 @@
 				<posy>540</posy>
 				<width>45</width>
 				<height>45</height>
-				<texture>new_osd/openSettings.png</texture>
+				<texture>osd/openSettings.png</texture>
 				<visible>!ControlGroup(600).HasFocus</visible>
 				<include>fadeinout</include>
 			</control>
@@ -71,7 +71,7 @@
 				<control type="image" id="1">
 					<width>350</width>
 					<height>72</height>
-					<texture border="48,33,48,33">new_osd/playerControlsPanel.png</texture>
+					<texture border="48,33,48,33">osd/playerControlsPanel.png</texture>
 				</control>
 				<include>toggle_PlayerControls</include>
 				<control type="group">
@@ -80,8 +80,8 @@
 						<posx>13</posx>
 						<width>48</width>
 						<height>48</height>
-						<texturefocus>new_osd/osd-button-prev-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-prev.png</texturenofocus>
+						<texturefocus>osd/osd-button-prev-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-prev.png</texturenofocus>
 						<onup>600</onup>
 						<onleft>705</onleft>
 						<onright>701</onright>
@@ -92,8 +92,8 @@
 						<posx>68</posx>
 						<width>48</width>
 						<height>48</height>
-						<texturefocus>new_osd/osd-button-rwd-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-rwd.png</texturenofocus>
+						<texturefocus>osd/osd-button-rwd-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-rwd.png</texturenofocus>
 						<onup>600</onup>
 						<onleft>700</onleft>
 						<onright>702</onright>
@@ -104,11 +104,11 @@
 						<posx>123</posx>
 						<width>48</width>
 						<height>48</height>
-						<texturefocus>new_osd/osd-button-pause-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-pause.png</texturenofocus>
+						<texturefocus>osd/osd-button-pause-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-pause.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus>new_osd/osd-button-play-focus.png</alttexturefocus>
-						<alttexturenofocus>new_osd/osd-button-play.png</alttexturenofocus>
+						<alttexturefocus>osd/osd-button-play-focus.png</alttexturefocus>
+						<alttexturenofocus>osd/osd-button-play.png</alttexturenofocus>
 						<onup>600</onup>
 						<onleft>701</onleft>
 						<onright>703</onright>
@@ -121,8 +121,8 @@
 						<width>48</width>
 						<height>48</height>
 						<font>-</font>
-						<texturefocus>new_osd/osd-button-stop-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-stop.png</texturenofocus>
+						<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-stop.png</texturenofocus>
 						<onleft>702</onleft>
 						<onright>704</onright>
 						<onup>600</onup>
@@ -135,8 +135,8 @@
 						<width>48</width>
 						<height>48</height>
 						<font>-</font>
-						<texturefocus>new_osd/osd-button-fwd-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-fwd.png</texturenofocus>
+						<texturefocus>osd/osd-button-fwd-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-fwd.png</texturenofocus>
 						<onleft>703</onleft>
 						<onright>705</onright>
 						<onup>600</onup>
@@ -149,8 +149,8 @@
 						<width>48</width>
 						<height>48</height>
 						<font>-</font>
-						<texturefocus>new_osd/osd-button-next-focus.png</texturefocus>
-						<texturenofocus>new_osd/osd-button-next.png</texturenofocus>
+						<texturefocus>osd/osd-button-next-focus.png</texturefocus>
+						<texturenofocus>osd/osd-button-next.png</texturenofocus>
 						<onleft>704</onleft>
 						<onright>700</onright>
 						<onup>600</onup>

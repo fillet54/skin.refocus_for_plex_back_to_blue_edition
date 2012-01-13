@@ -90,9 +90,9 @@
 		<pulseonselect>false</pulseonselect>
 		<texturefocus border="3">new_dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">new_dialogs/list-nofocus.png</texturenofocus>
-		<texturesliderbar>new_osd/sliderBGsmall.png</texturesliderbar>
-		<textureslidernib>new_osd/sliderNib.png</textureslidernib>
-		<textureslidernibfocus>new_osd/sliderNibsmall.png</textureslidernibfocus>
+		<texturesliderbar>osd/sliderBGsmall.png</texturesliderbar>
+		<textureslidernib>osd/sliderNib.png</textureslidernib>
+		<textureslidernibfocus>osd/sliderNibsmall.png</textureslidernibfocus>
 	</include>
 	<include name="dialog_Button-list">
 		<textcolor>Color4</textcolor>

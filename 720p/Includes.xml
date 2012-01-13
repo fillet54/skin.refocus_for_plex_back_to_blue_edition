@@ -1139,14 +1139,14 @@
 			<control type="image">
 				<height>200</height>
 				<width>screen_Width</width>
-				<texture>new_osd/infoOverlayTop.png</texture>
+				<texture>osd/infoOverlayTop.png</texture>
 			</control>
 			<control type="image" id="1">
 				<posy>200</posy>
 				<height>220</height>
 				<width>screen_Width</width>
 				<aspectratio>stretch</aspectratio>
-				<texture border="0,1,0,11">new_osd/infoOverlay.png</texture>
+				<texture border="0,1,0,11">osd/infoOverlay.png</texture>
 			</control>
 			
 			<control type="image">
