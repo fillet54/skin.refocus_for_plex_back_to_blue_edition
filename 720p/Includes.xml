@@ -19,6 +19,7 @@
 	<include file="IncludesAnimations.xml">-</include>
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
+	<include file="IncludesPlayerControl.xml" />
 	<include file="IncludesBackgrounds.xml" />
 	<include file="IncludesSearch.xml" />
 	<include file="IncludesHomeNewLists.xml" />

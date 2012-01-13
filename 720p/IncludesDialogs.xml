@@ -39,6 +39,7 @@
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
+		<include>autoscroll-line</include>
 	</include>
 	<include name="dialog_CommonListFocus">
 		<height>40</height>
@@ -139,6 +140,40 @@
 		<textoffsety>10</textoffsety>
 	</include>
 	
+	<include name="dialog_Label">
+		<height>40</height>
+		<aligny>center</aligny>
+		<font>small</font>
+		<textcolor>Color4</textcolor>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>10</textoffsety>
+	</include>
+	<!--
+	<include name="dialog_Label-alt">
+		<height>40</height>
+		<aligny>center</aligny>
+		<font>smallCaps</font>
+		<textcolor>Color1</textcolor>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>10</textoffsety>
+	</include>
+	-->
+	<include name="dialog_Label-bold">
+		<height>40</height>
+		<aligny>center</aligny>
+		<font>smallBold</font>
+		<textcolor>Color4</textcolor>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>10</textoffsety>
+	</include>
+	<include name="dialog_Label-pages">
+		<font>small</font>
+		<height>40</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>Color4</textcolor>
+		<shadowcolor>fff4f4f4</shadowcolor>
+	</include>
 	
 	<include name="contextMenuButton">
 		<font>list</font>
