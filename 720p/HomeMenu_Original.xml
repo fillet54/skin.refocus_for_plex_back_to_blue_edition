@@ -310,17 +310,6 @@
 									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
-								<control type="image">
-									<visible>ControlGroup(7002).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>134</width>
-									<height>134</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 								<control type="group">
 									<posx>67</posx>
 									<posy>140</posy>
@@ -361,17 +350,6 @@
 								</control>
 								<include>Home_EpisodeInfo</include>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7002).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 							</control>
 							<!-- movie + -->
 							<control type="group">
@@ -386,17 +364,6 @@
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7002).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="148" height="200">
@@ -624,17 +591,6 @@
 									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>134</width>
-									<height>134</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 								<control type="group">
 									<posx>67</posx>
 									<posy>140</posy>
@@ -673,17 +629,6 @@
 									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>134</width>
-									<height>134</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 								<control type="group">
 									<posx>67</posx>
 									<posy>140</posy>
@@ -703,7 +648,7 @@
 							<!-- tv show episode when both lists are visible -->
 							<control type="group">
 								<visible>ListItem.Type(episode) + Control.IsVisible(11001)</visible>
-								<posy>172</posy>
+								<posy>172</posy>							
 								<control type="image">
 									<width>130</width>
 									<height>185</height>
@@ -714,17 +659,6 @@
 								</control>
 								<include>Home_EpisodeInfo</include>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>	
 							</control>
 							<!-- tv show episode when only this list is visible -->
 							<control type="group">
@@ -740,17 +674,6 @@
 								</control>
 								<include>Home_EpisodeInfo</include>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 							</control>
 							<!-- movie when both lists are visible -->
 							<control type="group">
@@ -765,17 +688,6 @@
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 							</control>
 							<!-- movie when only this list is visible -->
 							<control type="group">
@@ -790,17 +702,6 @@
 									<bordersize>6</bordersize>
 								</control>
 								<include>Home_Overlay</include>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>130</width>
-									<height>185</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
-									<bordersize>6</bordersize>
-								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="148" height="200">
@@ -1210,17 +1111,6 @@
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									<texture background="true" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
 									<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
-									<bordersize>6</bordersize>
-								</control>
-								<control type="image">
-									<visible>ControlGroup(7003).HasFocus</visible>
-									<animation type="Conditional" condition="ControlGroup(7003).HasFocus">
-										<effect type="fade" time="250" center="screen_Center" start="0" end="50" />
-									</animation>
-									<width>134</width>
-									<height>134</height>
-									<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-									<texture>black.png</texture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="group">
