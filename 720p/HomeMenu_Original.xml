@@ -301,6 +301,9 @@
 							<!-- album + -->
 							<control type="group">
 								<visible>ListItem.Type(album)</visible>
+								<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>
 								<control type="image">
 									<width>134</width>
@@ -339,6 +342,9 @@
 							<!-- tv show episode + -->
 							<control type="group">
 								<visible>ListItem.Type(episode)</visible>
+								<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>							
 								<control type="image">
 									<width>130</width>
@@ -354,6 +360,9 @@
 							<!-- movie + -->
 							<control type="group">
 								<visible>ListItem.Type(movie)</visible>
+								<animation type="Conditional" condition="ControlGroup(7002).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>							
 								<control type="image">
 									<width>130</width>
@@ -582,6 +591,9 @@
 							<!-- album + -->
 							<control type="group">
 								<visible>ListItem.Type(album)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>
 								<control type="image">
 									<width>134</width>
@@ -620,6 +632,9 @@
 							<!-- photos + -->
 							<control type="group">
 								<visible>ListItem.Type(photo)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>
 								<control type="image">
 									<width>134</width>
@@ -648,6 +663,9 @@
 							<!-- tv show episode when both lists are visible -->
 							<control type="group">
 								<visible>ListItem.Type(episode) + Control.IsVisible(11001)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>172</posy>							
 								<control type="image">
 									<width>130</width>
@@ -663,6 +681,9 @@
 							<!-- tv show episode when only this list is visible -->
 							<control type="group">
 								<visible>ListItem.Type(episode) + !Control.IsVisible(11001)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>44</posy>							
 								<control type="image">
 									<width>130</width>
@@ -678,6 +699,9 @@
 							<!-- movie when both lists are visible -->
 							<control type="group">
 								<visible>ListItem.Type(movie) + Control.IsVisible(11001)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>172</posy>
 								<control type="image">
 									<width>130</width>
@@ -692,6 +716,9 @@
 							<!-- movie when only this list is visible -->
 							<control type="group">
 								<visible>ListItem.Type(movie) + !Control.IsVisible(11001)</visible>
+								<animation type="Conditional" condition="ControlGroup(7001).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>44</posy>
 								<control type="image">
 									<width>130</width>
@@ -1104,6 +1131,9 @@
 							<!-- clip -->
 							<control type="group">
 								<!-- <visible>ListItem.Type(clip)</visible> -->
+								<animation type="Conditional" condition="ControlGroup(7003).HasFocus">
+									<effect type="fade" time="250" center="screen_Center" start="100" end="60" />
+								</animation>
 								<posy>42</posy>
 								<control type="image">
 									<width>134</width>
