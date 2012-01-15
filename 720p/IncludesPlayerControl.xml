@@ -6,7 +6,7 @@
 				<posx>514</posx>
 				<posy>313</posy>
 				<visible allowhiddenfocus="true">ControlGroup(600).HasFocus</visible>
-				<include>open_PlayerControls</include>
+				<include>toggle_PlayerMenu</include>
 				<control type="image">
 					<width>252</width>
 					<height>267</height>
@@ -252,7 +252,6 @@
 				<include>toggle_PlayerControls</include>
 				<control type="group">
 					<posy>13</posy>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<control type="button" id="700">
 						<posx>13</posx>
 						<width>48</width>
