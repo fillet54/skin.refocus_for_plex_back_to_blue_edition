@@ -30,10 +30,6 @@
 	<include file="ViewGallery.xml" />
 	<include file="ViewBanner.xml" />
 	
-	<!-- moeten weggewerkt worden -->
-	<include file="ViewsAddons.xml">-</include>
-	<include file="ViewsShared.xml">-</include>
-	
 	
 	<include name="newtypelogo">
 		<control type="group">
@@ -1136,18 +1132,38 @@
 			<include>transition_OSD</include>
 			<visible>[Player.ShowInfo | Window.IsActive(fullscreeninfo)] + ![Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsActive(musicosd)]</visible>
 			<!---overlays--->
-			<control type="image">
-				<height>200</height>
-				<width>screen_Width</width>
-				<texture>osd/infoOverlayTop.png</texture>
+			<control type="group">
+				<visible>!Skin.HasSetting(overlay.black)</visible>
+				<control type="image">
+					<height>200</height>
+					<width>screen_Width</width>
+					<texture>osd/infoOverlayTop.png</texture>
+				</control>
+				<control type="image" id="1">
+					<posy>200</posy>
+					<height>220</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<texture border="0,1,0,11">osd/infoOverlay.png</texture>
+				</control>
 			</control>
-			<control type="image" id="1">
-				<posy>200</posy>
-				<height>220</height>
-				<width>screen_Width</width>
-				<aspectratio>stretch</aspectratio>
-				<texture border="0,1,0,11">osd/infoOverlay.png</texture>
+			
+			<control type="group">
+				<visible>Skin.HasSetting(overlay.black)</visible>
+				<control type="image">
+					<height>200</height>
+					<width>screen_Width</width>
+					<texture>osd/infoOverlayTop_black.png</texture>
+				</control>
+				<control type="image" id="1">
+					<posy>200</posy>
+					<height>220</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<texture border="0,1,0,11">osd/infoOverlay_black.png</texture>
+				</control>
 			</control>
+			
 			
 			<control type="image">
 				<posx>10</posx>
