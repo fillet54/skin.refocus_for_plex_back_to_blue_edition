@@ -374,6 +374,15 @@
 		<selectedcolor>Focused</selectedcolor>
 	</include>
 	
+	<!-- Hack to make slideshow work when opening menu, by Jason Mehring -->
+	<include name="hackStartBackground">
+		<control type="button">
+			<visible>!Skin.HasSetting(personalSlideShow)</visible>
+			<width>640</width>
+			<onfocus>Play</onfocus>
+			<onfocus>Play</onfocus>
+		</control>
+	</include>
 	
 	<!-- HOMESCREEN INCLUDES -->
 	<include name="homeMenusLayout">
@@ -390,13 +399,7 @@
 			</control>
 		</itemlayout>
 		<focusedlayout width="640" height="52">
-			<!-- Hack to make slideshow work when opening menu, by Jason Mehring -->
-			<control type="button">
-				<visible>!Skin.HasSetting(personalSlideShow)</visible>
-				<width>640</width>
-				<onfocus>Play</onfocus>
-				<onfocus>Play</onfocus>
-			</control>
+			<include condition="!Player.HasAudio">hackStartBackground</include>
 			<!-- normal focus background -->
 			<control type="image">
 				<posy>0</posy>
