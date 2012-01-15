@@ -1212,6 +1212,14 @@
 						<label>$INFO[MusicPlayer.Album,, • ]$INFO[MusicPlayer.Year]</label>
 						<font>info</font>
 						<textcolor>Color2</textcolor>
+						<visible>!IsEmpty(MusicPlayer.Year)</visible>
+					</control>
+					<control type="label">
+						<width>1000</width>
+						<label>$INFO[MusicPlayer.Album]</label>
+						<font>info</font>
+						<textcolor>Color2</textcolor>
+						<visible>IsEmpty(MusicPlayer.Year)</visible>
 					</control>
 					<control type="label">
 						<width>1000</width>
