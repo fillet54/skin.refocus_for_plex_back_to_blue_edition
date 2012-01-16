@@ -94,6 +94,18 @@
 		<textureslidernib>osd/sliderNib.png</textureslidernib>
 		<textureslidernibfocus>osd/sliderNibsmall.png</textureslidernibfocus>
 	</include>
+	<include name="dialog_Button-keyboard">
+		<font>keyboard</font>
+		<texturenofocus border="14">new_dialogs/keyboard.png</texturenofocus>
+		<texturefocus border="20,16,20,16">new_dialogs/keyboard-focus.png</texturefocus>
+		<textcolor>Color4</textcolor>
+		<focusedcolor>Color1</focusedcolor>
+		<width>48</width>
+		<height>48</height>
+		<align>center</align>
+		<textoffsety>9</textoffsety>
+	</include>
+	
 	<include name="dialog_Button-list">
 		<textcolor>Color4</textcolor>
 		<focusedcolor>Color1</focusedcolor>
