@@ -149,14 +149,6 @@
 	</include>
 
 
-
-	<!-- view_ListVideo, view_BigList, view_Poster, view_PosterInfo -->
-	<include name="grainypagefade">
-		<animation type="Focus">
-			<effect type="fade" start="0" end="100" delay="50" time="700"/>
-		</animation>
-	</include>
-
 <!---CONSTANTS------>
 	<constant name="screen_Width">1280</constant>
 	<constant name="screen_Height">720</constant>

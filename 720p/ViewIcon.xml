@@ -20,7 +20,6 @@
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
-			<!--<include>grainypagefade2</include>-->
 			<animation effect="slide" end="-30" time="150" condition="Container(57).OnNext">Conditional</animation>
 			<itemlayout height="260" width="186">
 				<control type="image">
@@ -125,7 +124,6 @@
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
-			<include>grainypagefade</include>
 			<itemlayout height="190" width="140">
 			
 				<control type="image">

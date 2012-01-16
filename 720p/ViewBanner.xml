@@ -18,7 +18,6 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
--			<include>grainypagefade</include>
 			<visible>Container.Content(tvshows)</visible>
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="65">
 				<control type="label">

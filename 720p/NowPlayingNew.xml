@@ -1,5 +1,5 @@
 <includes>
-	<include name="grainyeditionnowplayinghome">
+	<include name="nowplayinghome">
 		<control type="group">
 			<control type="group">
 				<visible>Player.HasMusicPlaylist</visible>

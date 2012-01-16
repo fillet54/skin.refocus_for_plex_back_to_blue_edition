@@ -688,7 +688,6 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<include>grainypagefade</include>
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)</visible>
 			<include condition="Window.IsVisible(videofiles)">BigList_Video</include>
 			<include condition="Window.IsVisible(musicfiles)">BigList_Music</include>

@@ -55,7 +55,7 @@
 			<visible>Player.HasAudio</visible>
 			<posx>905</posx>
 			<posy>-15</posy>
-			<include>grainyeditionnowplayinghome</include>
+			<include>nowplayinghome</include>
 		</control>
 
 		<!-- time and date -->
@@ -71,7 +71,6 @@
 				<aspectratio align="right">stretch</aspectratio>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
-				<include>grainypagefade</include>
 			</control>
 			
 		<control type="group" id="6100">
