@@ -21,6 +21,7 @@
 			<include condition="Window.IsVisible(videoplaylist)">List_VideoPlaylist</include>
 			<include condition="Window.IsVisible(musicplaylist)">List_MusicPlaylist</include>
 			<include condition="Window.IsVisible(pictures) | Window.IsVisible(programs) | Window.IsVisible(addonbrowser)">List_Files</include>
+			<include condition="Window.IsVisible(sharedcontent)">List_Shared</include>
 		</control>
 	</include>
 		
@@ -640,6 +641,48 @@
 				<height>22</height>
 				<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
 				<aspectratio align="right">keep</aspectratio>
+			</control>
+		</focusedlayout>
+	</include>
+	
+	<!-- shared -->
+	<include name="List_Shared">
+		<itemlayout width="625" height="67">
+			<control type="label">
+				<posx>40</posx>
+				<width>420</width>
+				<label>$INFO[ListItem.Property(sourceTitle)]</label>
+				<include>list_Label</include>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>28</posy>
+				<width>560</width>
+				<label>$INFO[ListItem.Property(serverName)]</label>
+				<include>list_Label-sub</include>
+			</control>
+		</itemlayout>
+		<focusedlayout width="625" height="67">
+			<control type="image">
+				<posy>-30</posy>
+				<width>650</width>
+				<height>128</height>
+				<texture border="0,30,0,30">views/list-focus.png</texture>
+				<include>focus_ListScroll</include>
+				<visible>!ControlGroup(6000).HasFocus</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<width>420</width>
+				<label>$INFO[ListItem.Property(sourceTitle)]</label>
+				<include>list_Label-focus</include>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>28</posy>
+				<width>560</width>
+				<label>$INFO[ListItem.Property(serverName)]</label>
+				<include>list_Label-sub-focus</include>
 			</control>
 		</focusedlayout>
 	</include>
