@@ -651,14 +651,14 @@
 			<control type="label">
 				<posx>40</posx>
 				<width>420</width>
-				<label>$INFO[ListItem.Property(sourceTitle)]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<include>list_Label</include>
 			</control>
 			<control type="label">
 				<posx>40</posx>
 				<posy>28</posy>
 				<width>560</width>
-				<label>$INFO[ListItem.Property(serverName)]</label>
+				<label>$INFO[ListItem.Property(sourceTitle)] • $INFO[ListItem.Property(serverName)]</label>
 				<include>list_Label-sub</include>
 			</control>
 		</itemlayout>
@@ -674,14 +674,14 @@
 			<control type="label">
 				<posx>40</posx>
 				<width>420</width>
-				<label>$INFO[ListItem.Property(sourceTitle)]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<include>list_Label-focus</include>
 			</control>
 			<control type="label">
 				<posx>40</posx>
 				<posy>28</posy>
 				<width>560</width>
-				<label>$INFO[ListItem.Property(serverName)]</label>
+				<label>$INFO[ListItem.Property(sourceTitle)] • $INFO[ListItem.Property(serverName)]</label>
 				<include>list_Label-sub-focus</include>
 			</control>
 		</focusedlayout>
