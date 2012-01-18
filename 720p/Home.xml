@@ -25,10 +25,10 @@
 			<include>screen_Dimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<fadetime>850</fadetime>
-			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(301) + Container(301).HasFocus(12)</visible>
 			<include>fadeinout</include>
 		</control>
+		
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<include>fadeinout</include>
@@ -95,6 +95,6 @@
 			</control>
 		</control>	
 		<!-- MOD CALL MENU GRAINY EDITION -->
-		<include>HomeMenu_Original</include>		
+		<include>HomeMenu_Original</include>
 	</controls>
 </window>

@@ -404,12 +404,12 @@
 			</control>
 			<control type="image">
 				<posy>0</posy>
-				<width>950</width>
+				<width>600</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="80,0,0,0">home/menuSelect.png</texture>
 				<include>home_ListScroll</include>
-				<visible allowhiddenfocus="true">[Container(300).HasFocus(12)]</visible>	
+				<visible allowhiddenfocus="true">[Control.HasFocus(301) + Container(301).HasFocus(12)]</visible>	
 			</control>
 
 			<control type="label">
@@ -421,7 +421,7 @@
 				<align>left</align>
 				<textcolor>Color5</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13)]</visible>
+				<visible>![Container(300).HasFocus(6) | Container(301).HasFocus(13)]</visible>
 				<visible>IsEmpty(Listitem.Label2)</visible>
 			</control>
 			<control type="label">
@@ -433,7 +433,7 @@
 				<align>left</align>
 				<textcolor>Color5</textcolor>
 				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
-				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13)]</visible>
+				<visible>![Container(300).HasFocus(6) | Container(301).HasFocus(13)]</visible>
 				<visible>!IsEmpty(Listitem.Label2)</visible>
 			</control>
 		</focusedlayout>
