@@ -81,7 +81,7 @@
 				<control type="button" id="9019">
 					<label>$LOCALIZE[31961]</label>
 					<include>newHomeMenuCategoryButton</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(291) | Control.HasFocus(292) | Control.HasFocus(293) | Control.HasFocus(294) | Control.HasFocus(295)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(291) | Control.HasFocus(292) | Control.HasFocus(293) | Control.HasFocus(294) | Control.HasFocus(295) | Control.HasFocus(296) | Control.HasFocus(297) | Control.HasFocus(298)]</visible>
 				</control>
 				<control type="button" id="9020">
 					<label>$LOCALIZE[31961]</label>
@@ -444,6 +444,25 @@
 					<label>Show Plug-Ins in Main Menu</label>
 					<onclick>Skin.ToggleSetting(homeMenuPlugins)</onclick>
 					<selected>Skin.HasSetting(homeMenuPlugins)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<!-- channels -->
+				<control type="radiobutton" id="296">
+					<label>Show Video Channel in Main Menu (activates Recently Used)</label>
+					<onclick>Skin.ToggleSetting(home.showvideochannel)</onclick>
+					<selected>Skin.HasSetting(home.showvideochannel)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="297">
+					<label>Show Music Channel in Main Menu (activates Recently Used)</label>
+					<onclick>Skin.ToggleSetting(home.showmusicchannel)</onclick>
+					<selected>Skin.HasSetting(home.showmusicchannel)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="298">
+					<label>Show Picture Channel in Main Menu (activates Recently Used)</label>
+					<onclick>Skin.ToggleSetting(home.showpicturechannel)</onclick>
+					<selected>Skin.HasSetting(home.showpicturechannel)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<!-- search -->
