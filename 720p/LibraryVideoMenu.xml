@@ -309,15 +309,6 @@
 					<itemgap>0</itemgap>
 					<include>transition2</include>
 					<visible>ControlGroup(9100).HasFocus(9001)</visible>
-					<!-- common -->
-					<control type="radiobutton" id="220">
-						<label>hide rating</label>
-						<onclick>Container.SetViewMode(51)</onclick>
-						<onclick>Skin.ToggleSetting(episodehiderating)</onclick>
-						<selected>Skin.HasSetting(episodehiderating)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
-						<visible>Control.IsVisible(51) + Container.Content(episodes)</visible>
-					</control>
 					<!-- slide -->
 					<control type="button" id="202">
 						<description>SLIDE: use posters</description>
@@ -335,14 +326,6 @@
 						<include>newHomeMenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
 					</control>					
-					<control type="radiobutton" id="205">
-						<label>hide rating</label>
-						<onclick>Container.SetViewMode(52)</onclick>
-						<onclick>Skin.ToggleSetting(slidehiderating)</onclick>
-						<selected>Skin.HasSetting(slidehiderating)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
-						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
-					</control>
 					<control type="radiobutton" id="206">
 						<label>hide resolution</label>
 						<onclick>Container.SetViewMode(52)</onclick>

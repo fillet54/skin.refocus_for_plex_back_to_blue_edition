@@ -25,6 +25,7 @@
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>!Container.Content(seasons)</visible>
+				<visible>!Skin.HasSetting(hideratings)</visible>
 			</control>
 			<control type="image">
 				<width>96</width>
@@ -111,6 +112,7 @@
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating)</visible>
+				<visible>!Skin.HasSetting(hideratings)</visible>
 			</control>
 			<control type="image">
 				<width>128</width>
@@ -223,6 +225,7 @@
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(albums)</visible>
+				<visible>!Skin.HasSetting(hideratings)</visible>
 			</control>
 		</control>
 	</include>
@@ -239,7 +242,7 @@
 				<info>ListItem.StarRating</info>
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(seasons) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(slidehiderating)] | Window.IsActive(2003)]</visible>
+				<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(seasons) + [!Skin.HasSetting(hideratings) | Window.IsActive(2003)]</visible>
 			</control>
 			<!-- resolution -->
 			<control type="image">
@@ -301,6 +304,7 @@
 			<colordiffuse>Color7</colordiffuse>
 			<aspectratio align="center">keep</aspectratio>
 			<visible>!IsEmpty(ListItem.StarRating)</visible>
+			<visible>!Skin.HasSetting(hideratings)</visible>
 		</control>
 		<control type="image">
 			<posx>30</posx>
@@ -479,6 +483,7 @@
 				<include>typeFlag</include>
 				<texture>$INFO[Listitem.StarRating,special://skin/flags/rating/mono/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(hideratings)</visible>
 				<colordiffuse>Color4</colordiffuse>
 			</control>
 			<control type="image">

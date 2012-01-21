@@ -126,6 +126,7 @@
 				<height>24</height>
 				<aspectratio align="left">keep</aspectratio>
 				<info>ListItem.StarRating</info>
+				<visible>!Skin.HasSetting(hideratings)</visible>
 			</control>
 	
 			<control type="group" id="900">

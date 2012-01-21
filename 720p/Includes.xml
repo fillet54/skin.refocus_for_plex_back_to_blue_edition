@@ -724,14 +724,6 @@
 		<aspectratio align="center">scale</aspectratio>
 		<fadetime>fadetime_Thumb</fadetime>
 	</include>
-	<!--watchedOverlay-->
-	<include name="overlay_UnWatched">
-		<width>32</width>
-		<height>32</height>
-		<texture>$INFO[ListItem.Overlay]</texture>
-		<aspectratio align="right">keep</aspectratio>
-		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
-	</include>
 	
 	<include name="art_TVShowLogo">
 		<texture>$INFO[Listitem.Title,../../extra.tvshowlogos/,.png]</texture>
