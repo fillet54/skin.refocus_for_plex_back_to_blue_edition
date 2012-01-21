@@ -87,7 +87,7 @@
 					<width>32</width>
 					<height>32</height>
 					<include>watchedOverlay</include>
-					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					<include>focus_ThumbPoster</include>
 				</control>
 				<!-- unwatched show seasons -->
